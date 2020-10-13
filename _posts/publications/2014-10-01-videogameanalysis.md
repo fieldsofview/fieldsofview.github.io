@@ -17,7 +17,7 @@ bibtex: "@inproceedings{palavalli2014analyzing,
   booktitle={Proceedings of the Second International Conference on Technological Ecosystems for Enhancing Multiculturality},
   pages={235--239},
   year={2014},
-  organization={ACM}
+  publisher={ACM}
 }"
 permalink: /publications/videogameanalysis/
 ---
