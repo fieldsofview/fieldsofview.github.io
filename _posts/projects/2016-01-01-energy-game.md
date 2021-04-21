@@ -5,7 +5,7 @@ permalink: /projects/energy-game/
 title: Energy Game
 intended: General Public, Energy Policy Planners.
 keywords: Multi-party negotiation, Conflict resolution, Energy Policy, Planning.
-type: Paper-based / table-top
+type: Paper-based / Table-top
 duration: 1 - 1.5 hours
 players: 6 - 12 players
 video: https://www.youtube.com/embed/s6yeTJrRwRQ
