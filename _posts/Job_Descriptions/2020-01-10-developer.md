@@ -13,7 +13,7 @@ whyWorkForFov: <b>Why Work at Fields of View</b> <br> <ul> <li>We have collabora
 
 applicationProcess: <b> The Application Process </b> <br> Please write <a href="mailto://work@fieldsofview.in"> work@fieldsofview.in</a> with your CV and a few words about why you want to work with us. Women are strongly encouraged to apply. <p class="simple-content"> We will review your application and setup a quick phone call. The phone call acts as a good way to introduce yourself and for us to let you know a bit more about our work. This call will be followed up with an assignment.</p>  <p class="simple-content"> The assignment will involve a cross section of the kind of work you'll do with us &mdash; from research to drawing up a quick concept note to actually coding. You take as much time as you want to complete the assignment, but we've noted that it takes on average about 7 days to finish.</p> <p class="simple-content">If we like your approach to the assignment (and your code sample), we invite you to spend a day with us. You can pepper us with more questions and get to know the rest of the team. Once this is done, and if you like us and we like you, we will extend an offer within 3 days.</p>
 
-notes: <b>Other Notes</b> <br> <ul> <li>Fields of View is a non-profit organisation.</li> <li>The position is based in Bangalore</li> <li>Our office is in JP Nagar, close to Rangashankara</li> <li>At this point in time, we are not in a position to offer remote working</li></ul>
+notes: <b>Other Notes</b> <br> <ul> <li>Fields of View is a non-profit organisation.</li> <li>The position is based in Bangalore</li> <li>Our office is in JP Nagar, close to Rangashankara</li></ul>
 
 ide: Developer
 
