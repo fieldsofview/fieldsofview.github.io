@@ -5,13 +5,13 @@ layout: default-layout
     <div class="container-fluid clearfix">
         <div class="row">
             <div class="col-md-offset-2 col-md-2">
-                <a href="{{site.baseurl}}/publications/research/">
+                <a href="{{ site.baseurl }}/publications/research/">
                     <h2 class="about" id="all">research in play</h2>
                 </a>
                 <ul>
-                    {%for category in page.categories%}
-                    <li class="about_nav" id="{{category.ide}}">{{category.title}}</li>
-                    {%endfor%}
+                    {% for category in page.categories %}
+                    <li class="about_nav" id="{{ category.ide }}">{{ category.title }}</li>
+                    {% endfor %}
                     <li class="about_nav"><a href="{{ site.baseurl }}/publications/">Back</a></li>
                 </ul>
             </div>
@@ -20,14 +20,14 @@ layout: default-layout
                 <span class="topspace"></span>
                 <div class="row-fluid">
                     {% for post in site.categories['rip'] %}
-                    <div style="width: 30%;" id="{{post.ide}}" class="research {{post.tag}} col-md-8">
-                        <a href="{{site.baseurl}}/research/{{post.ide}}" style="cursor:pointer">
-                            <img src="{{post.speakerimage}}" style="width: 100%;cursor: pointer;padding-bottom: 35px;" />
-                            <center><span class="team-name" style="font-family: Bebas Neue; font-size: 14pt; color:#939393; letter-spacing:0.5px">{{ post.authors}}</span>
+                    <div style="width: 30%;" id="{{ post.ide }}" class="research {{ post.tag }} col-md-8">
+                        <a href="{{ site.baseurl }}/research/{{ post.ide }}" style="cursor:pointer">
+                            <img src="{{ post.speakerimage }}" style="width: 100%;cursor: pointer;padding-bottom: 35px;" />
+                            <center><span class="team-name" style="font-family: Bebas Neue; font-size: 14pt; color:#939393; letter-spacing:0.5px">{{ post.authors }}</span>
                             </center>
                         </a>
                     </div>
-                    {%endfor%}
+                    {% endfor %}
                 </div>
             </div>
             <div class="col-md-3" style="padding-top:18px">
@@ -41,9 +41,9 @@ layout: default-layout
                         compilation of all the talks and the workshop over the next few weeks.</p>
                 </div>
             </div>
-            {% for category in page.categories%}
-            <div class="category-desc" id="{{category.ide}}-content" style="display: none">
-                <p class="simple-content">{{category.description}}</p>
+            {% for category in page.categories %}
+            <div class="category-desc" id="{{ category.ide }}-content" style="display: none">
+                <p class="simple-content">{{ category.description }}</p>
             </div>
             {% endfor %}
         </div>
@@ -52,7 +52,7 @@ layout: default-layout
 <script>
 $(document).ready(function() {
 
-    { % for category in page.categories % }
+    {% for category in page.categories %}
     $("#{{category.ide}}").click(function() {
         $(".research").css("display", "none");
         $(".{{category.ide}}").css("display", "block");
@@ -63,7 +63,7 @@ $(document).ready(function() {
         $(".category-desc").hide();
         $("#{{category.ide}}-content").show();
         $("#our-work-description").hide();
-    }); { % endfor % }
+    }); {% endfor %}
     $("#all").click(function() {
         $("li.research").css("display", "block");
         $(".about_nav").css("font-weight", "normal");

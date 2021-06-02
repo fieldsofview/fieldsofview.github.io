@@ -9,7 +9,7 @@ layout: default-layout
             </div>
             <div class="col-md-6">
                 {% for year in page.mediamentions %}
-                <h3 class="team-name" style="padding-top:38px;">{{year.year}}</h3>
+                <h3 class="team-name" style="padding-top:38px;">{{ year.year }}</h3>
                 <ul class="presentations-list">
                     {% for item in year.items %}
                     <li>
@@ -17,7 +17,7 @@ layout: default-layout
                         <a href="{{item.link}}"><span class="italic2">{{ item.title }}</span></a>
                         {% else %}
                         <span class="italic2">{{ item.title }}</span>
-                        {%endif%}
+                        {% endif %}
                         <span class="italicregular">{{ item.description }}</span>
                     </li>
                     {% endfor %}

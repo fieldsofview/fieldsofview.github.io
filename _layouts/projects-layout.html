@@ -7,17 +7,17 @@ layout: default-layout
             <div class="col-md-offset-2 col-md-2">
                 <h2 class="about" id="all">All Projects</h2>
                 <ul>
-                    {%for category in page.categories %}
-                    <li class="about_nav" id="{{category.ide}}">{{ category.title }}</li>
-                    {%endfor%}
+                    {% for category in page.categories %}
+                    <li class="about_nav" id="{{ category.ide }}">{{ category.title }}</li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="col-md-4" style="padding-top:53px">
                 <span class="topspace"></span>
                 {% for post in site.categories['project'] %}
-                <div id="{{post.ide}}" class="project {{post.tag}} col-md-6">
-                    <a href="{{site.baseurl}}/projects/{{post.ide}}" style="cursor:pointer">
-                        <img src="/img/{{post.ide}}-thumb.jpg" style="width:100%; cursor: pointer; padding-bottom:35px" />
+                <div id="{{ post.ide }}" class="project {{ post.tag }} col-md-6">
+                    <a href="{{ site.baseurl }}/projects/{{ post.ide }}" style="cursor:pointer">
+                        <img src="/img/{{ post.ide }}-thumb.jpg" style="width:100%; cursor: pointer; padding-bottom:35px" />
                     </a>
                 </div>
                 {% endfor %}
@@ -41,14 +41,14 @@ layout: default-layout
                     </p>
                 </div>
                 {% for category in page.categories %}
-                <div class="category-desc" id="{{category.ide}}-content" style="display: none">
+                <div class="category-desc" id="{{ category.ide }}-content" style="display: none">
                     <p class="simple-content">{{ category.description }}</p>
                 </div>
                 {% endfor %}
                 <a href="/brochures/FoVBrochure.pdf" style="font-size:14pt" class="mailid">Download our brochure
                     here.</a></span><br /><br>
                 <span class="italic"><a href="mailto:info@fieldsofview.in?Subject=Collaborating with FoV" style="font-size:14pt">Work with us.</a></span><br />
-                <span class="italic"><a href="mailto:info@fieldsofview.in?Subject=Funding {{page.title}} at FoV" style="font-size:14pt">Fund a project.</a></span>
+                <span class="italic"><a href="mailto:info@fieldsofview.in?Subject=Funding {{ page.title }} at FoV" style="font-size:14pt">Fund a project.</a></span>
             </div>
         </div>
     </div>
@@ -56,7 +56,7 @@ layout: default-layout
 <script>
 $(document).ready(function() {
 
-    { % for category in page.categories % }
+    {% for category in page.categories %}
     $("#{{category.ide}}").click(function() {
         $(".project").css("display", "none");
         $(".{{category.ide}}").css("display", "block");
@@ -67,7 +67,7 @@ $(document).ready(function() {
         $(".category-desc").hide();
         $("#{{category.ide}}-content").show();
         $("#our-work-description").hide();
-    }); { % endfor % }
+    }); {% endfor %}
     $("#all").click(function() {
         $("li.project").css("display", "block");
         $(".about_nav").css("font-weight", "normal");

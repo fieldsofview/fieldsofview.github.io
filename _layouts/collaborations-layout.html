@@ -25,15 +25,15 @@ layout: default-layout
                     <div class="clearfix"></div>
                     {% endif %}
                     {% assign counter = counter | plus: 1 %}
-                    <div id="{{collaborations.ide}}" class="col-md-3" style="padding-bottom:50px; float:left;">
+                    <div id="{{ collaborations.ide }}" class="col-md-3" style="padding-bottom:50px; float:left;">
                         <div style="width: 400;height: 400;">
-                            <a href="{{collaborations.url}}" target="_blank">
-                                <img class="img-responsive" src="{{collaborations.img}}" style="cursor:pointer;" />
+                            <a href="{{ collaborations.url }}" target="_blank">
+                                <img class="img-responsive" src="{{ collaborations.img }}" style="cursor:pointer;" />
                             </a>
                         </div>
-                        <center><span class="italicregular" style="font-size:12pt; line-height: 5px;">{{collaborations.title}}</span></center>
+                        <center><span class="italicregular" style="font-size:12pt; line-height: 5px;">{{ collaborations.title }}</span></center>
                     </div>
-                    {%endfor %}
+                    {% endfor %}
                 </div>
             </div>
         </div>

@@ -24,21 +24,21 @@ bg-url: {{page.bg-url}}
             </div>
             <div class="col-md-5" style="padding-top:30px">
                 <div class="col-md-12" style="padding-left: 0px">
-                    <h3 class="team-name">{{page.authors}}<br />{{page.year}}</h3>
+                    <h3 class="team-name">{{ page.authors }}<br />{{ page.year }}</h3>
                     <p class="simple-content" style="margin-top:0px">
-                        <span style="font-weight:bold">{{page.title}}</span>
+                        <span style="font-weight:bold">{{ page.title }}</span>
                     </p>
                 </div>
                 <div class="col-md-12" style="padding-left: 0px;overflow: scroll;overflow-y: visible;overflow-x: hidden;width: 800px;height: 600px;">
-                    {% if page.abstract != null%}
+                    {% if page.abstract != null %}
                     <h3 class="team-name">Abstract</h3>
-                    <p class="simple-content" style="margin-top:0px">{{page.abstract}}</p>
+                    <p class="simple-content" style="margin-top:0px">{{ page.abstract }}</p>
                     {% endif %}
                 </div>
-                {% if page.link != null%}
+                {% if page.link != null %}
                 <div class="col-md-12" style="padding-left: 0px;">
                     <h3 class="team-name">Link</h3>
-                    <a style="font-size: 14pt" href="{{page.link}}">{{page.link}}</a>
+                    <a style="font-size: 14pt" href="{{page.link}}">{{ page.link }}</a>
                 </div>
                 {% endif %}
             </div>

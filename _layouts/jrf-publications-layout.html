@@ -5,12 +5,12 @@ layout: default-layout
     <div class="container-fluid clearfix">
         <div class="row">
             <div class="col-md-offset-2 col-md-2">
-                <a href="{{site.baseurl}}/publications/allaboard/">
+                <a href="{{ site.baseurl }}/publications/allaboard/">
                     <h2 class="about" id="all">All Aboard</h2>
                 </a>
                 <ul>
                     {% for category in page.categories %}
-                    <li class="about_nav" id="{{category.ide}}">{{category.title}}</li>
+                    <li class="about_nav" id="{{category.ide}}">{{ category.title }}</li>
                     {% endfor %}
                     <li class="about_nav"><a href="{{ site.baseurl }}/publications/">Back</a></li>
                 </ul>
@@ -21,14 +21,14 @@ layout: default-layout
                 <div class="row-fluid">
                     {% assign sortedposts = site.categories['jrf'] | sort: 'order' %}
                     {% for post in sortedposts %}
-                    <div style="width: 30%; padding-bottom: 30px;" id="{{post.ide}}" class="research {{post.tag}} col-md-8">
-                        <a href="{{post.href}}" style="cursor:pointer">
-                            <img src="{{post.speakerimage}}" style="width: 100%;cursor: pointer;padding-bottom: 15px;" />
+                    <div style="width: 30%; padding-bottom: 30px;" id="{{ post.ide }}" class="research {{ post.tag }} col-md-8">
+                        <a href="{{ post.href }}" style="cursor:pointer">
+                            <img src="{{ post.speakerimage }}" style="width: 100%;cursor: pointer;padding-bottom: 15px;" />
                             <center style="height: 60px !important;"><span class="team-name" style="font-family: Bebas Neue; font-size: 14pt; color:#939393; letter-spacing:0.5px;">{{ post.name }}</span>
                             </center>
                         </a>
                     </div>
-                    {%endfor%}
+                    {% endfor %}
                 </div>
             </div>
             <div class="col-md-3" style="padding-top:18px">
@@ -49,9 +49,9 @@ layout: default-layout
                         public transport held on June 20-21, 2019.</p>
                 </div>
             </div>
-            {% for category in page.categories%}
+            {% for category in page.categories %}
             <div class="category-desc" id="{{category.ide}}-content" style="display: none">
-                <p class="simple-content">{{category.description}}</p>
+                <p class="simple-content">{{ category.description }}</p>
             </div>
             {% endfor %}
         </div>
@@ -59,8 +59,7 @@ layout: default-layout
 </section>
 <script>
 $(document).ready(function() {
-
-    { % for category in page.categories % }
+    {% for category in page.categories %}
     $("#{{category.ide}}").click(function() {
         $(".research").css("display", "none");
         $(".{{category.ide}}").css("display", "block");
@@ -71,7 +70,7 @@ $(document).ready(function() {
         $(".category-desc").hide();
         $("#{{category.ide}}-content").show();
         $("#our-work-description").hide();
-    }); { % endfor % }
+    }); {% endfor %}
     $("#all").click(function() {
         $("li.research").css("display", "block");
         $(".about_nav").css("font-weight", "normal");
