@@ -9,7 +9,7 @@ responsibilities: <b> Responsibilities </b> <br> <ul> <li>Designing, developing 
 
 skills: <b> Skills </b> <br> We are looking for someone with solid, strong fundamentals in Python or Ruby. You should have written a web application using bare metal techniques or used a mature framework like Django or Rails. We expect you to know how to connect to and use databases like PostgreSQL and/or MySQL using high performance libraries.
 
-developmentskills: <b> Development Skills </b> <br> <ul> <li> Python/Ruby/Go </li> <li> Django/Rails/Hugo </li> <li> Javascript/Typescript </li> <li> Basics of D3.js and HighChats </li> </ul>
+developmentskills: <b> Development Skills </b> <br> <ul> <li> Python/Ruby/Go </li> <li> Django/Rails/Hugo </li> <li> Javascript/Typescript </li> <li> Basics of D3.js and HighCharts </li> </ul>
 
 techskills: <b> Technical Skills </b> <br> <ul> <li> Basic administration of a Linux server (Ubuntu/Debian)  <ul> <li> Manage package updates </li> <li>User management </li> <li> Disc management </li> <li> Installing DBMS applications </li> </ul> </li> <li> Manage Apache + Nginx system remotely <ul> <li> Hosting new websites </li> <li> Configuration for using SSL </li> <li> Modifying server name </li> </ul> </li> <li> Deploy and manage Django/Rails applications </li> </ul> 
 
