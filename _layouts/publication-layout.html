@@ -84,6 +84,10 @@ layout: default-layout
         </div>
         <div class="clear"></div>
         {% endif %} -->
+                {% if page.collaborations != null %}
+                        <h3 class="team-name">Collaborations and Funders</h3>
+                        <p class="simple-content" style="margin-top:0px;">{{ page.collaborations }}</p>
+                {% endif %}
                 {% if page.link != null %}
                 <div class="col-md-12" style="padding-left: 0px;">
                     <h3 class="team-name">Link</h3>
