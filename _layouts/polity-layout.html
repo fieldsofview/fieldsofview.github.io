@@ -1,0 +1,99 @@
+---
+layout: default-layout
+bg-url: {{page.bg-url}}
+---
+<section class="content">
+  <div class="container-fluid clearfix">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-2">
+        <h2 class="about" id="current_about" style="margin-right: 15px;">{{page.title}}</h2>
+        <ul>
+          {% for link in page.links %}
+          <li class="about_nav" id="{{ link.ide }}">
+            <a href="{{ site.baseurl }}/projects/polity/{{ link.ide }}" style="cursor:pointer">
+              {{ link.title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          {% if page.video != null %}
+          <div class="flex-video widescreen" style="margin: 0 auto;text-align:center; padding-top:55px; padding-right:15px">
+            <iframe allowfullscreen="" src="{{ page.video }}" frameborder="0" width="100%" height="auto"></iframe>
+          </div>
+          <a class="italic" style="font-weight:100; font-size:13pt">{{ page.vidcaption }}</a>
+          {% endif %}
+        </div>
+        <div class="row">
+          {% if page.video2 != null %}
+          <div class="flex-video widescreen" style="margin: 0 auto;text-align:center; padding-top:55px; padding-right:15px">
+            <iframe allowfullscreen="" src="{{ page.video2 }}" frameborder="0" width="100%" height="auto"></iframe>
+          </div>
+          <a class="italic" style="font-weight:100; font-size:13pt">{{ page.vidcaption2 }}</a>
+          {% endif %}
+        </div>
+        <div class="row">
+          <div class="col-md-12" style="padding:0 0 0 0; margin-top:-10px">
+            <img src="{{ page.banner-img }}" style="height: 100%; width: 100%;">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6" style="padding:0 0 0 0; margin-top:-10px">
+            <div style="text-align: center; background-color: #f6f7f8; padding: 10px; border-radius: 25px;">
+              <h5><b>3 months | 12 weeks | 30 hours</b></h5>
+              <h4>Every Saturday 10 am - 12:30 pm<br/><br/>
+              November 2022 - January 2023</h4>
+              <h3>Online Virtual Course</h3>
+            </div>
+            <div style="text-align: center; padding: 10px; margin-top: 20px;">
+              <h4>Course Fee: Rs. 50,000</h4>
+              <h5>
+                (If you require a scholarship to attend this course, please email <a href="mailto:trina@fieldsofview.in">trina@fieldsofview.in</a> with your <b>scholarship</b> requirement.)
+              </h3>
+            </div>
+            <div style="background-color: #f6f7f8; padding: 10px; border-radius: 25px; margin-top: 20px;">
+              <p class="simple-content" style="padding-left: 10px;">
+                The course fee includes:
+                <ul>
+                  <li><b>Experience</b> of playing the <b>games</b></li>
+                  <li><b>Learning to use</b> the experiential tools for yourself to do inclusive bottom-up design of programs and interventions</li>
+                  <li><b>Learning to facilitate</b> the use of these experiential tools for your team and community.</li>
+                  <li>Get an <b>open license</b> to use our tools in future for yourself or for your community.</li>
+                  <li>Get <b>access to all assets</b> in the tools to use for yourself or your community in future.</li>
+                </ul>
+              </p>
+            </div>
+            <div style="text-align: center; background-color: #f6f7f8; padding: 10px; border-radius: 25px; margin-top: 20px;">
+              Visit To Apply:<br/>
+              <b><a href="http://bit.ly/politydevleaders">bit.ly/politydevleaders</a></b><br/>
+              Apply by<br>
+              <b>2 October 2022</b>
+            </div>
+          </div>
+          <div class="col-md-6" style="margin-top: -10px; padding-top: 0px">
+            <img src="{{ page.img1 }}" style="padding-bottom:40px; float:right; height:100%; width:100%;">
+            {% if page.img2 != null %}
+            <img src="{{ page.img2 }}" style="padding-bottom:40px; float:right; height:100%; width:100%;">
+            {% endif %}
+            {% if page.img3 != null %}
+            <img src="{{ page.img3 }}" style="padding-bottom:40px; float:right; height:100%; width:100%;">
+            {% endif %}
+          </div>
+          <div class="col-md-12" style="padding:0 0 0 0; margin-top:-10px; text-align: center;">
+            <h3>Apply today!</h3>
+            <h4>
+              Become a Champion of Inclusive Development (CID), where you uncover not crimes, but complexities!
+            </h4>
+            <h5>
+              For any questions or clarifications contact<br/>
+              Trina Talukdar, Lead, Polity, at <a href="mailto:trina@fieldsofview.in">trina@fieldsofview.in</a>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2" style="margin-top:25px; border-bottom: 1.5px solid #939393;"></div>
+    </div>
+  </div>
+</section>
