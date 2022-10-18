@@ -19,7 +19,7 @@ ide: Social Media
 
 tag: Social Media
 
-category: jd
+category: _jd
 
 permalink: /projects/work-with-us/socialmediamanager/
 

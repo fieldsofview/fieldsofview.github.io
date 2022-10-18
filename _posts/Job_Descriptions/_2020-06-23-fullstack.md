@@ -25,7 +25,7 @@ ide: Developer
 
 tag: Developer
 
-category: jd
+category: _jd
 
 permalink: /projects/work-with-us/fullstackdeveloper/
 
