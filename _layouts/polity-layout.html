@@ -8,32 +8,20 @@ bg-url: {{page.bg-url}}
       <div class="col-md-offset-2 col-md-2">
         <h2 class="about" id="current_about" style="margin-right: 15px;">{{page.title}}</h2>
         <ul>
-          {% for link in page.links %}
-          <li class="about_nav" id="{{ link.ide }}">
-            <a href="{{ site.baseurl }}/projects/polity/{{ link.ide }}" style="cursor:pointer">
-              {{ link.title }}
-            </a>
-          </li>
+          {% for section in page.sections %}
+            <li class="about_nav" id="{{ section.ide }}">
+              {{ section.title }}
+            </li>
           {% endfor %}
+          <li class="about_nav" id="{{ section.ide }}">
+            <a href="http://bit.ly/politydevleaders" target="_blank">FORM</a>
+          </li>
         </ul>
       </div>
-      <div class="col-md-6">
-        <div class="row">
-          {% if page.video != null %}
-          <div class="flex-video widescreen" style="margin: 0 auto;text-align:center; padding-top:55px; padding-right:15px">
-            <iframe allowfullscreen="" src="{{ page.video }}" frameborder="0" width="100%" height="auto"></iframe>
-          </div>
-          <a class="italic" style="font-weight:100; font-size:13pt">{{ page.vidcaption }}</a>
-          {% endif %}
-        </div>
-        <div class="row">
-          {% if page.video2 != null %}
-          <div class="flex-video widescreen" style="margin: 0 auto;text-align:center; padding-top:55px; padding-right:15px">
-            <iframe allowfullscreen="" src="{{ page.video2 }}" frameborder="0" width="100%" height="auto"></iframe>
-          </div>
-          <a class="italic" style="font-weight:100; font-size:13pt">{{ page.vidcaption2 }}</a>
-          {% endif %}
-        </div>
+
+      <!-- HOME -->
+      <!-- TODO Get content from .md -->
+      <div class="col-md-6 section-desc" id="home-content">
         <div class="row">
           <div class="col-md-12" style="padding:0 0 0 0; margin-top:-10px">
             <img src="{{ page.banner-img }}" style="height: 100%; width: 100%;">
@@ -67,7 +55,7 @@ bg-url: {{page.bg-url}}
             </div>
             <div style="text-align: center; background-color: #f6f7f8; padding: 10px; border-radius: 25px; margin-top: 20px;">
               Visit To Apply:<br/>
-              <b><a href="http://bit.ly/politydevleaders">bit.ly/politydevleaders</a></b><br/>
+              <b><a href="http://bit.ly/politydevleaders" target="_blank">bit.ly/politydevleaders</a></b><br/>
               Apply by<br>
               <b>2 October 2022</b>
             </div>
@@ -93,7 +81,73 @@ bg-url: {{page.bg-url}}
           </div>
         </div>
       </div>
+
+      <!-- MODULES -->
+      <div class="col-md-6 section-desc" id="modules-content" style="display: none;">
+        <div class="row">
+
+          <!-- Left Col -->
+          <div class="col-md-6">
+            {% for module in page.modules_lhs %}
+              <div class="module-box">
+                <div style="flex: 2">
+                  <h2 class="module-title">{{ module.title }}</h2>
+                  <p class="simple-content">
+                    {{ module.description }}
+                  </p>
+                </div>
+                <div style="flex: 1; align-self: center;">
+                  <img src="{{ module.img }}" class="center-block" style="height: 100%; width: 100%;">
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+
+          <!-- Right Col -->
+          <div class="col-md-6">
+            {% for module in page.modules_rhs %}
+              <div class="module-box">
+                <div style="flex: 2">
+                  <h2 class="module-title">{{ module.title }}</h2>
+                  <p class="simple-content">
+                    {{ module.description }}
+                  </p>
+                </div>
+                <div style="flex: 1; align-self: center;">
+                  <img src="{{ module.img }}" class="center-block" style="height: 100%; width: 100%;">
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
       <div class="col-md-2" style="margin-top:25px; border-bottom: 1.5px solid #939393;"></div>
     </div>
   </div>
 </section>
+
+<script>
+  $(document).ready(function() {
+    // set HOME to bold
+    $("#home").css("font-weight", "bold");
+
+    {% for section in page.sections %}
+      $("#{{section.ide}}").click(function() {
+        $(".about_nav").css("font-weight", "normal");
+        $("#{{section.ide}}").css("font-weight", "bold");
+
+        $(".section-desc").hide();
+        $("#{{section.ide}}-content").show();
+      });
+    {% endfor %}
+  });
+</script>
+
+<style type="text/css">
+  .module-box {
+    display: flex;
+    flex-direction: row;
+  }
+</style>

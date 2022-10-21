@@ -937,3 +937,23 @@ li.peoplepub {
   list-style-type: none;
   margin-top: 10px;
 }
+
+/* Polity */
+h2.module-title {
+  color: #757575;
+  font-family: 'Bebas Neue';
+  font-weight: bold;
+  font-size: 16pt;
+  /*border-bottom: 1.5px solid #939393;*/
+  padding-bottom: 3px;
+  letter-spacing: 1px; 
+}
+h4.module-desc {
+  color: #757575;
+  /*font-family: 'Bebas Neue';*/
+  /*font-weight: bold;*/
+  font-size: 14pt;
+  /*border-bottom: 1.5px solid #939393;*/
+  padding-bottom: 3px;
+  letter-spacing: 1px; 
+}
