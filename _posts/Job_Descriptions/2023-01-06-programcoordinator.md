@@ -17,8 +17,6 @@ applicationProcess: <b> How To Apply </b> <br><br> If this sounds interesting or
 
 notes: <b>Other Notes</b> <br> <ul> <li>Fields of View is a non-profit organisation.</li> <li>The position is based in Bangalore</li> <li>Our office is in JP Nagar, close to Rangashankara</li></ul>
 
-remmuneration: <b> Remmuneration </b> <br><br> Rs. 63,250 per month
-
 ide: Program Coordinator
 
 tag: Program Coordinator
