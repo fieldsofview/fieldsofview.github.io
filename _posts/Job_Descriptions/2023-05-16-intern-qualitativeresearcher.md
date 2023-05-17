@@ -3,13 +3,13 @@ layout: work-with-us-layout
 
 title: Qualitative Research Intern
 
-role: <b> Role </b> <br><br> Qualitative Researcher
+role: <b> Role </b> <br> Qualitative Researcher
 
-location: <b> Location </b> <br><br> In-person, Bangalore
+location: <b> Location </b> <br> In-person, Bangalore
 
-duration: <b> Duration </b> <br><br> 8 weeks/2 months
+duration: <b> Duration </b> <br> 8 weeks/2 months
 
-startdate: <b> Start Date </b> <br><br> Immediate
+startdate: <b> Start Date </b> <br> Immediate
 
 responsibilities: <b> Responsibilities and Duties </b> <br> <ul> <li> Collation of secondary literature study on topics related to gender and employment in public spaces </li> <li> Analysis of secondary literature </li> <li> Annotated bibliography </li> </ul>
 
