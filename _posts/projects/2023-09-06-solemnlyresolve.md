@@ -1,6 +1,6 @@
 ---
 layout: project-layout
-bg-url: 
+bg-url: /img/background-project1.png
 permalink: /projects/solemnlyresolve/
 title: Solemnly Resolve&#58; Build The Preamble To Your Future 
 intended: Students, Youth Organizations, Community Groups, Policy Makers, Civic Activists
