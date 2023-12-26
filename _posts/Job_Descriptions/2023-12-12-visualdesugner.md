@@ -1,9 +1,9 @@
 ---
 layout: work-with-us-layout
 
-title: Visual Designer
+title: Information Designer
 
-role: <b> Role </b> <br><br> As the Visual Designer your role will be to tell the Fields of View story to the world! At Fields of View we do complex work, because wicked social problems need complex solutions. As the Visual Designer, your role will be to tell the story of our complex work in simple and engaging ways to the public. So, although the role is of a Designer, at Fields of View you will have the opportunity to learn about complex systems, policies and get an in-depth understanding of social development, so you can use your design skill set to communicate what you are learning to the outside world. <br> <br> An in-house visual designer for Fields of View will work on visual content in both the digital and print medium. The in-house visual designer is expected to be able to draw out narratives from different projects and represent it in the visual medium. The designer must also be able to use visualisations to make sense of data, elucidate processes and represent systems. The primary aim is to reduce dependence on written form for better accessibility, considering the Indian context. Producing project specific visual content such as infographics, visualisations, web interfaces, dashboards, presentations, game screens, game assets and more. <br> <br> Your strengths should lie in designing for storytelling, with an understanding of the social media world and how to leverage its relevance and power. Your knack in content creation and a strong instinct for breaking down and narrating in and around data for an information hungry, ever-evolving audience will be crucial, for this role. <br> <br> Knowledge of print and web standards for handoff is a must. A working knowledge of Figma/Illustrator/Indesign/Photoshop is a must, but if you are more familiar with their open source alternatives, even better.
+role: <b> Role </b> <br><br> As the Information Designer your role will be to tell the Fields of View story to the world! At Fields of View we do complex work, because wicked social problems need complex solutions. As Information Designer, your role will be to tell the story of our complex work in simple and engaging ways to the public. So, although the role is of a Designer, at Fields of View you will have the opportunity to learn about complex systems, policies and get an in-depth understanding of social development, so you can use your design skill set to communicate what you are learning to the outside world. <br> <br> An in-house visual designer for Fields of View will work on visual content in both the digital and print medium. The in-house visual designer is expected to be able to draw out narratives from different projects and represent it in the visual medium. The designer must also be able to use visualisations to make sense of data, elucidate processes and represent systems. The primary aim is to reduce dependence on written form for better accessibility, considering the Indian context. Producing project specific visual content such as infographics, visualisations, web interfaces, dashboards, presentations, game screens, game assets and more. <br> <br> Your strengths should lie in designing for storytelling, with an understanding of the social media world and how to leverage its relevance and power. Your knack in content creation and a strong instinct for breaking down and narrating in and around data for an information hungry, ever-evolving audience will be crucial, for this role. <br> <br> Knowledge of print and web standards for handoff is a must. A working knowledge of Figma/Illustrator/Indesign/Photoshop is a must, but if you are more familiar with their open source alternatives, even better.
 
 responsibilities: <b> Responsibilities </b> <br> <ul> <li> Create visual content for digital and print medium </li> <li> Create data visualisations, infographics, dashboards to communicate complex public policy research studies </li> <li> Design external facing visual content, like posters, booklets, brochures, visiting cards, web presence, presentations </li> <li> Design assets for games, simulations and tools being built by us internally </li> </ul>
 
@@ -15,9 +15,9 @@ notes: <b>Other Notes</b> <br> <ul> <li>Fields of View is a non-profit organisat
 
 remuneration: <b> Remuneration </b> <br><br> Rs. 69,575 per month
 
-ide: Visual Designer
+ide: Information Designer
 
-tag: Visual Designer
+tag: Information Designer
 
 category: jd
 
