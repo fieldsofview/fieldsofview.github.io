@@ -66,7 +66,7 @@ bg-url: {{page.bg-url}}
                     </div>
                     <a class="italic" style="font-weight:100; font-size:13pt">{{ page.vidcaption2 }}</a>
                     {% endif %}
-                </div>
+                </div> 
                 <div class="row">
                     <div class="col-md-6" style="padding:0 0 0 0; margin-top:-10px">
                         <br />
@@ -75,6 +75,10 @@ bg-url: {{page.bg-url}}
                         <p>{{ page.description }}</p>
                         {% if page.brochure != null %}
                         <a href="{{ page.brochure }}" class="downloadbrochure">Download Brochure</a>
+                        <br /><br />
+                        {% endif %}
+                        {% if page.brochure2 != null %}
+                        <a href="{{ page.brochure2 }}" class="downloadbrochure">Download the 74th Ammendment Act Comic Book</a>
                         <br /><br />
                         {% endif %}
                         <a href="mailto:info@fieldsofview.in?subject={{ page.title }}" class="mailid">Mail us to know
