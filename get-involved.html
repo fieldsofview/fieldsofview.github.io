@@ -1,0 +1,50 @@
+---
+layout: default-layout
+title: Get Involved
+permalink: /get-involved/
+---
+<section class="content">
+    <div class="mt-20 px-16 ">
+        <div class="flex justify-between">
+            <div>
+                <p class="title w-10/12">We would love to hear from <span>you</span></p>
+                <div class="mt-12 mr-32 grid grid-cols-[1.5rem_auto] gap-2 contact-container">
+                    <img class="inline" src="{{ site.baseurl }}/img/icons/phone.svg">
+                    <span>Phone : +91 80 40977237</span>
+                    <img class="inline" src="{{ site.baseurl }}/img/icons/email.svg">
+                    <span>E-mail :
+                        <a class="underline underline-offset-4"
+                            href="mailto:info@fieldsofview.in">info@fieldsofview.in</a>
+                    </span>
+                    <img class="inline" src="{{ site.baseurl }}/img/icons/location.svg">
+                    <span>Address : Fields of View, #1915, 5th Cross, 18th A Main, JP Nagar II Phase, Bangalore, 560
+                        078.</span>
+                </div>
+            </div>
+
+            <div class="w-11/12 aspect-[16/9]">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4624.726744207098!2d77.58976157851845!3d12.913111175650188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6c85144ac603%3A0x1f67b6b1cb1fbe68!2sFields+of+View!5e0!3m2!1sen!2sin!4v1454498243595"
+                    class="w-full h-full border-0" allowfullscreen></iframe>
+            </div>
+
+        </div>
+        {% if site.categories['jd'] %}
+        <div>
+            <p class="title w-5/12 mt-36">
+                You can apply for available positions <span>here</span>
+            </p>
+            {% for post in site.categories['jd'] %}
+            <div class="my-28 cursor-pointer">
+                <a class="job-title" href="{{post.url}}">{{post.title}}</a>
+                <!-- <p class="job-title inline">{{post.title}}</p> -->
+                <img class="inline" src="{{ site.baseurl}}/img/icons/arrow-down.svg">
+                <p class="job-date">{{post.display-date}}</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+    </div>
+
+</section>
