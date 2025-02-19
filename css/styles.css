@@ -40,7 +40,7 @@ nav ul li {
   position: relative;
 }
 
-nav ul li::after {
+nav ul li::before {
   content: "";
   position: absolute;
   top: 0;
@@ -55,24 +55,24 @@ nav ul li::after {
   pointer-events: none;
 }
 
-nav ul li:hover::after {
+nav ul li:hover::before {
   filter: opacity(1);
 }
 
 /* Different background images */
-nav ul li:nth-child(1)::after {
+nav ul li:nth-child(1)::before {
   background-image: url('../img/hover/tools-bg.svg');
 }
 
-nav ul li:nth-child(2)::after {
+nav ul li:nth-child(2)::before {
   background-image: url('../img/hover/tools-bg.svg');
 }
 
-nav ul li:nth-child(3)::after {
+nav ul li:nth-child(3)::before {
   background-image: url('../img/hover/resources-bg.svg');
 }
 
-nav ul li:nth-child(4)::after {
+nav ul li:nth-child(4)::before {
   background-image: url('../img/hover/resources-bg.svg');
 }
 
@@ -115,7 +115,7 @@ nav ul li:nth-child(4)::after {
 }
 
 
-.newsletter-container a::after {
+.newsletter-container a::before {
   content: "";
   position: absolute;
   top: 0;
@@ -130,7 +130,7 @@ nav ul li:nth-child(4)::after {
   background-image: url('../img/hover/subscribe-bg.svg');
 }
 
-.newsletter-container a:hover::after {
+.newsletter-container a:hover::before {
   filter: opacity(1);
 }
 
