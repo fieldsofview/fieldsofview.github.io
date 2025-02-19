@@ -102,7 +102,7 @@ nav ul li:nth-child(4)::before {
   font-weight: 400;
 }
 
-.newsletter-container a {
+.subscribe {
   color: var(--black);
   font-size: 1.4rem;
   font-weight: 500;
@@ -111,7 +111,7 @@ nav ul li:nth-child(4)::before {
 }
 
 
-.newsletter-container a::before {
+.subscribe::before {
   content: "";
   position: absolute;
   top: 0;
@@ -126,7 +126,7 @@ nav ul li:nth-child(4)::before {
   background-image: url('../img/hover/subscribe-bg.svg');
 }
 
-.newsletter-container a:hover::before {
+.subscribe:hover::before {
   filter: opacity(1);
 }
 
