@@ -35,15 +35,25 @@ permalink: /get-involved/
                 You can apply for available positions <span>here</span>
             </p>
             {% for post in site.categories['jd'] %}
-            <div class="my-28 cursor-pointer">
-                <a class="job-title" href="{{post.url}}">{{post.title}}</a>
+            <div class="my-28 inline-block">
+                <!-- Hidden Checkbox to Toggle State -->
+                <input type="checkbox" id={{post.title}} class="peer hidden">
+                <label for={{post.title}} class="job-title inline-block cursor-pointer">{{post.title}}
+                    <img class="inline" src="{{ site.baseurl}}/img/icons/arrow-down.svg">
+                    <p class="job-date">{{post.display-date}}</p>
+                </label>
                 <!-- <p class="job-title inline">{{post.title}}</p> -->
-                <img class="inline" src="{{ site.baseurl}}/img/icons/arrow-down.svg">
-                <p class="job-date">{{post.display-date}}</p>
+
+                <!-- Expandable Content -->
+                <div class="job-desc mt-4 peer-checked:block hidden w-5/12">
+                    {{post.description}}
+                </div>
             </div>
             {% endfor %}
         </div>
         {% endif %}
+
+
 
     </div>
 
