@@ -96,10 +96,6 @@ nav ul li:nth-child(4)::before {
   top: 0;
 }
 
-.working-on-item {
-  width: 30%;
-}
-
 ::placeholder {
   color: #828282;
   font-size: 0.8rem;
