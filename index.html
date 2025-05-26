@@ -6,8 +6,8 @@ layout: default-layout
 ---
 
 <section class="content">
-    <div class="px-16">
-        <div class="flex justify-between">
+    <div class="">
+        <div class="hero-container flex justify-between">
             <div class="mt-9 w-96">
                 <p class="title mb-12">
                     We make
@@ -15,11 +15,12 @@ layout: default-layout
                     engage with the nuances of
                     <span>vulnerability</span>
                 </p>
-                <p>
+                <p class="mb-10">
                     We are an inter-disciplinary team developing tools to engage with
                     wicked problems. We focus on addressing vulnerability through
                     data-informed and participatory policy-making.
                 </p>
+                <a href="{{ site.baseurl }}/about/">Learn more about us here!</a>
             </div>
             <div class="hero-illustration w-1/2 relative">
                 <img class="shape1" src="./img/illustration/blue-rect-1.svg"></img>
@@ -40,25 +41,60 @@ layout: default-layout
                 <img class="shape16" src="./img/illustration/yellow-rect-2.svg"></img>
             </div>
         </div>
-        {% if site.categories['highlight'] %}
+        {% if site.categories['tool-highlight'] %}
         <div class="working-on-container mt-52">
             <p class="title">
                 We have been working on <br>
                 <span>lorem ipsum</span>
             </p>
             <div class="mt-12 flex justify-between gap-8">
-                {% for post in site.categories['highlight'] %}
-                <div class="relative w-[30%] transition-transform duration-300 hover:scale-105 cursor-pointer">
-                    <img src="./img/working-on/Rectangle-1.png" alt="project 1" class="object-cover ">
-                    <div
-                        class="absolute inset-0 bg-[#FF9874] bg-opacity-20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                        <p class="text-[var(--black)] text-xl font-medium">{{post.title}}</p>
+                {% for post in site.categories['tool-highlight'] %}
+                <div class="project-card">
+                    <!-- Orange rotating background -->
+                    <div class="rotate-bg"></div>
+
+                    <!-- Foreground image -->
+                    <img src="./img/working-on/city-game-img-1.jpg" alt="project 1" />
+
+                    <!-- Hover text overlay -->
+                    <div class="text-overlay">
+                        <div class="text-wrapper">
+                            <p>{{ post.title }}</p>
+                        </div>
                     </div>
                 </div>
+
+
                 {% endfor %}
             </div>
         </div>
+
         {% endif %}
+
+
+        <hr class="my-20" />
+
+        {% if site.categories['update'] %}
+        <div class="updates-container">
+            {% for post in site.categories['update'] %}
+            <div class="update-card">
+                <div class="rotate-bg"></div>
+                <img src="{{ post.img}}" alt="update image">
+                <div class="text-overlay">
+                    <div class="text-wrapper">
+                        <p>{{ post.title }}</p>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+
+        </div>
+        {% endif %}
+
+
+
 
         <div class="newsletter-container mt-20 mb-12 flex justify-between items-center gap-1 pr-16">
             <p class="title w-[40rem]">

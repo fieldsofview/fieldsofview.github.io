@@ -1,10 +1,10 @@
 /* VARIABLES */
 :root {
   /* Colours */
-  --grey-1: #B0B0B0;
-  --grey-2: #5E5E5E;
-  --grey-3: #E0E0E0;
-  --black: #231F20;
+  --grey-1: #b0b0b0;
+  --grey-2: #5e5e5e;
+  --grey-3: #e0e0e0;
+  --black: #231f20;
 
   /* Fonts */
   --primary-font-family: Satoshi;
@@ -17,19 +17,24 @@
 }
 
 body {
-  font-family: 'Satoshi', var(--default-font-family);
+  font-family: "Satoshi", var(--default-font-family);
   font-size: 1.25rem;
   color: var(--grey-2);
+  padding: 2rem 4rem 4rem 4rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  position: relative;
 }
 
 p {
   line-height: 130%;
-
 }
+
+/* Header Styles */
 
 nav ul {
   color: var(--black);
-  font-family: 'Satoshi', var(--default-font-family);
+  font-family: "Satoshi", var(--default-font-family);
   font-size: 1.4rem;
   font-weight: 500;
 }
@@ -59,30 +64,40 @@ nav ul li:hover::before {
   filter: opacity(1);
 }
 
-/* Different background images */
 nav ul li:nth-child(1)::before {
-  background-image: url('../img/hover/tools-bg.svg');
+  background-image: url("../img/hover/tools-bg.svg");
 }
 
 nav ul li:nth-child(2)::before {
-  background-image: url('../img/hover/tools-bg.svg');
+  background-image: url("../img/hover/tools-bg.svg");
 }
 
 nav ul li:nth-child(3)::before {
-  background-image: url('../img/hover/resources-bg.svg');
+  background-image: url("../img/hover/resources-bg.svg");
 }
 
 nav ul li:nth-child(4)::before {
-  background-image: url('../img/hover/resources-bg.svg');
+  background-image: url("../img/hover/resources-bg.svg");
 }
 
+/* Footer Styles */
+
+footer p {
+  color: #b0b0b0;
+  font-size: 0.875rem;
+  width: 30rem;
+  height: 2.2rem;
+  margin-right: 3rem;
+}
+
+/* All page content Styles */
 
 .title {
-  font-family: 'Satoshi', var(--default-font-family);
+  font-family: "Satoshi", var(--default-font-family);
   font-weight: 900;
   font-size: 2.75rem;
   line-height: 124%;
-  color: #B0B0B0;
+  color: #b0b0b0;
 }
 
 .title span {
@@ -91,10 +106,94 @@ nav ul li:nth-child(4)::before {
   font-weight: 400;
 }
 
+.text-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease-in-out;
+  background-color: rgba(255, 152, 116, 0.3);
+  opacity: 0;
+  font-weight: 500;
+  color: white;
+}
+
+.rotate-bg {
+  transition: transform 0.5s ease-in-out;
+  position: absolute;
+  inset: 0;
+  background-color: #ff9874;
+}
+
+
+/* Home - Hero Section Styles */
+
+.hero-container a {
+  font-family: Libre Baskerville, var(--default-font-family);
+  font-style: italic;
+  font-weight: 400;
+  color: #65599b;
+}
+
 .hero-illustration img {
   position: absolute;
   top: 0;
 }
+
+/* Home - Projects Section Styles */
+
+.project-card {
+  position: relative;
+  width: 30%;
+  cursor: pointer;
+}
+
+.project-card img {
+  object-fit: cover;
+  position: relative;
+}
+
+.project-card:hover .rotate-bg {
+  transform: rotate(-12deg);
+}
+
+.project-card:hover .text-overlay {
+  opacity: 1;
+}
+
+/* Home - Updates Section Styles */
+
+.updates-container {
+  columns: 3;
+  column-gap: 5rem;
+  width: 100%;
+  margin: auto;
+}
+
+.update-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5rem;
+  display: block;
+  position: relative;
+}
+
+.update-card {
+  position: relative;
+  cursor: pointer;
+}
+
+.update-card:hover .rotate-bg {
+  transform: rotate(-12deg);
+}
+
+.update-card:hover .text-overlay {
+  opacity: 1;
+}
+
+
+/* Home - Subscribe Section Styles */
 
 ::placeholder {
   color: #828282;
@@ -110,7 +209,6 @@ nav ul li:nth-child(4)::before {
   position: relative;
 }
 
-
 .subscribe::before {
   content: "";
   position: absolute;
@@ -123,20 +221,14 @@ nav ul li:nth-child(4)::before {
   filter: opacity(0);
   transition: filter 0.3s ease-in-out;
   mix-blend-mode: multiply;
-  background-image: url('../img/hover/subscribe-bg.svg');
+  background-image: url("../img/hover/subscribe-bg.svg");
 }
 
 .subscribe:hover::before {
   filter: opacity(1);
 }
 
-footer p {
-  color: #B0B0B0;
-  font-size: 0.875rem;
-  width: 30rem;
-  height: 2.2rem;
-  margin-right: 3rem;
-}
+/* Get Involved - Work with us Section Styles */
 
 .contact-container {
   color: var(--grey-2);
@@ -147,7 +239,6 @@ footer p {
   color: var(--grey-2);
   font-size: 1.1rem;
   font-weight: 500;
-
 }
 
 .job-date {
@@ -156,7 +247,6 @@ footer p {
   color: var(--grey-2);
   font-size: 0.7rem;
   font-weight: 400;
-
 }
 
 .job-desc {
@@ -166,3 +256,20 @@ footer p {
   font-size: 1.1rem;
   font-weight: 500;
 }
+
+/* Get Involved - Pay It Forward Section Styles */
+
+.pif-container p {
+  margin: 2rem 2rem 2rem 0;
+}
+
+.pif-container {
+  display: flex;
+}
+
+.pif-container img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
