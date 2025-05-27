@@ -3,7 +3,10 @@
 <nav class="sticky top-0 flex justify-between items-center z-10 bg-white mb-10">
     <div class="nav-brand">
         <a href="{{ site.baseurl }}/">
-            <img src="{{ site.baseurl }}/img/Logo-cropped.svg" style="width: 220px;">
+            <div style="width: 220px;">
+            <!-- <img src="{{ site.baseurl }}/img/Logo-cropped.svg" style="width: 220px;"> -->
+             {% include logo.html %}
+             </div>
         </a>
     </div>
     <ul class="flex mr-8">

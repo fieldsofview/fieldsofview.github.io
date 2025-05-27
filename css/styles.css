@@ -80,6 +80,17 @@ nav ul li:nth-child(4)::before {
   background-image: url("../img/hover/resources-bg.svg");
 }
 
+/* Logo Styles */
+#flip-group {
+  transition: 0.2s ease-in-out;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.nav-brand:hover #flip-group {
+  transform: scaleY(-1);
+}
+
 /* Footer Styles */
 
 footer p {
@@ -139,6 +150,59 @@ footer p {
 .hero-illustration img {
   position: absolute;
   top: 0;
+}
+
+/* Home - Illustration Styles */
+.illustration path, circle{
+  transition: 0.3s ease-in-out;
+}
+.illustration:hover #s01{
+  transform: rotate(1deg) translateY(-10px);
+}
+.illustration:hover #s15{
+  transform: translateX(-20px);
+}
+.illustration:hover #s10{
+  transform: translateX(-20px);
+}
+.illustration:hover #s04{
+  transform: translateX(-20px);
+}
+.illustration:hover #s02{
+  transform: translateX(-20px);
+}
+.illustration:hover #s06{
+  transform: translateX(-20px);
+}
+.illustration:hover #s12{
+  transform: translateX(-20px);
+}
+.illustration:hover #s08{
+  transform: translateX(-20px);
+}
+.illustration:hover #s14{
+  transform: translateX(-20px);
+}
+.illustration:hover #s09{
+  transform: translateX(15px);
+}
+.illustration:hover #s11{
+  transform: translateX(-10px);
+}
+.illustration:hover #s05{
+  transform: translate(1px,-5px);
+}
+.illustration:hover #s13{
+  transform: translateX(10px);
+}
+.illustration:hover #s07{
+  transform: translateX(25px);
+}
+#s03 {
+  transform-origin: left;
+}
+.illustration:hover #s03{
+  transform: rotate(-9deg) translateY(20px) translateX(10px);
 }
 
 /* Home - Projects Section Styles */
