@@ -1,0 +1,52 @@
+---
+layout: default-layout
+---
+<section class="content tool-container">
+
+    <div class="breadcrumb">
+
+        <a class="breadcrumb" href="{{ site.baseurl }}/tools/">
+            Tools
+        </a>
+        <span> > </span>
+        <a class="breadcrumb" href="{{ page.url }}">
+            {{ page.title }}
+        </a>
+    </div>
+   
+
+    <img src="{{ page.img1 }}" alt="Main image for {{ page.title }}" class="tool-image-main">
+    <hr />
+    <div class="tool-overview-container">
+
+        <div class="tool-links">
+            <p class="tool-title">{{ page.title }}</p>
+            <p class="tool-subtitle">{{ page.subtitle }}</p>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Stakeholders</a></li>
+            </ul>
+            {% if page.live-site %}
+            <a target="_blank" href="{{page.live-site}}">view live site</a>
+            {% endif %}
+
+        </div>
+        <div class="tool-overview">
+            <h3>Overview</h3>
+            {{ page.overview }}
+        </div>
+    </div>
+
+
+
+    <img src="{{ page.img2 }}" alt="Secondary image for {{ page.title }}" class="tool-image-secondary">
+
+    {{ page.desc-2}}
+
+    <div class="tool-gallery">
+        {% for image in page.gallery %}
+        <img src="{{ image }}" alt="Gallery image for {{ page.title }}" class="tool-image-gallery">
+        {% endfor %}
+    </div>
+</section>

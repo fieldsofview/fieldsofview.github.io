@@ -1,10 +1,16 @@
+/* ======================================================================================== */
 /* VARIABLES */
+/* ======================================================================================== */
+
 :root {
   /* Colours */
-  --grey-1: #b0b0b0;
-  --grey-2: #5e5e5e;
-  --grey-3: #e0e0e0;
+  --grey-1: #5e5e5e;
+  --grey-2: #828282;
+  --grey-3: #b0b0b0;
+  --grey-4: #e0e0e0;
+  --grey-5: #f3f3f3;
   --black: #231f20;
+  --orange: #ff9874;
 
   /* Fonts */
   --primary-font-family: Satoshi;
@@ -16,12 +22,17 @@
     "Source Han Sans CN", sans-serif;
 }
 
+/* ======================================================================================== */
+/* Global Styles */
+/* ======================================================================================== */
+
+
 body {
   font-family: "Satoshi", var(--default-font-family);
   font-size: 1.25rem;
-  color: var(--grey-2);
+  color: var(--grey-1);
   padding: 2rem 4rem 4rem 4rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
   position: relative;
 }
@@ -30,7 +41,9 @@ p {
   line-height: 130%;
 }
 
+/* ======================================================================================== */
 /* Header Styles */
+/* ======================================================================================== */
 
 nav ul {
   color: var(--black);
@@ -80,7 +93,10 @@ nav ul li:nth-child(4)::before {
   background-image: url("../img/hover/resources-bg.svg");
 }
 
+/* ======================================================================================== */
 /* Logo Styles */
+/* ======================================================================================== */
+
 #flip-group {
   transition: 0.2s ease-in-out;
   transform-origin: center;
@@ -91,24 +107,29 @@ nav ul li:nth-child(4)::before {
   transform: scaleY(-1);
 }
 
+/* ======================================================================================== */
 /* Footer Styles */
+/* ======================================================================================== */
 
 footer p {
-  color: #b0b0b0;
+  color: var(--grey-3);
   font-size: 0.875rem;
   width: 30rem;
   height: 2.2rem;
   margin-right: 3rem;
 }
 
+/* ======================================================================================== */
 /* All page content Styles */
+/* ======================================================================================== */
+
 
 .title {
   font-family: "Satoshi", var(--default-font-family);
   font-weight: 900;
   font-size: 2.75rem;
   line-height: 124%;
-  color: #b0b0b0;
+  color: var(--grey-3);
 }
 
 .title span {
@@ -134,17 +155,18 @@ footer p {
   transition: transform 0.5s ease-in-out;
   position: absolute;
   inset: 0;
-  background-color: #ff9874;
+  background-color: var(--orange);
 }
 
-
+/* ======================================================================================== */
 /* Home - Hero Section Styles */
+/* ======================================================================================== */
 
 .hero-container a {
   font-family: Libre Baskerville, var(--default-font-family);
   font-style: italic;
   font-weight: 400;
-  color: #65599b;
+  color: var(--black);
 }
 
 .hero-illustration img {
@@ -152,60 +174,52 @@ footer p {
   top: 0;
 }
 
+/* ======================================================================================== */
 /* Home - Illustration Styles */
-.illustration path, circle{
+/* ======================================================================================== */
+
+.illustration path,
+circle {
   transition: 0.3s ease-in-out;
 }
-.illustration:hover #s01{
+.illustration:hover #s01 {
   transform: rotate(1deg) translateY(-10px);
 }
-.illustration:hover #s15{
+.illustration:hover #s15 ,
+.illustration:hover #s10 ,
+.illustration:hover #s04 ,
+.illustration:hover #s02 ,
+.illustration:hover #s06 ,
+.illustration:hover #s12 ,
+.illustration:hover #s08 ,
+.illustration:hover #s14 {
   transform: translateX(-20px);
 }
-.illustration:hover #s10{
-  transform: translateX(-20px);
-}
-.illustration:hover #s04{
-  transform: translateX(-20px);
-}
-.illustration:hover #s02{
-  transform: translateX(-20px);
-}
-.illustration:hover #s06{
-  transform: translateX(-20px);
-}
-.illustration:hover #s12{
-  transform: translateX(-20px);
-}
-.illustration:hover #s08{
-  transform: translateX(-20px);
-}
-.illustration:hover #s14{
-  transform: translateX(-20px);
-}
-.illustration:hover #s09{
+.illustration:hover #s09 {
   transform: translateX(15px);
 }
-.illustration:hover #s11{
+.illustration:hover #s11 {
   transform: translateX(-10px);
 }
-.illustration:hover #s05{
-  transform: translate(1px,-5px);
+.illustration:hover #s05 {
+  transform: translate(1px, -5px);
 }
-.illustration:hover #s13{
+.illustration:hover #s13 {
   transform: translateX(10px);
 }
-.illustration:hover #s07{
+.illustration:hover #s07 {
   transform: translateX(25px);
 }
 #s03 {
   transform-origin: left;
 }
-.illustration:hover #s03{
+.illustration:hover #s03 {
   transform: rotate(-9deg) translateY(20px) translateX(10px);
 }
 
+/* ======================================================================================== */
 /* Home - Projects Section Styles */
+/* ======================================================================================== */
 
 .project-card {
   position: relative;
@@ -226,7 +240,9 @@ footer p {
   opacity: 1;
 }
 
+/* ======================================================================================== */
 /* Home - Updates Section Styles */
+/* ======================================================================================== */
 
 .updates-container {
   columns: 3;
@@ -256,11 +272,13 @@ footer p {
   opacity: 1;
 }
 
-
+/* ======================================================================================== */
 /* Home - Subscribe Section Styles */
+/* ======================================================================================== */
+
 
 ::placeholder {
-  color: #828282;
+  color: var(--grey-2);
   font-size: 0.8rem;
   font-weight: 400;
 }
@@ -292,15 +310,18 @@ footer p {
   filter: opacity(1);
 }
 
+/* ======================================================================================== */
 /* Get Involved - Work with us Section Styles */
+/* ======================================================================================== */
+
 
 .contact-container {
-  color: var(--grey-2);
+  color: var(--grey-1);
   font-size: 0.8rem;
 }
 
 .job-title {
-  color: var(--grey-2);
+  color: var(--grey-1);
   font-size: 1.1rem;
   font-weight: 500;
 }
@@ -308,7 +329,7 @@ footer p {
 .job-date {
   font-family: var(--secondary-font-family), var(--default-font-family);
   font-style: italic;
-  color: var(--grey-2);
+  color: var(--grey-1);
   font-size: 0.7rem;
   font-weight: 400;
 }
@@ -316,12 +337,15 @@ footer p {
 .job-desc {
   font-family: var(--primary-font-family), var(--default-font-family);
   font-style: normal;
-  color: var(--grey-1);
+  color: var(--grey-3);
   font-size: 1.1rem;
   font-weight: 500;
 }
 
+/* ======================================================================================== */
 /* Get Involved - Pay It Forward Section Styles */
+/* ======================================================================================== */
+
 
 .pif-container p {
   margin: 2rem 2rem 2rem 0;
@@ -337,3 +361,128 @@ footer p {
   margin-bottom: 2rem;
 }
 
+/* ======================================================================================== */
+/* Tools - All tools page styles */
+/* ======================================================================================== */
+
+.breadcrumb > span {
+  color: var(--grey-3);
+  font-weight: 600;
+}
+
+.tools-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.tool-card {
+  position: relative;
+  cursor: pointer;
+  align-self: start;
+}
+
+.tool-card img {
+  object-fit: cover;
+  position: relative;
+  border-radius: 10px;
+}
+
+.tool-card:hover img {
+  opacity: 0.6;
+}
+
+.tool-card .text-overlay {
+  align-items: end;
+  justify-content: start;
+  padding: 4rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--grey-1);
+}
+
+.tool-card .text-wrapper {
+  max-width: 50%;
+}
+
+.tool-card .text-overlay {
+  border-radius: 10px;
+}
+
+.tool-card:hover .text-overlay {
+  opacity: 1;
+}
+
+/* ======================================================================================== */
+/* Tools - Inidivual tool page styles */
+/* ======================================================================================== */
+
+.tool-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.tool-image-main {
+  border: 1px solid var(--grey-4);
+  border-radius: 10px;
+}
+
+.tool-overview-container {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.tool-links ul {
+  margin: 2rem 0;
+}
+.tool-links ul > li {
+  padding: 0.8rem 0;
+  color: var(--grey-2);
+}
+
+.tool-links .tool-title {
+  font-weight: 900;
+  font-size: 2.75rem;
+  color: var(--grey-3);
+}
+
+.tool-links .tool-subtitle {
+  font-family: Libre Baskerville, var(--default-font-family);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--grey-3);
+  font-size: 1.2rem;
+}
+
+.tool-links > a {
+  color: var(--black);
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.tool-overview p {
+  padding: 1rem 0;
+}
+
+.tool-overview h3 {
+  font-weight: 600;
+}
+
+.tool-image-secondary {
+  background-color: var(--grey-5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.tool-gallery {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+}
