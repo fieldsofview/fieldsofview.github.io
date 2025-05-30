@@ -45,11 +45,24 @@ p {
 /* Header Styles */
 /* ======================================================================================== */
 
+nav {
+   position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  background-color: white;
+  margin-bottom: 2.5rem;
+}
+
 nav ul {
   color: var(--black);
   font-family: "Satoshi", var(--default-font-family);
   font-size: 1.4rem;
   font-weight: 500;
+  display: flex;
+  margin-right: 2rem;
 }
 
 nav ul li {
@@ -93,6 +106,41 @@ nav ul li:nth-child(4)::before {
   background-image: url("../img/hover/resources-bg.svg");
 }
 
+.dropdown {
+  position: absolute;
+  left: 0.75rem;
+  background-color: white;
+  border: 1px solid var(--grey-4); 
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); 
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.group {
+  position: relative;
+}
+
+.group:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown a {
+   display: block;
+  padding-left: 1rem;   
+  padding-right: 1rem;
+  padding-top: 0.25rem; 
+  padding-bottom: 0.25rem;
+  font-weight: 400;     
+  font-size: 1rem;    
+  transition: background-color 0.2s ease;
+}
+
+.dropdown a:hover {
+  background-color: var(--grey-5); 
+}
+
 /* ======================================================================================== */
 /* Logo Styles */
 /* ======================================================================================== */
@@ -111,12 +159,39 @@ nav ul li:nth-child(4)::before {
 /* Footer Styles */
 /* ======================================================================================== */
 
+.hr-wrapper {
+  margin-top: 2.5rem;
+}
+
+.custom-hr {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  border-color: var(--grey-4);
+  border-style: solid;
+  border-width: 1px 0 0 0;
+}
+
+footer {
+  height: 8rem;
+  background-color: white;
+  display: flex;
+  padding-top: 3rem;
+}
+
 footer p {
   color: var(--grey-3);
   font-size: 0.875rem;
   width: 30rem;
   height: 2.2rem;
   margin-right: 3rem;
+}
+
+footer .icons {
+  position: absolute;
+  right: 4rem;
+  display: flex;
+  gap: 1.1rem;
 }
 
 /* ======================================================================================== */
@@ -162,11 +237,27 @@ footer p {
 /* Home - Hero Section Styles */
 /* ======================================================================================== */
 
+.hero-container {
+display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  height: 90vh;
+}
+
 .hero-container a {
   font-family: Libre Baskerville, var(--default-font-family);
   font-style: italic;
   font-weight: 400;
   color: var(--black);
+}
+
+.hero-content {
+  margin-top: 4rem;
+  max-width: 22vw;
+}
+
+.hero-content .description {
+ padding: 3rem 0;
 }
 
 .hero-illustration img {
@@ -177,6 +268,8 @@ footer p {
 /* ======================================================================================== */
 /* Home - Illustration Styles */
 /* ======================================================================================== */
+
+
 
 .illustration path,
 circle {
@@ -220,6 +313,12 @@ circle {
 /* ======================================================================================== */
 /* Home - Projects Section Styles */
 /* ======================================================================================== */
+
+.projects-container {
+  margin-top: 2rem;
+display: flex;
+justify-content: space-between;
+}
 
 .project-card {
   position: relative;
@@ -276,6 +375,27 @@ circle {
 /* Home - Subscribe Section Styles */
 /* ======================================================================================== */
 
+.newsletter-container {
+   margin-top: 5rem;         
+  margin-bottom: 3rem;     
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 0.25rem;
+  padding-right: 4rem;
+}
+
+.newsletter-container input {
+  width: 20rem;                 /* w-80 */
+  display: inline;             /* inline */
+  height: 2.75rem;             /* h-11 */
+  border: 1px solid var(--grey-3);  /* border with custom color */
+  padding-left: 1.25rem;       /* px-5 = 1.25rem left/right */
+  padding-right: 1.25rem;
+  padding-top: 0.75rem;        /* py-3 = 0.75rem top/bottom */
+  padding-bottom: 0.75rem;
+  margin-right: 2.75rem; 
+}
 
 ::placeholder {
   color: var(--grey-2);
@@ -311,19 +431,77 @@ circle {
 }
 
 /* ======================================================================================== */
+/* Get Involved */
+/* ======================================================================================== */
+
+.get-involved-container {
+  margin-top: 5rem;
+  padding-right: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap:7rem;
+}
+
+.contact-items {
+  margin-top: 3rem;
+  margin-right: 8rem;
+  display: grid;
+  grid-template-columns: 1.5rem auto;
+  gap: 0.5rem;
+   color: var(--grey-1);
+  font-size: 0.8rem;
+}
+
+.contact-items img {
+  display: inline;
+}
+
+.contact-items a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.location-map {
+  aspect-ratio: 16 / 9;
+}
+
+.location-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ======================================================================================== */
 /* Get Involved - Work with us Section Styles */
 /* ======================================================================================== */
 
+.job-container {
+  margin-bottom: 8rem;
+}
 
-.contact-container {
-  color: var(--grey-1);
-  font-size: 0.8rem;
+.job-container .title {
+  max-width: 50%;
+}
+
+.job-card {
+  margin-top: 2rem;
 }
 
 .job-title {
   color: var(--grey-1);
   font-size: 1.1rem;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.job-title img {
+  display: inline;
 }
 
 .job-date {
@@ -334,35 +512,55 @@ circle {
   font-weight: 400;
 }
 
+.peer {
+  display: none;
+}
+
+.peer:checked ~ .job-desc {
+  display: block;
+}
+
 .job-desc {
   font-family: var(--primary-font-family), var(--default-font-family);
   font-style: normal;
   color: var(--grey-3);
   font-size: 1.1rem;
   font-weight: 500;
+  margin-top: 1rem;
+  display: none;
+  width: 40%;
 }
 
 /* ======================================================================================== */
-/* Get Involved - Pay It Forward Section Styles */
+/* Get Involved - Pay It Forward */
 /* ======================================================================================== */
 
+.pif-container .title {
+  max-width: 25%;
+}
 
-.pif-container p {
+.pif-layout p {
   margin: 2rem 2rem 2rem 0;
 }
 
-.pif-container {
-  display: flex;
+.pif-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.pif-container img {
+.pif-images {
+  columns: 2;
+}
+
+.pif-layout img {
   width: 100%;
   height: auto;
   margin-bottom: 2rem;
+  max-height: 1000px;
 }
 
 /* ======================================================================================== */
-/* Tools - All tools page styles */
+/* Tools - All tools page */
 /* ======================================================================================== */
 
 .breadcrumb > span {
@@ -416,7 +614,7 @@ circle {
 }
 
 /* ======================================================================================== */
-/* Tools - Inidivual tool page styles */
+/* Tools - Individual tool page styles */
 /* ======================================================================================== */
 
 .tool-container {

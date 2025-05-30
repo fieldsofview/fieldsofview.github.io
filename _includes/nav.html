@@ -1,24 +1,23 @@
 <!-- Navigation -->
 
-<nav class="sticky top-0 flex justify-between items-center z-10 bg-white mb-10">
+<nav>
     <div class="nav-brand">
         <a href="{{ site.baseurl }}/">
             <div style="width: 220px;">
-            <!-- <img src="{{ site.baseurl }}/img/Logo-cropped.svg" style="width: 220px;"> -->
              {% include logo.html %}
              </div>
         </a>
     </div>
-    <ul class="flex mr-8">
+    <ul>
         <li><a href="{{ site.baseurl }}/about/">about</a></li>
         <li><a href="{{ site.baseurl }}/tools/">tools</a></li>
-        <li class="relative group"><a href="{{ site.baseurl }}/resources/">resources</a>
+        <li class="group"><a href="{{ site.baseurl }}/resources/">resources</a>
             <div
-                class="absolute left-3 bg-white border border-gray-200 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                <a href="{{ site.baseurl }}/resources/" class="block px-4 py-1 hover:bg-gray-100 font-normal text-base">publication</a>
-                <a href="{{ site.baseurl }}/resources/" class="block px-4 py-1 hover:bg-gray-100 font-normal text-base">newsletter</a>
-                <a href="{{ site.baseurl }}/resources/" class="block px-4 py-1 hover:bg-gray-100 font-normal text-base">financials</a>
-                <a href="{{ site.baseurl }}/resources/" class="block px-4 py-1 hover:bg-gray-100 font-normal text-base">tools archive</a>
+                class="dropdown">
+                <a href="{{ site.baseurl }}/resources/">publication</a>
+                <a href="{{ site.baseurl }}/resources/">newsletter</a>
+                <a href="{{ site.baseurl }}/resources/">financials</a>
+                <a href="{{ site.baseurl }}/resources/">tools archive</a>
             </div>
         </li>
         <li><a href="{{ site.baseurl }}/get-involved/">get involved</a></li>

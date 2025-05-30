@@ -6,34 +6,32 @@ layout: default-layout
 ---
 
 <section class="content">
-    <div class="hero-container flex justify-between">
-        <div class="mt-9 w-96">
-            <p class="title mb-12">
+    <div class="hero-container">
+        <div class="hero-content">
+            <p class="title">
                 We make
                 <span>tools to</span>
                 engage with the nuances of
                 <span>vulnerability</span>
             </p>
-            <p class="mb-10">
+            <p class="description">
                 We are an inter-disciplinary team developing tools to engage with
                 wicked problems. We focus on addressing vulnerability through
                 data-informed and participatory policy-making.
             </p>
             <a href="{{ site.baseurl }}/about/">Learn more about us here!</a>
         </div>
-        <div class="hero-illustration w-2/3 relative">
-            <div class="illustration">
-                {% include illustration.html %}
-            </div>
+        <div class="illustration">
+            {% include illustration.html %}
         </div>
     </div>
     {% if site.categories['tool-highlight'] %}
-    <div class="working-on-container mt-52">
+    <div class="">
         <p class="title">
             We have been working on <br>
             <span>lorem ipsum</span>
         </p>
-        <div class="mt-12 flex justify-between gap-8">
+        <div class="projects-container">
             {% for post in site.categories['tool-highlight'] %}
             <div class="project-card">
                 <!-- Orange rotating background -->
@@ -58,7 +56,7 @@ layout: default-layout
     {% endif %}
 
 
-    <hr class="my-20" />
+    <hr style="margin: 6rem 0" />
 
     {% if site.categories['update'] %}
     <div class="updates-container">
@@ -82,9 +80,10 @@ layout: default-layout
 
 
 
-    <div class="newsletter-container mt-20 mb-12 flex justify-between items-center gap-1 pr-16">
-        <p class="title w-[40rem]">
-            Read about what we have been upto in our
+    <div class="newsletter-container">
+        <p class="title">
+            Read about what we have been <br>
+            upto in our
             <span>
                 newsletter
             </span>
@@ -92,7 +91,7 @@ layout: default-layout
         <form
             action="https://fieldsofview.us6.list-manage.com/subscribe/post?u=13324657f9f9f9443ccb89cb1&amp;id=685a335226"
             method="post" id="subscribe-form" name="subscribe-form" target="_blank" novalidate>
-            <input class="w-80 inline h-11 border border-[var(--grey-3)] px-5 py-3 mr-11" type="email"
+            <input type="email"
                 placeholder="Email" name="EMAIL" required>
             <button class="subscribe inline" type="submit">subscribe</button>
         </form>
