@@ -3,61 +3,53 @@ layout: default-layout
 title: Tools
 permalink: /tools/
 ---
-<div class="section">
-    <p>
-        <a class="breadcrumb" href="{{ site.baseurl }}/tools/">
-            Tools
-        </a>
-        >
+<section class="content">
+    <p class="title">
+        Here are a few tools we have <br>
+        been <span>working on</span>
     </p>
     <div class="tools-container">
 
-        <a href="{{ site.baseurl }}/tools/e-qlt"  style="grid-area: 1 / 1 / 2 / 3;">
-            <div class="tool-card">
-                <img src="/img/tools/eqlt-img-1.png" alt="">
-                <div class="text-overlay">
-                    <div class="text-wrapper">
-                        <p>E-QLT</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-
-        <a href="#">
-            <div class="tool-card">
-                <img src="/img/tools/city-game-img-1.jpg" alt="">
-                <div class="text-overlay">
-                    <div class="text-wrapper">
-                        <p>VULNERABILITY GAME</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-
-        <a href="#">
-            <div class="tool-card">
-                <img src="/img/tools/gazette-gonzo-img-1.jpg" alt="">
-                <div class="text-overlay">
-                    <div class="text-wrapper">
-                        <p>GUDLUCK</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-
-    </div>
-
-    <!-- {% if site.categories['tool'] %}
-    <div class="tools-list">
         {% for post in site.categories['tool'] %}
-        <div class="tool-item">
-            <h2>{{ post.title }}</h2>
-            <p>{{ post.excerpt }}</p>
-            <img src="{{ post.thumbnail }}" alt="E-QLT Thumbnail">
-            <a href="{{ post.url }}">Read more</a>
-        </div>
-        {% endfor %}
-    </div>
-    {% endif %} -->
+        <a href="{{site.baseurl}}{{post.url}}" class="project-card">
+            <div style="position: relative;">
+                <!-- Foreground image -->
+                <img src="{{site.baseurl}}{{post.img}}" alt="project 1" />
 
-</div>
+                <!-- Hover effect -->
+                <div class="img-overlay"></div>
+            </div>
+
+
+            <p class="title">{{ post.title }}</p>
+            <p class="subtitle">{{ post.subtitle }}</p>
+            <hr>
+            <p class="tag">{{ post.tag }}</p>
+        </a>
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<style>
+    .tools-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 2rem;
+        padding-top: 5rem;
+    }
+
+    .tools-container .project-card {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    img {
+        max-height: 100%;
+        width: auto;
+        margin: auto;
+        border-radius: 10px;
+    }
+</style>

@@ -9,8 +9,7 @@ layout: default-layout
     <div class="hero-container">
         <div class="hero-content">
             <p class="title">
-                We make
-                <span>tools to</span>
+                We make tools to
                 engage with the nuances of
                 <span>vulnerability</span>
             </p>
@@ -19,33 +18,35 @@ layout: default-layout
                 wicked problems. We focus on addressing vulnerability through
                 data-informed and participatory policy-making.
             </p>
-            <a href="{{ site.baseurl }}/about/">Learn more about us here!</a>
+            <a href="{{ site.baseurl }}/about/">learn more about us!</a>
         </div>
         <div class="illustration">
             {% include illustration.html %}
         </div>
     </div>
     {% if site.categories['tool-highlight'] %}
-    <div class="">
-        <p class="title">
-            We have been working on <br>
+    <div>
+        <p class="subtitle">
+            We have been working on
             <span>lorem ipsum</span>
         </p>
         <div class="projects-container">
             {% for post in site.categories['tool-highlight'] %}
             <div class="project-card">
-                <!-- Orange rotating background -->
-                <div class="rotate-bg"></div>
+                <div style="position: relative;">
 
-                <!-- Foreground image -->
-                <img src="./img/working-on/city-game-img-1.jpg" alt="project 1" />
+                    <!-- Foreground image -->
+                    <img src="./img/working-on/city-game-img-1.jpg" alt="project 1" />
 
-                <!-- Hover text overlay -->
-                <div class="text-overlay">
-                    <div class="text-wrapper">
-                        <p>{{ post.title }}</p>
-                    </div>
+                    <!-- Hover effect -->
+                    <div class="img-overlay"></div>
                 </div>
+
+
+                <p class="title">{{ post.title }}</p>
+                <p class="subtitle">{{ post.subtitle }}</p>
+                <hr>
+                <p class="tag">{{ post.tag }}</p>
             </div>
 
 
@@ -58,7 +59,7 @@ layout: default-layout
 
     <hr style="margin: 6rem 0" />
 
-    {% if site.categories['update'] %}
+    <!-- {% if site.categories['update'] %}
     <div class="updates-container">
         {% for post in site.categories['update'] %}
         <div class="update-card">
@@ -75,26 +76,217 @@ layout: default-layout
 
 
     </div>
-    {% endif %}
+    {% endif %} -->
 
+    <!-- LinkedIn Feed -->
+    <div>
+        <p class="subtitle">
+            We have been working on
+            <span>lorem ipsum</span>
+        </p>
+        <div style="position: relative; padding-top: 3rem;">
+            <script src="https://static.elfsight.com/platform/platform.js" async></script>
+            <div class="elfsight-app-cf90864e-841f-4a44-94bc-4ebfce2c81c2" data-elfsight-app-lazy></div>
+        </div>
 
+    </div>
 
 
     <div class="newsletter-container">
-        <p class="title">
-            Read about what we have been <br>
-            upto in our
-            <span>
-                newsletter
-            </span>
-        </p>
-        <form
-            action="https://fieldsofview.us6.list-manage.com/subscribe/post?u=13324657f9f9f9443ccb89cb1&amp;id=685a335226"
-            method="post" id="subscribe-form" name="subscribe-form" target="_blank" novalidate>
-            <input type="email"
-                placeholder="Email" name="EMAIL" required>
-            <button class="subscribe inline" type="submit">subscribe</button>
-        </form>
+        <div>
+            <p class="subtitle">
+                Subscribe to our
+                <span>
+                    newsletter
+                </span>
+            </p>
+            <form
+                action="https://fieldsofview.us6.list-manage.com/subscribe/post?u=13324657f9f9f9443ccb89cb1&amp;id=685a335226"
+                method="post" id="subscribe-form" name="subscribe-form" target="_blank" novalidate>
+                <input type="email" placeholder="Your email address..." name="EMAIL" required>
+                <button class="subscribe" type="submit">subscribe</button>
+            </form>
+        </div>
+        <div class="img-container">
+            <img src="{{ site.baseurl }}/img/newsletter/11yearsinview.png" alt="Newsletter cover image">
+
+            <div class="img-overlay"></div>
+
+        </div>
+
     </div>
 
 </section>
+
+<style>
+    /* ======================================================================================== */
+    /* Home - Hero Section Styles */
+    /* ======================================================================================== */
+
+    .hero-container {
+        display: grid;
+        grid-template-columns: 1.15fr 2fr;
+        height: 90vh;
+    }
+
+    .hero-container a {
+        font-weight: 500;
+        color: var(--black);
+        position: relative;
+    }
+
+    .hero-container a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: opacity(0);
+        transition: filter 0.3s ease-in-out;
+        mix-blend-mode: multiply;
+        background-image: url("../img/hover/about-bg.svg");
+    }
+
+    .hero-container a:hover::before {
+        filter: opacity(1);
+    }
+
+    .hero-content .description {
+        padding: 3rem 0;
+        max-width: 22vw;
+    }
+
+    .hero-illustration img {
+        position: absolute;
+        top: 0;
+    }
+
+    /* ======================================================================================== */
+    /* Home - Illustration Styles */
+    /* ======================================================================================== */
+
+    .illustration path,
+    circle {
+        transition: 0.3s ease-in-out;
+    }
+
+    .illustration:hover #s01 {
+        transform: rotate(1deg) translateY(-10px);
+    }
+
+    .illustration:hover #s15,
+    .illustration:hover #s10,
+    .illustration:hover #s04,
+    .illustration:hover #s02,
+    .illustration:hover #s06,
+    .illustration:hover #s12,
+    .illustration:hover #s08,
+    .illustration:hover #s14 {
+        transform: translateX(-20px);
+    }
+
+    .illustration:hover #s09 {
+        transform: translateX(15px);
+    }
+
+    .illustration:hover #s11 {
+        transform: translateX(-10px);
+    }
+
+    .illustration:hover #s05 {
+        transform: translate(1px, -5px);
+    }
+
+    .illustration:hover #s13 {
+        transform: translateX(10px);
+    }
+
+    .illustration:hover #s07 {
+        transform: translateX(25px);
+    }
+
+    #s03 {
+        transform-origin: left;
+    }
+
+    .illustration:hover #s03 {
+        transform: rotate(-9deg) translateY(20px) translateX(10px);
+    }
+
+    /* ======================================================================================== */
+    /* Home - Subscribe Section Styles */
+    /* ======================================================================================== */
+
+    .newsletter-container {
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1.3fr;
+    }
+
+    .newsletter-container input {
+        /* width: 28rem;  */
+        width: 60%;
+        display: inline;
+        /* inline */
+        height: 2.75rem;
+        /* h-11 */
+        border: 1px solid var(--grey-3);
+        /* border with custom color */
+        padding: 1rem 1rem;
+        /* margin-right: 2.75rem; */
+        margin-top: 4rem;
+        border-radius: 10px;
+    }
+
+    ::placeholder {
+        color: var(--grey-2);
+        /* font-size: var(--fs18-font-size); */
+        font-weight: 400;
+    }
+
+    .subscribe {
+        color: var(--black);
+        font-size: var(--fs25-font-size);
+        font-weight: 500;
+        padding: 1rem;
+        position: relative;
+        display: inline;
+    }
+
+    .subscribe::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: opacity(0);
+        transition: filter 0.3s ease-in-out;
+        mix-blend-mode: multiply;
+        background-image: url("../img/hover/subscribe-bg.svg");
+    }
+
+    .subscribe:hover::before {
+        filter: opacity(1);
+    }
+
+    .newsletter-container .img-container {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .newsletter-container img {
+        border-radius: 20px;
+    }
+
+    .newsletter-container .img-container:hover .img-overlay {
+        opacity: 0.7;
+        border-radius: 20px;
+    }
+</style>

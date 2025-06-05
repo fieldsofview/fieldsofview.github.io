@@ -1,49 +1,194 @@
 ---
 layout: default-layout
 ---
+
+<div class="tools-nav">
+    {% for post in site.categories['tool'] %}
+    <a class="{% if post.title == page.title %}active{% endif %}" href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+    {% endfor %}
+</div>
 <section class="content tool-container">
 
-    <div class="breadcrumb">
 
-        <a class="breadcrumb" href="{{ site.baseurl }}/tools/">
-            Tools
-        </a>
-        <span> > </span>
-        <a class="breadcrumb" href="{{ page.url }}">
-            {{ page.title }}
-        </a>
-    </div>
 
-    <img src="{{ page.img1 }}" alt="Main image for {{ page.title }}" class="tool-image-main">
-    <hr />
-    <div class="tool-overview-container">
-
-        <div class="tool-links">
-            <p class="tool-title">{{ page.title }}</p>
-            <p class="tool-subtitle">{{ page.subtitle }}</p>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Partners</a></li>
-                <li><a href="#">Stakeholders</a></li>
-            </ul>
+    <div class="tool-header">
+        <div>
+            <p class="title">{{ page.title }}</p>
+            <p class="subtitle">{{ page.subtitle }}</p>
             {% if page.live-site %}
-            <a target="_blank" href="{{page.live-site}}">view live site</a>
+            <a href="{{page.live-site}}">view the live site!</a>
             {% endif %}
 
+            {% if page.about %}
+            <div class="info">
+                <p>About:</p>
+                <p>{{ page.about }}</p>
+            </div>
+
+            {% endif %}
+
+            {% if page.partners %}
+            <div class="info">
+                <p>Partners:</p>
+                <p>{{ page.partners }}</p>
+            </div>
+            {% endif %}
+
+            {% if page.stakeholders %}
+            <div class="info">
+                <p>Stakeholders:</p>
+                <p>{{ page.stakeholders }}</p>
+            </div>
+            {% endif %}
         </div>
-        <div class="tool-overview">
-            <h3>Overview</h3>
-            {{ page.overview }}
-        </div>
+
+        <img src="{{ page.img }}" alt="Primary image for {{ page.title }}">
+
     </div>
 
-    <img src="{{ page.img2 }}" alt="Secondary image for {{ page.title }}" class="tool-image-secondary">
+    <div class="tool-overview">
+        <div>
+            {{ page.overview}}
+        </div>
+        <img src="{{ page.img1 }}" alt="Secondary image for {{ page.title }}">
+    </div>
 
-    {{ page.desc-2}}
+
+    <img src="{{ page.img2 }}" alt="Image for {{ page.title }}" class="full-width">
 
     <div class="tool-gallery">
-        {% for image in page.gallery %}
-        <img src="{{ image }}" alt="Gallery image for {{ page.title }}" class="tool-image-gallery">
-        {% endfor %}
+        <div>
+            {{page.description}}
+        </div>
+        <div class="images">
+            {% for image in page.gallery %}
+            <img src="{{ image }}" alt="Gallery image for {{ page.title }}" class="tool-image-gallery">
+            {% endfor %}
+        </div>
+
     </div>
 </section>
+
+<style>
+    .tools-nav {
+        position: sticky;
+        z-index: 9;
+        background: white;
+        padding: 1rem 4rem 2rem 4rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        transition: box-shadow 1s ease-in-out;
+    }
+
+    .tools-nav::after {
+        content: "";
+        position: absolute;
+        left: 4rem;
+        right: 4rem;
+        bottom: 0;
+        height: 1px;
+        background: var(--grey-4);
+        pointer-events: none;
+    }
+
+    .tools-nav a {
+        padding-right: 5rem;
+        color: var(--grey-1);
+    }
+
+    .tools-nav a.active {
+        color: var(--orange);
+    }
+
+    .tool-container {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+    }
+
+    .tool-header {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: auto;
+        gap: 4rem;
+    }
+
+    .tool-header a {
+        font-weight: 500;
+        color: var(--black);
+    }
+
+    .tool-header .subtitle {
+        font-size: var(--fs20-font-size);
+        font-weight: 500;
+        padding: 1rem 0 2rem 0;
+    }
+
+    .tool-header .info {
+        padding: 1rem 0;
+        color: var(--title-color);
+    }
+
+    .tool-header .info p {
+        padding: 0.25rem 0;
+    }
+
+    img {
+        max-height: 100%;
+        width: auto;
+        margin: auto;
+        border-radius: 10px;
+    }
+
+    .tool-overview {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+
+    .tool-overview p {
+        padding-bottom: 3rem;
+        color: var(--grey-1);
+    }
+
+    .full-width {
+        background-color: var(--grey-5);
+        padding: 2rem;
+        border-radius: 10px;
+    }
+
+    .tool-gallery {
+        display: grid;
+        gap: 4rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .tool-gallery p {
+        padding-bottom: 3rem;
+        color: var(--grey-1);
+    }
+
+    .tool-gallery img {
+        margin-bottom: 2rem;
+    }
+</style>
+<script>
+    function setToolsNavTop() {
+        const nav = document.querySelector('nav');
+        const toolsNav = document.querySelector('.tools-nav');
+        if (nav && toolsNav) {
+            // Get nav's height including margin-bottom
+            nav.style.boxShadow = 'none';
+            const navStyles = getComputedStyle(nav);
+            const navHeight = nav.offsetHeight - parseFloat(navStyles.marginBottom) - 20;
+            const navMarginBottom = parseFloat(navStyles.marginBottom) || 0;
+            toolsNav.style.top = (navHeight + navMarginBottom) + 'px';
+        }
+    }
+
+    // Set on load and on resize
+    window.addEventListener('DOMContentLoaded', setToolsNavTop);
+    window.addEventListener('resize', setToolsNavTop);
+</script>
