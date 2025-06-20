@@ -1,0 +1,373 @@
+---
+layout: default-layout
+title: About
+permalink: /about/
+---
+<section class="content">
+    <div class="about-content">
+        <div>
+            <p class="title">
+                Our approach towards engaging with the nuances of <span>vulnerability</span>
+            </p>
+            <p style="padding-bottom: 2rem;">
+                We are an inter-disciplinary team developing tools to engage with wicked problems. We focus on
+                addressing vulnerability through data-informed and participatory policy-making.  
+            </p>
+            <p style="padding-bottom: 2rem;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <a href="{{ site.baseurl }}/tools/">learn more about our tools</a>
+        </div>
+
+        <div class="about-images-grid">
+            <img src="{{ site.baseurl }}/img/about/img1.svg" alt="">
+            <img src="{{ site.baseurl }}/img/about/img2.svg" alt="">
+            <img src="{{ site.baseurl }}/img/about/img3.svg" alt="">
+            <img src="{{ site.baseurl }}/img/about/img4.svg" alt="">
+        </div>
+    </div>
+
+    <p class="subtitle">We have been <span>collaboratively working with</span></p>
+    <div class="partners-container">
+        {% for project in site.data.partners %}
+        <div class="project-partners">
+            <p class="project-title">{{ project.project }}</p>
+            <div class="partner-logos">
+                {% for logo in project.logos %}
+                <div class="partner-logo">
+                    <img src="{{ site.baseurl }}{{ logo }}" alt="Partner logo for {{ project.project }}">
+                    <!-- Hover effect -->
+                    <div class="img-overlay"></div>
+                </div>
+
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <p class="subtitle">Our <span>team</span></p>
+    <div class="team-container">
+        {% for member in site.data.team %}
+        <div class="team-member">
+            <div class="team-img-container">
+                <img src="{{ site.baseurl }}{{ member.img }}" alt="{{ member.name }}">
+                <div class="team-overlay">
+
+                    <button class="team-arrow-open" aria-label="Show details">
+                        <img src="{{ site.baseurl }}/img/icons/arrow-light-up.svg" alt="">
+                    </button>
+                    <div class="overlay-details"
+                        style="align-self: start; text-align: left; display: flex; justify-content: space-between; width:100%;">
+                        <div>
+                            <p class="team-name">{{ member.name }}</p>
+                            <p>{{ member.designation }}</p>
+                            <div style="padding-top: 1rem;">
+                                <a style="font-size: 14px; background-color: #D9D9D9; padding:0.3rem 1rem; border-radius: 20px;"
+                                    href="mailto:{{ member.email }}">Email</a>
+                                {% if member.linkedin %}
+                                <a style="font-size: 14px; background-color: #0095FF; padding:0.3rem 1rem; border-radius: 20px; color: white;"
+                                    href="{{ member.linkedin }}" target="_blank">LinkedIn</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <img src="{{ site.baseurl }}{{ member.logo }}" alt="" style="height: 100%;width: auto;">
+
+                    </div>
+                </div>
+                <div class="team-details">
+                    <img class="team-arrow-close" src="{{ site.baseurl }}/img/icons/arrow-light-down.svg" alt="">
+                    <p class="team-description">{{ member.description }}</p>
+                    <a class="team-email" href="mailto:{{ member.email }}">{{ member.email }}</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <p class="subtitle">Our <span>board</span></p>
+<div class="team-container">
+        {% for member in site.data.board %}
+        <div class="team-member">
+            <div class="team-img-container">
+                <img src="{{ site.baseurl }}{{ member.img }}" alt="{{ member.name }}">
+                <div class="team-overlay">
+                    <div class="overlay-details"
+                        style="align-self: start; text-align: left; display: flex; justify-content: space-between; width:100%; padding-top: 1rem;">
+                        <div>
+                            <p class="team-name">{{ member.name }}</p>
+                            <p>{{ member.designation }}</p>
+                            <div style="padding-top: 1rem;">
+                                <a style="font-size: 14px; background-color: #D9D9D9; padding:0.3rem 1rem; border-radius: 20px;"
+                                    href="mailto:{{ member.email }}">Email</a>
+                                {% if member.linkedin %}
+                                <a style="font-size: 14px; background-color: #0095FF; padding:0.3rem 1rem; border-radius: 20px; color: white;"
+                                    href="{{ member.linkedin }}" target="_blank">LinkedIn</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <img src="{{ site.baseurl }}{{ member.logo }}" alt="" style="height: 100%;width: auto;">
+
+                    </div>
+                </div>
+                <div class="team-details">
+                    <img class="team-arrow-close" src="{{ site.baseurl }}/img/icons/arrow-light-down.svg" alt="">
+                    <p class="team-description">{{ member.description }}</p>
+                    <a class="team-email" href="mailto:{{ member.email }}">{{ member.email }}</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+</section>
+<style>
+    .team-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 8rem;
+        margin-top: 3rem;
+        padding-bottom: 8rem;
+    }
+
+    .team-member {
+        background: #fff;
+        border-radius: 10px;
+        padding: 0;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        overflow: hidden;
+        aspect-ratio: 1/1;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .team-img-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .team-member img {
+        width: 100%;
+        height: 90%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .team-overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* gap: 0.3rem; */
+        padding: 0.5rem 1.5rem 1.2rem 1.5rem;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        z-index: 2;
+    }
+
+    .team-arrow-open {
+        cursor: pointer;
+        width: 5rem;
+        height: 2rem;
+        background-color: #fff;
+        justify-items: center;
+        position: relative;
+        top: -1rem;
+        border-radius: 40%;
+        transition: transform 0.2s ease;
+        /* Smooth transition for the bounce */
+    }
+
+    .team-arrow-open:hover {
+        animation: bounceUp 1s ease-in-out infinite;
+    }
+
+    /* Bounce animation keyframes */
+    @keyframes bounceUp {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-4px);
+        }
+    }
+
+    .team-arrow-open img,
+    .team-details img {
+        height: 0.8rem;
+        width: 0.8rem;
+    }
+
+    .team-name {
+        font-size: var(--fs20-font-size);
+        font-weight: 500;
+        color: var(--black);
+    }
+
+    .team-details img {
+        margin: 1rem;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    .team-details {
+        position: absolute;
+        top: 100%;
+        background: #fff;
+        padding: 0 1.5rem 1rem 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        z-index: 3;
+        transition: top 0.4s cubic-bezier(.77, 0, .18, 1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .team-member.open .team-details {
+        top: 0;
+    }
+
+    .team-description {
+        font-size: 1em;
+        margin-bottom: 1rem;
+        color: var(--grey-1);
+    }
+
+    .team-email {
+        color: var(--orange);
+        font-size: 0.95em;
+        text-decoration: underline;
+        word-break: break-all;
+    }
+
+    .partners-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3rem;
+        padding-bottom: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .project-title {
+        font-size: var(--fs18-font-size);
+        font-weight: 400;
+        line-height: 131%;
+        font-style: italic;
+        color: var(--title-color);
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--grey-4);
+        margin-bottom: 2rem;
+    }
+
+    .partner-logos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .partner-logos img {
+        border-radius: 10px;
+        transition: opacity 0.3s ease-in-out;
+        /*temporary*/
+    }
+
+    .partner-logo {
+        position: relative;
+    }
+
+    .partner-logo:hover .img-overlay {
+        opacity: 0.7;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .partner-logo:hover img {
+        opacity: 0.1;
+        /*temporary*/
+    }
+
+
+
+    .title,
+    .subtitle {
+        padding-bottom: 3rem;
+    }
+
+    .about-images-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-rows: 1fr 1fr; */
+        /* gap: 6rem; */
+        max-width: 650px;
+        margin: auto;
+
+    }
+
+    .about-images-grid img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        padding: 1.5rem 3rem;
+    }
+
+    .about-content {
+        display: grid;
+        grid-template-columns: 5fr 7fr;
+        gap: 7rem;
+        padding-bottom: 8rem;
+    }
+
+    .about-content a {
+        font-weight: 500;
+        color: var(--black);
+        position: relative;
+    }
+
+    .about-content a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: opacity(0);
+        transition: filter 0.3s ease-in-out;
+        mix-blend-mode: multiply;
+        background-image: url("../img/hover/about-bg.svg");
+        background-size: cover;
+    }
+
+    .about-content a:hover::before {
+        filter: opacity(1);
+    }
+</style>
+<script>
+    document.querySelectorAll('.team-arrow-open').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            const card = btn.closest('.team-member');
+            card.classList.toggle('open');
+        });
+    });
+    document.querySelectorAll('.team-arrow-close').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            const card = btn.closest('.team-member');
+            card.classList.toggle('open');
+        });
+    });
+</script>
