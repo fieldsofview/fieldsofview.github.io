@@ -4,27 +4,189 @@ title: Resources
 permalink: /resources/
 ---
 <section class="content">
-    <div>
-        <p class="title">Publications</p>
-        <ul>
-            <li>Event Reports</li>
-            <li>Peer Reviewed</li>
-            <li>Brochures</li>
-            <li>Reports</li>
-        </ul>
-    </div>
-    <hr>
-    <div>
-        <p class="title">Newsletter</p>
-    </div>
-    <hr>
-    <div>
-        <p class="title">Archive</p>
-        This is the tools archive
-    </div>
-    <hr>
-    <div>
-        <p class="title">Financials</p>
+    {% assign resource_categories = "publication,newsletter,archive,financials" | split: "," %}
+
+    <div class="tabs">
+        {% for cat in resource_categories %}
+        <button class="tab-btn{% if forloop.first %} active{% endif %}" data-tab="{{ cat }}">{{ cat | capitalize
+            }}</button>
+        {% endfor %}
     </div>
 
+    <div class="tab-contents">
+        {% for cat in resource_categories %}
+        <div class="tab-content{% if forloop.first %} active{% endif %}" id="tab-{{ cat }}">
+            {% assign posts_in_cat = site.categories[cat] %}
+            {% assign subcategories = posts_in_cat | map: "subcategory" | uniq %}
+            {% for subcat in subcategories %}
+            <p class="subcat-title">{{ subcat }}</p>
+            <hr>
+            <div class="scroll-x">
+                <ul>
+                    {% for post in posts_in_cat %}
+                    {% if post.subcategory == subcat %}
+                    <li>
+                        <a href="{{ post.url }}">
+                            <div class="img-container">
+                                <img src="{{ site.baseurl }}/img/partners/logo1.png" alt="">
+                                <!-- Hover effect -->
+                                <div class="img-overlay"></div>
+                            </div>
+                        </a>
+                        <p class="resource-title">
+                            {{ post.title }}
+                        </p>
+                        <p class="resource-subtitle">
+                            {{ post.event_date }}
+                        </p>
+
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
 </section>
+<style>
+    .tabs {
+        position: sticky;
+        z-index: 9;
+        background: white;
+        padding: 1rem 4rem 2rem 0;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        transition: box-shadow 1s ease-in-out;
+    }
+
+    .tabs::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 4rem;
+        bottom: 0;
+        height: 1px;
+        background: var(--grey-4);
+        pointer-events: none;
+    }
+
+    .tab-btn {
+        padding-right: 5rem;
+        color: var(--grey-1);
+        cursor: pointer;
+    }
+
+    .tab-btn.active {
+        color: var(--orange);
+    }
+
+    .tab-content {
+        display: none;
+        padding-top: 4rem;
+    }
+
+    .tab-content.active {
+        display: block;
+    }
+
+    .subcat-title {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        font-style: italic;
+        color: var(--title-color);
+    }
+
+    hr {
+        padding-bottom: 2rem;
+    }
+
+    .scroll-x {
+        overflow-x: auto;
+        padding-bottom: 1rem;
+    }
+
+    .scroll-x ul {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        min-width: 100%;
+    }
+
+    .scroll-x li {
+        flex: 0 0 auto;
+        background: #fff;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .scroll-x img {
+        width: 300px;
+        height: 300px;
+        border-radius: 20px;
+    }
+
+    .img-container {
+        position: relative;
+    }
+
+    .img-container:hover .img-overlay {
+        opacity: 0.7;
+    }
+
+    .img-container:hover img {
+        opacity: 0.5;
+    }
+
+    .resource-title {
+        color: var(--title-color);
+        font-size: 30px;
+        padding: 2rem 0;
+        text-decoration: underline 1px;
+        text-underline-offset: 1rem;
+
+    }
+
+    .resource-subtitle {
+        /* padding-top: 2rem; */
+        padding-bottom: 1rem;
+        font-style: italic;
+        color: var(--title-color);
+    }
+</style>
+
+<script>
+function activateTabFromHash() {
+    const hash = window.location.hash.replace('#', '');
+    if (!hash) return;
+    const btn = document.querySelector('.tab-btn[data-tab="' + hash + '"]');
+    const tab = document.getElementById('tab-' + hash);
+    if (btn && tab) {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+        btn.classList.add('active');
+        tab.classList.add('active');
+    }
+}
+
+document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+        // Update the hash in the URL
+        history.replaceState(null, '', '#' + btn.dataset.tab);
+    });
+});
+
+window.addEventListener('DOMContentLoaded', activateTabFromHash);
+window.addEventListener('hashchange', activateTabFromHash);
+</script>
