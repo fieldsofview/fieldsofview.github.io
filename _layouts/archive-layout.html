@@ -1,0 +1,140 @@
+---
+layout: default-layout
+---
+
+<section class="content">
+    <div class="tabs">
+        <a href="{{site.baseurl}}/resources/#publications" class="tab-btn active"
+            data-tab="publications">Publications</a>
+        <a href="{{site.baseurl}}/resources/#newsletter" class="tab-btn" data-tab="newsletter">Newsletter</a>
+        <a href="{{site.baseurl}}/resources/#archive" class="tab-btn" data-tab="archive">Archive</a>
+        <a href="{{site.baseurl}}/resources/#financials" class="tab-btn" data-tab="financials">Financials</a>
+    </div>
+    <a class="back-link" href="{{ site.baseurl }}/resources/#archive">
+        <img src="/img/icons/arrow-light-left.svg" alt="back"
+            style="height: 12px; display: inline;">&nbsp;&nbsp;&nbsp;Back to archive</a>
+    <div class="tool-content">
+        <div>
+
+            <p class="title">{{page.title}}:</p>
+            <p class="subtitle">{{page.subtitle}}</p>
+            <p class="overview">{{page.p1}}</p>
+            {{page.overview}}
+        </div>
+        <div>
+            <img src="{{ site.baseurl }}{{page.img1}}" alt="">
+            <img src="{{ site.baseurl }}{{page.img2}}" alt="">
+        </div>
+    </div>
+
+</section>
+
+<style>
+    .tabs {
+        position: sticky;
+        z-index: 9;
+        background: white;
+        padding: 1rem 4rem 2rem 0;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        transition: box-shadow 1s ease-in-out;
+    }
+
+    .tabs::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 4rem;
+        bottom: 0;
+        height: 1px;
+        background: var(--grey-4);
+        pointer-events: none;
+    }
+
+    .tab-btn {
+        padding-right: 5rem;
+        color: var(--grey-1);
+        cursor: pointer;
+    }
+
+    .tab-btn.active {
+        color: var(--orange);
+    }
+
+    .back-link {
+        font-size: 16px;
+        color: var(--grey-2);
+    }
+
+    .title {
+        padding-top: 3rem;
+    }
+
+    .subtitle {
+        /* Title Tags */
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        padding: 2rem 0;
+    }
+
+    .overview {
+        color: var(--title-color);
+        font-size: 18px;
+        padding-bottom: 1rem;
+    }
+
+    .tool-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+</style>
+<script>
+    function activateTabFromHash() {
+        const hash = window.location.hash.replace('#', '');
+        if (!hash) return;
+        const btn = document.querySelector('.tab-btn[data-tab="' + hash + '"]');
+        const tab = document.getElementById('tab-' + hash);
+        if (btn && tab) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+            btn.classList.add('active');
+            tab.classList.add('active');
+        }
+    }
+
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+            // Update the hash in the URL
+            history.replaceState(null, '', '#' + btn.dataset.tab);
+        });
+    });
+
+    function setToolsNavTop() {
+        const nav = document.querySelector('nav');
+        const resourcesNav = document.querySelector('.tabs');
+        if (nav && resourcesNav) {
+            // Get nav's height including margin-bottom
+            nav.style.boxShadow = 'none';
+            const navStyles = getComputedStyle(nav);
+            const navHeight = nav.offsetHeight - parseFloat(navStyles.marginBottom) - 20;
+            const navMarginBottom = parseFloat(navStyles.marginBottom) || 0;
+            resourcesNav.style.top = (navHeight + navMarginBottom) + 'px';
+        }
+    }
+
+    // Set on load and on resize
+    window.addEventListener('DOMContentLoaded', setToolsNavTop);
+    window.addEventListener('resize', setToolsNavTop);
+
+    window.addEventListener('DOMContentLoaded', activateTabFromHash);
+    window.addEventListener('hashchange', activateTabFromHash);
+</script>

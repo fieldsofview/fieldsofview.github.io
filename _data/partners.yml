@@ -1,45 +1,101 @@
-- project: Simulating pathways towards household resilience
+- project: Academic Institutions
   logos:
-    - /img/partners/logo1.png
-    - /img/partners/logo2.png
-    - /img/partners/logo2.png
-    - /img/partners/logo2.png
-    - /img/partners/logo2.png
-- project: Another tagline for a project
+    - /img/partners/Academic Institutions/Githam logo.jpeg
+    - /img/partners/Academic Institutions/IIITB_logo.png
+    - /img/partners/Academic Institutions/IITM - Logo.png
+    - /img/partners/Academic Institutions/NID-Logo.png
+    - /img/partners/Academic Institutions/Teri school Logo.jpg
+    - /img/partners/Academic Institutions/Teri school.jpg
+    - /img/partners/Academic Institutions/TISS - Logo.png
+- project: Arts collective
   logos:
-    - /img/partners/logo3.png
-    - /img/partners/logo4.png
-    - /img/partners/logo4.png
-    - /img/partners/logo4.png
-    - /img/partners/logo4.png
-    - /img/partners/logo4.png
-- project: Simulating pathways towards household resilience
+    - /img/partners/Arts collective/KHOJ - logo.png
+    - /img/partners/Arts collective/Maraa - logo.jpeg
+    - /img/partners/Arts collective/Sand bb.jpg
+    - /img/partners/Arts collective/Sandbox 1.png
+- project: Civil Society partners
   logos:
-    - /img/partners/logo1.png
-    - /img/partners/logo2.png
-    - /img/partners/logo2.png
-    - /img/partners/logo2.png
-    - /img/partners/logo2.png
-- project: Another tagline for a project
+    - /img/partners/Civil Society partners/ALF-logo.jpeg
+    - /img/partners/Civil Society partners/Hasirudala- logo.png
+    - /img/partners/Civil Society partners/HD-logo.png
+    - /img/partners/Civil Society partners/IGS-Logo.jpg
+    - /img/partners/Civil Society partners/Indian Grameen Services -logo.png
+    - /img/partners/Civil Society partners/Sahjeevan.webp
+    - /img/partners/Civil Society partners/Selco-Foundation- logo.jpg
+    - /img/partners/Civil Society partners/solidarity-logo.png
+    - /img/partners/Civil Society partners/Yuva - logo.jpeg
+- project: Funding partners
   logos:
-    - /img/partners/logo3.png
-    - /img/partners/logo4.png
-    - /img/partners/logo4.png
-    - /img/partners/logo4.png
-    - /img/partners/logo4.png
-    - /img/partners/logo4.png
-- project: Simulating pathways towards household resilience
+    - /img/partners/Funding partners/Bangalore sustainability Forum -logo.jpeg
+    - /img/partners/Funding partners/India foundation forf the Arts -logo.png
+    - /img/partners/Funding partners/Nilakeni -logo.png
+    - /img/partners/Funding partners/Rainmatter foundation - logo.jpg
+    - /img/partners/Funding partners/Tata trust -logo.png
+- project: Governments
   logos:
-    - /img/partners/logo1.png
-    - /img/partners/logo2.png
-    - /img/partners/logo2.png
-    - /img/partners/logo2.png
-    - /img/partners/logo2.png
-- project: Another tagline for a project
+    - /img/partners/Governments/Ministry of Science and Technology.jpg
+    - /img/partners/Governments/NIUA logoHIGH-white.png
+    - /img/partners/Governments/TamilNadu_Logo.svg.png
+    - /img/partners/Governments/UDD, Govt of Karnataka.png
+- project: Industry Groups
   logos:
-    - /img/partners/logo3.png
-    - /img/partners/logo4.png
-    - /img/partners/logo4.png
-    - /img/partners/logo4.png
-    - /img/partners/logo4.png
-    - /img/partners/logo4.png
+    - /img/partners/Industry Groups/Catalyst-2030-Movement.png
+    - /img/partners/Industry Groups/city-solutions-logo-representing-urban-development-sustainability_906185-17550.avif
+    - /img/partners/Industry Groups/Give - logo.png
+    - /img/partners/Industry Groups/TARU-LOGO (1) (1).avif
+- project: International Institutions
+  logos:
+    - /img/partners/International Institutions/carnegie-mellon-university-logo-png_seeklogo-368076.png
+    - /img/partners/International Institutions/Citra communications.png
+    - /img/partners/International Institutions/Citra logo.png
+    - /img/partners/International Institutions/City Tech Collaborative - logo.png
+    - /img/partners/International Institutions/Computational science lab -logo.png
+    - /img/partners/International Institutions/KTH-royal-institute-of-technology.jpg
+    - /img/partners/International Institutions/Medialab amsterdam.png
+    - /img/partners/International Institutions/Netherlands e science center logo.png
+    - /img/partners/International Institutions/The university-of-edinburgh.jpg
+    - /img/partners/International Institutions/TU Delft logo.png
+- project: Multilateral - International
+  logos:
+    - /img/partners/Multilateral/Multilateral/AFD.webp
+    - /img/partners/Multilateral/Multilateral/Gender @ work India.png
+    - /img/partners/Multilateral/Multilateral/Gender at work.png
+    - /img/partners/Multilateral/Multilateral/GIZ logo.jpg
+    - /img/partners/Multilateral/Multilateral/giz5563 logo.jpg
+    - /img/partners/Multilateral/Multilateral/Mahatma_Gandhi_Institute_of_Education_for_Peace_and_Sustainable_Development_(MGIEP)_of_UNESCO_logo.png
+    - /img/partners/Multilateral/Multilateral/Netherlands Organisation for scientific Rsearch.png
+    - /img/partners/Multilateral/Multilateral/Swissnex.png
+    - /img/partners/Multilateral/Multilateral/UNDP_logo.svg.png
+    - /img/partners/Multilateral/Multilateral/UNESCO-logo-1.png
+    - /img/partners/Multilateral/Multilateral/UNESCO.png
+- project: Multilateral - India
+  logos:
+    - /img/partners/Multilateral/Multilateral India/African Development Bank.jpg 
+    - /img/partners/Multilateral/Multilateral India/APEC_logo_vertical.svg.png
+    - /img/partners/Multilateral/Multilateral India/Asia-Europe Meeting.png
+    - /img/partners/Multilateral/Multilateral India/Asian_Development_Bank_logo.svg.png
+    - /img/partners/Multilateral/Multilateral India/BIMSTEC.jpeg
+    - /img/partners/Multilateral/Multilateral India/BRICS logo.jpg
+    - /img/partners/Multilateral/Multilateral India/Brics.jpeg
+    - /img/partners/Multilateral/Multilateral India/Commonwealth of learning.png
+    - /img/partners/Multilateral/Multilateral India/G20-Logo.png
+    - /img/partners/Multilateral/Multilateral India/G20.png
+    - /img/partners/Multilateral/Multilateral India/Ganga.png
+    - /img/partners/Multilateral/Multilateral India/GG20.png
+    - /img/partners/Multilateral/Multilateral India/IBSA.png
+    - /img/partners/Multilateral/Multilateral India/Iea - International energy.png
+    - /img/partners/Multilateral/Multilateral India/IF AD.png
+    - /img/partners/Multilateral/Multilateral India/IF AD.png 1.jpeg
+    - /img/partners/Multilateral/Multilateral India/Indian Ocean Rim Association.png
+    - /img/partners/Multilateral/Multilateral India/International Monetary fund.jpeg
+    - /img/partners/Multilateral/Multilateral India/Mekong Ganga Cooperation.png
+    - /img/partners/Multilateral/Multilateral India/SAARC -Logo.jpg
+    - /img/partners/Multilateral/Multilateral India/Seal_of_ASEAN.svg.png
+    - /img/partners/Multilateral/Multilateral India/The Shanghai Cooperation Organisation.jpg
+    - /img/partners/Multilateral/Multilateral India/UNAIDS.jpg
+    - /img/partners/Multilateral/Multilateral India/Unicef 12.jpg
+    - /img/partners/Multilateral/Multilateral India/Unicef.png
+    - /img/partners/Multilateral/Multilateral India/UNICEF.webp
+    - /img/partners/Multilateral/Multilateral India/United Nations Human Settlements.png
+    - /img/partners/Multilateral/Multilateral India/WHO 1.png
+    - /img/partners/Multilateral/Multilateral India/world-bank-logo_0.jpg

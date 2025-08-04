@@ -4,50 +4,162 @@ title: Resources
 permalink: /resources/
 ---
 <section class="content">
-    {% assign resource_categories = "publication,newsletter,archive,financials" | split: "," %}
 
     <div class="tabs">
-        {% for cat in resource_categories %}
-        <button class="tab-btn{% if forloop.first %} active{% endif %}" data-tab="{{ cat }}">{{ cat | capitalize
-            }}</button>
-        {% endfor %}
+        <button class="tab-btn active" data-tab="publications">Publications</button>
+        <button class="tab-btn" data-tab="newsletter">Newsletter</button>
+        <!-- <button class="tab-btn" data-tab="archive">Archive</button> -->
+        <button class="tab-btn" data-tab="financials">Financials</button>
     </div>
 
-    <div class="tab-contents">
-        {% for cat in resource_categories %}
-        <div class="tab-content{% if forloop.first %} active{% endif %}" id="tab-{{ cat }}">
-            {% assign posts_in_cat = site.categories[cat] %}
-            {% assign subcategories = posts_in_cat | map: "subcategory" | uniq %}
-            {% for subcat in subcategories %}
-            <p class="subcat-title">{{ subcat }}</p>
+    <!-- PUBLICATIONS -->
+    {% assign publications = site.posts | where: "category", "publications" %}
+    {% assign pub_subcategories = publications | map: "subcategory" | uniq %}
+    <div class="tab-content active" id="tab-publications">
+        {% for subcat in pub_subcategories %}
+        {% assign visible_posts = publications | where: "subcategory", subcat | slice: 0, 3 %}
+        {% assign hidden_posts = publications | where: "subcategory", subcat | slice: 3, 99 %}
+        <div class="subcategory-block">
+            <div class="subcat-header">
+                <p class="subcat-title">{{ subcat }}</p>
+                {% if hidden_posts.size > 0 %}
+                <button class="show-more-btn" aria-expanded="false">
+                    Show More&nbsp;&nbsp;
+                    <img src="/img/icons/arrow-light-down.svg" alt="down" style="height: 10px;">
+                </button>
+                {% endif %}
+            </div>
             <hr>
-            <div class="scroll-x">
-                <ul>
-                    {% for post in posts_in_cat %}
-                    {% if post.subcategory == subcat %}
+            <ul class="resource-list">
+                {% for post in visible_posts %}
+                <li>
+                    <a href="{{ post.url }}">
+                        <p class="event-date">{{ post.event_date }}</p>
+                        <p class="resource-title">{{ post.title }}</p>
+                        <p class="resource-subtitle">{{ post.subtitle }}</p>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% if hidden_posts.size > 0 %}
+            <div class="hidden-items" style="display: none;">
+                <ul class="resource-list">
+                    {% for post in hidden_posts %}
                     <li>
                         <a href="{{ post.url }}">
-                            <div class="img-container">
-                                <img src="{{ site.baseurl }}/img/partners/logo1.png" alt="">
-                                <!-- Hover effect -->
-                                <div class="img-overlay"></div>
-                            </div>
+                            <p class="event-date">{{ post.event_date }}</p>
+                            <p class="resource-title">{{ post.title }}</p>
+                            <p class="resource-subtitle">{{ post.subtitle }}</p>
                         </a>
-                        <p class="resource-title">
-                            {{ post.title }}
-                        </p>
-                        <p class="resource-subtitle">
-                            {{ post.event_date }}
-                        </p>
-
                     </li>
-                    {% endif %}
                     {% endfor %}
                 </ul>
             </div>
-            {% endfor %}
+            {% endif %}
         </div>
         {% endfor %}
+    </div>
+
+    <!-- NEWSLETTER -->
+    {% assign newsletters = site.posts | where: "category", "newsletter" %}
+    {% assign nl_subcategories = newsletters | map: "subcategory" | uniq %}
+
+    <div class="tab-content" id="tab-newsletter">
+        <div class="newsletter-container">
+            <div>
+                <p class="subtitle">
+                    Subscribe to our
+                    <span>
+                        newsletter
+                    </span>
+                </p>
+                <form
+                    action="https://fieldsofview.us6.list-manage.com/subscribe/post?u=13324657f9f9f9443ccb89cb1&amp;id=685a335226"
+                    method="post" id="subscribe-form" name="subscribe-form" target="_blank" novalidate>
+                    <input type="email" placeholder="Your email address..." name="EMAIL" required>
+                    <button class="subscribe" type="submit">subscribe</button>
+                </form>
+            </div>
+            <a href="{{site.baseurl}}/newsletter/latest" class="img-container">
+                <img src="{{ site.baseurl }}/img/newsletter/latest-nl-cover.jpg" alt="Newsletter cover image">
+
+                <div class="img-overlay"></div>
+
+            </a>
+
+        </div>
+        {% for subcat in nl_subcategories %}
+        <div class="subcategory-block">
+            {% assign newsletters = newsletters | where: "subcategory", subcat %}
+            <div class="subcat-header">
+                <p class="subcat-title">{{ subcat }}</p>
+            </div>
+            <hr>
+            <ul class="newsletter-list">
+                {% for post in newsletters %}
+                <li>
+                    <a href="{{ post.url }}">
+                        <p class="event-date">{{ post.event_date }}</p>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- ARCHIVE -->
+    <!-- {% assign archives = site.posts | where: "category", "archive" %}
+    {% assign archive_subcategories = archives | map: "subcategory" | uniq %}
+    <div class="tab-content" id="tab-archive">
+        {% for subcat in archive_subcategories %}
+        {% assign visible_posts = archives | where: "subcategory", subcat | slice: 0, 4 %}
+        {% assign hidden_posts = archives | where: "subcategory", subcat | slice: 4, 99 %}
+        <div class="subcategory-block">
+            <div class="subcat-header">
+                <p class="subcat-title">{{ subcat }}</p>
+                {% if hidden_posts.size > 0 %}
+                <button class="show-more-btn" aria-expanded="false">
+                    Show More&nbsp;&nbsp;
+                    <img src="/img/icons/arrow-light-down.svg" alt="down" style="height: 10px;">
+                </button>
+                {% endif %}
+            </div>
+            <hr>
+            <div class="archive-list">
+                {% for post in visible_posts %}
+                <a href="{{ post.url }}" class="archive-card">
+                    <img src="{{ post.img }}">
+                    <p style="font-size: var(--fs25-font-size)">{{ post.title }}</p>
+                </a>
+                {% endfor %}
+            </div>
+            {% if hidden_posts.size > 0 %}
+            <div class="hidden-items" style="display: none;">
+                <div class="archive-list">
+                    {% for post in hidden_posts %}
+                    <a href="{{ post.url }}" class="archive-card">
+                        <img src="{{ post.img }}">
+                        <p style="font-size: var(--fs25-font-size)">{{ post.title }}</p>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+
+    </div> -->
+
+    <!-- FINANCIALS -->
+
+    <div class="tab-content" id="tab-financials">
+        <div class="financials-list">
+            {% for financial in site.data.financials %}
+            <a href="{{site.baseurl}}{{ financial.pdf }}">{{ financial.title }}</a>
+            {% endfor %}
+        </div>
     </div>
 </section>
 <style>
@@ -62,7 +174,7 @@ permalink: /resources/
         transition: box-shadow 1s ease-in-out;
     }
 
-    .tabs::after {
+    /* .tabs::after {
         content: "";
         position: absolute;
         left: 0;
@@ -71,6 +183,10 @@ permalink: /resources/
         height: 1px;
         background: var(--grey-4);
         pointer-events: none;
+    } */
+
+    .content {
+        padding-top: 0;
     }
 
     .tab-btn {
@@ -85,11 +201,16 @@ permalink: /resources/
 
     .tab-content {
         display: none;
-        padding-top: 4rem;
+        padding-top: 2rem;
     }
 
     .tab-content.active {
         display: block;
+    }
+
+    .subcat-header {
+        display: flex;
+        justify-content: space-between;
     }
 
     .subcat-title {
@@ -97,40 +218,60 @@ permalink: /resources/
         padding-bottom: 1rem;
         font-style: italic;
         color: var(--title-color);
+        font-weight: 500;
     }
 
     hr {
         padding-bottom: 2rem;
+        /* border-color: var(--title-color) */
     }
 
-    .scroll-x {
-        overflow-x: auto;
-        padding-bottom: 1rem;
-    }
-
-    .scroll-x ul {
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
+    .resource-list {
         list-style: none;
         padding: 0;
         margin: 0;
-        min-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        padding-bottom: 4rem;
     }
 
-    .scroll-x li {
-        flex: 0 0 auto;
+    /* .archive-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2rem;
+        padding-bottom: 4rem;
+    }
+
+    .archive-card img {
+        height: 220px;
+        width: 280px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .archive-card p {
+        font-size: var(--fs25-font-size);
+    } */
+
+    .resource-list li {
         background: #fff;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        /* padding: 1rem; */
+        border-radius: 1rem;
     }
 
-    .scroll-x img {
-        width: 300px;
-        height: 300px;
-        border-radius: 20px;
+    .show-more-btn {
+        margin-top: 1rem;
+        padding: 0.5rem 1.5rem;
+        /* color: white; */
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        display: flex;
+        text-wrap: nowrap;
+        align-items: center;
+
     }
 
     .img-container {
@@ -145,48 +286,119 @@ permalink: /resources/
         opacity: 0.5;
     }
 
-    .resource-title {
+    .event-date {
         color: var(--title-color);
-        font-size: 30px;
-        padding: 2rem 0;
+        font-size: 16px;
+        padding: 2rem 0 1rem 0;
+        margin-bottom: 2rem;
         text-decoration: underline 1px;
         text-underline-offset: 1rem;
+        font-style: italic;
+        font-weight: 400;
+        /* line-height: 25.402px; */
+    }
+
+    .resource-title {
+        padding-bottom: 1rem;
+        /* font-style: italic; */
+        color: var(--title-color);
 
     }
 
     .resource-subtitle {
         /* padding-top: 2rem; */
         padding-bottom: 1rem;
-        font-style: italic;
+        font-size: 14px;
+        /* font-style: italic; */
         color: var(--title-color);
+    }
+
+    .newsletter-list .event-date {
+        padding: 0;
+    }
+
+    .financials-list a {
+        display: block;
+        color: var(--title-color);
+        font-size: 16px;
+        padding: 1rem 0;
+        /* margin-bottom: 2rem; */
+        text-decoration: underline 1px;
+        text-underline-offset: 10px;
+        font-style: italic;
+        font-weight: 400;
     }
 </style>
 
 <script>
-function activateTabFromHash() {
-    const hash = window.location.hash.replace('#', '');
-    if (!hash) return;
-    const btn = document.querySelector('.tab-btn[data-tab="' + hash + '"]');
-    const tab = document.getElementById('tab-' + hash);
-    if (btn && tab) {
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
-        btn.classList.add('active');
-        tab.classList.add('active');
+    function activateTabFromHash() {
+        const hash = window.location.hash.replace('#', '');
+        if (!hash) return;
+        const btn = document.querySelector('.tab-btn[data-tab="' + hash + '"]');
+        const tab = document.getElementById('tab-' + hash);
+        if (btn && tab) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+            btn.classList.add('active');
+            tab.classList.add('active');
+        }
     }
-}
 
-document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.addEventListener('click', function () {
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
-        btn.classList.add('active');
-        document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
-        // Update the hash in the URL
-        history.replaceState(null, '', '#' + btn.dataset.tab);
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+            // Update the hash in the URL
+            history.replaceState(null, '', '#' + btn.dataset.tab);
+        });
     });
-});
 
-window.addEventListener('DOMContentLoaded', activateTabFromHash);
-window.addEventListener('hashchange', activateTabFromHash);
+    function setToolsNavTop() {
+        const nav = document.querySelector('nav');
+        const resourcesNav = document.querySelector('.tabs');
+        if (nav && resourcesNav) {
+            // Get nav's height including margin-bottom
+            nav.style.boxShadow = 'none';
+            const navStyles = getComputedStyle(nav);
+            const navHeight = nav.offsetHeight - parseFloat(navStyles.marginBottom) - 20;
+            const navMarginBottom = parseFloat(navStyles.marginBottom) || 0;
+            resourcesNav.style.top = (navHeight + navMarginBottom) + 'px';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll('.show-more-btn');
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                const subcatBlock = button.closest('.subcategory-block');
+                const hiddenItems = subcatBlock.querySelector('.hidden-items');
+                const resourceList = subcatBlock.querySelector('.resource-list');
+
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+                if (isExpanded) {
+                    // Hide extra items
+                    hiddenItems.style.display = 'none';
+                    button.innerHTML = 'Show More &nbsp;&nbsp;<img src="/img/icons/arrow-light-down.svg" alt="down" style="height: 10px;">';
+                    button.setAttribute('aria-expanded', 'false');
+                } else {
+                    // Show all items
+                    hiddenItems.style.display = 'block';
+                    button.innerHTML = 'Hide &nbsp;&nbsp;<img src="/img/icons/arrow-light-up.svg" alt="up" style="height: 10px;">';
+                    button.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    });
+
+
+
+    // Set on load and on resize
+    window.addEventListener('DOMContentLoaded', setToolsNavTop);
+    window.addEventListener('resize', setToolsNavTop);
+
+    window.addEventListener('DOMContentLoaded', activateTabFromHash);
+    window.addEventListener('hashchange', activateTabFromHash);
 </script>

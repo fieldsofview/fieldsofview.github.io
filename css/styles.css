@@ -154,3 +154,77 @@ p {
 .project-card:hover .img-overlay {
   opacity: 1;
 }
+
+/* ======================================================================================== */
+    /* Home - Subscribe Section Styles */
+    /* ======================================================================================== */
+
+    .newsletter-container {
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1.3fr;
+    }
+
+    .newsletter-container input {
+        /* width: 28rem;  */
+        width: 60%;
+        display: inline;
+        /* inline */
+        height: 2.75rem;
+        /* h-11 */
+        border: 1px solid var(--grey-3);
+        /* border with custom color */
+        padding: 1rem 1rem;
+        /* margin-right: 2.75rem; */
+        margin-top: 4rem;
+        border-radius: 10px;
+    }
+
+    ::placeholder {
+        color: var(--grey-2);
+        /* font-size: var(--fs18-font-size); */
+        font-weight: 400;
+    }
+
+    .subscribe {
+        color: var(--black);
+        font-size: var(--fs25-font-size);
+        font-weight: 500;
+        padding: 1rem;
+        position: relative;
+        display: inline;
+    }
+
+    .subscribe::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: opacity(0);
+        transition: filter 0.3s ease-in-out;
+        mix-blend-mode: multiply;
+        background-image: url("../img/hover/subscribe-bg.svg");
+    }
+
+    .subscribe:hover::before {
+        filter: opacity(1);
+    }
+
+    .newsletter-container .img-container {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .newsletter-container img {
+        border-radius: 20px;
+    }
+
+    .newsletter-container .img-container:hover .img-overlay {
+        opacity: 0.7;
+        border-radius: 20px;
+    }
