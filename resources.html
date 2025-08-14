@@ -5,10 +5,11 @@ permalink: /resources/
 ---
 <section class="content">
 
+
+
     <div class="tabs">
         <button class="tab-btn active" data-tab="publications">Publications</button>
         <button class="tab-btn" data-tab="newsletter">Newsletter</button>
-        <!-- <button class="tab-btn" data-tab="archive">Archive</button> -->
         <button class="tab-btn" data-tab="financials">Financials</button>
     </div>
 
@@ -25,19 +26,26 @@ permalink: /resources/
                 {% if hidden_posts.size > 0 %}
                 <button class="show-more-btn" aria-expanded="false">
                     Show More&nbsp;&nbsp;
-                    <img src="/img/icons/arrow-light-down.svg" alt="down" style="height: 10px;">
+                    <img src="/img/icons/arrow-pink-down.svg" alt="down" style="height: 10px;">
                 </button>
                 {% endif %}
             </div>
-            <hr>
             <ul class="resource-list">
                 {% for post in visible_posts %}
                 <li>
-                    <a href="{{ post.url }}">
-                        <p class="event-date">{{ post.event_date }}</p>
-                        <p class="resource-title">{{ post.title }}</p>
-                        <p class="resource-subtitle">{{ post.subtitle }}</p>
-                    </a>
+                    {% if post.doc %}
+                    <a target="_blank" href="{{ post.doc }}">
+                        {% else %}
+                        <a href="{{ post.url }}">
+                            {% endif %}
+                            <p class="event-date">{{ post.event_date }}</p>
+                            <p class="resource-title">{{ post.title }}</p>
+                            <p class="resource-subtitle">{{ post.subtitle }}</p>
+                            <p class="link">read publication <img
+                                    src="{{ site.baseurl }}/img/icons/arrow-pink-right.svg" alt=""
+                                    style="display: inline;">
+                            </p>
+                        </a>
                 </li>
                 {% endfor %}
             </ul>
@@ -46,17 +54,26 @@ permalink: /resources/
                 <ul class="resource-list">
                     {% for post in hidden_posts %}
                     <li>
-                        <a href="{{ post.url }}">
-                            <p class="event-date">{{ post.event_date }}</p>
-                            <p class="resource-title">{{ post.title }}</p>
-                            <p class="resource-subtitle">{{ post.subtitle }}</p>
-                        </a>
+                        {% if post.pdf %}
+                        <a target="_blank" href="{{ post.pdf }}">
+                            {% else %}
+                            <a href="{{ post.url }}">
+                                {% endif %}
+                                <p class="event-date">{{ post.event_date }}</p>
+                                <p class="resource-title">{{ post.title }}</p>
+                                <p class="resource-subtitle">{{ post.subtitle }}</p>
+                                <p class="link">read publication <img
+                                        src="{{ site.baseurl }}/img/icons/arrow-pink-right.svg" alt=""
+                                        style="display: inline;">
+
+                            </a>
                     </li>
                     {% endfor %}
                 </ul>
             </div>
             {% endif %}
         </div>
+        <hr>
         {% endfor %}
     </div>
 
@@ -67,12 +84,16 @@ permalink: /resources/
     <div class="tab-content" id="tab-newsletter">
         <div class="newsletter-container">
             <div>
-                <p class="subtitle">
-                    Subscribe to our
-                    <span>
-                        newsletter
-                    </span>
-                </p>
+                <h2 class="title">
+                    Latest Newsletter
+                </h2>
+                <h3 class="subtitle">
+                    We spent a day reimagining resilience
+                </h3>
+
+                <a class="link" href="{{site.baseurl}}/newsletter/latest" target="_blank"> read newsletter <img style="display: inline;"
+                        src="{{ site.baseurl }}/img/icons/arrow-pink-right.svg" alt=""></a>
+                <p class="subscribe-p">Subscribe to our <span>newsletter</span></p>
                 <form
                     action="https://fieldsofview.us6.list-manage.com/subscribe/post?u=13324657f9f9f9443ccb89cb1&amp;id=685a335226"
                     method="post" id="subscribe-form" name="subscribe-form" target="_blank" novalidate>
@@ -80,8 +101,8 @@ permalink: /resources/
                     <button class="subscribe" type="submit">subscribe</button>
                 </form>
             </div>
-            <a href="{{site.baseurl}}/newsletter/latest" class="img-container">
-                <img src="{{ site.baseurl }}/img/newsletter/latest-nl-cover.jpg" alt="Newsletter cover image">
+            <a href="{{site.baseurl}}/newsletter/latest" class="img-container" style="margin: auto;">
+                <img src="{{ site.baseurl }}/img/newsletter/latest-nl-cover.png" alt="Newsletter cover image">
 
                 <div class="img-overlay"></div>
 
@@ -89,21 +110,47 @@ permalink: /resources/
 
         </div>
         {% for subcat in nl_subcategories %}
-        <div class="subcategory-block">
-            {% assign newsletters = newsletters | where: "subcategory", subcat %}
+        <div class="subcategory-block nl">
+            {% assign newsletters = site.categories.newsletter | where: "subcategory", subcat %}
+            {% assign visible_posts = newsletters | where: "subcategory", subcat | slice: 0, 3 %}
+            {% assign hidden_posts = newsletters | where: "subcategory", subcat | slice: 3, 99 %}
+            <hr>
+
             <div class="subcat-header">
                 <p class="subcat-title">{{ subcat }}</p>
+                {% if hidden_posts.size > 0 %}
+                <button class="show-more-btn" aria-expanded="false">
+                    Show More&nbsp;&nbsp;
+                    <img src="/img/icons/arrow-pink-down.svg" alt="down" style="height: 10px;">
+                </button>
+                {% endif %}
             </div>
-            <hr>
-            <ul class="newsletter-list">
-                {% for post in newsletters %}
+            <ul class="newsletter-list" style="padding-bottom: var(--p2-rem);">
+                {% for post in visible_posts %}
+
                 <li>
-                    <a href="{{ post.url }}">
+                    <a href="{{ post.url }}" target="_blank">
                         <p class="event-date">{{ post.event_date }}</p>
+                        <p class="resource-title">{{ post.title }}</p>
                     </a>
                 </li>
                 {% endfor %}
+
             </ul>
+            {% if hidden_posts.size > 0 %}
+            <div class="hidden-items" style="display: none;">
+                <ul class="newsletter-list">
+                    {% for post in hidden_posts %}
+                    <li>
+                        <a href="{{ post.url }}" target="_blank">
+                            <p class="event-date">{{ post.event_date }}</p>
+                            <p class="resource-title">{{ post.title }}</p>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
         </div>
         {% endfor %}
     </div>
@@ -130,7 +177,7 @@ permalink: /resources/
                 {% for post in visible_posts %}
                 <a href="{{ post.url }}" class="archive-card">
                     <img src="{{ post.img }}">
-                    <p style="font-size: var(--fs25-font-size)">{{ post.title }}</p>
+                    <p style="font-size: var(--fs25)">{{ post.title }}</p>
                 </a>
                 {% endfor %}
             </div>
@@ -140,7 +187,7 @@ permalink: /resources/
                     {% for post in hidden_posts %}
                     <a href="{{ post.url }}" class="archive-card">
                         <img src="{{ post.img }}">
-                        <p style="font-size: var(--fs25-font-size)">{{ post.title }}</p>
+                        <p style="font-size: var(--fs25)">{{ post.title }}</p>
                     </a>
                     {% endfor %}
                 </div>
@@ -157,51 +204,34 @@ permalink: /resources/
     <div class="tab-content" id="tab-financials">
         <div class="financials-list">
             {% for financial in site.data.financials %}
-            <a href="{{site.baseurl}}{{ financial.pdf }}">{{ financial.title }}</a>
+            <a href="{{site.baseurl}}{{ financial.pdf }}" target="_blank">{{ financial.title }}</a>
             {% endfor %}
         </div>
     </div>
 </section>
 <style>
-    .tabs {
-        position: sticky;
-        z-index: 9;
-        background: white;
-        padding: 1rem 4rem 2rem 0;
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-        transition: box-shadow 1s ease-in-out;
-    }
 
-    /* .tabs::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 4rem;
-        bottom: 0;
-        height: 1px;
-        background: var(--grey-4);
-        pointer-events: none;
-    } */
+    .tabs {
+        width: 100%;
+    }
 
     .content {
         padding-top: 0;
     }
 
-    .tab-btn {
-        padding-right: 5rem;
-        color: var(--grey-1);
-        cursor: pointer;
+    .tab-btn.active {
+        color: var(--pink);
     }
 
-    .tab-btn.active {
-        color: var(--orange);
+    .link {
+        color: var(--pink);
+        font-size: var(--fs16);
+        padding-top: var(--p1-rem);
     }
 
     .tab-content {
         display: none;
-        padding-top: 2rem;
+        padding-top: var(--p2-rem);
     }
 
     .tab-content.active {
@@ -214,16 +244,20 @@ permalink: /resources/
     }
 
     .subcat-title {
-        padding-top: 2rem;
-        padding-bottom: 1rem;
+        padding-top: var(--p2-rem);
+        padding-bottom: var(--p1-rem);
         font-style: italic;
         color: var(--title-color);
         font-weight: 500;
     }
 
+    #tab-newsletter .subcat-title {
+        padding: var(--p1-rem) 0 var(--p2-rem) 0;
+        color: var(--pink);
+    }
+
     hr {
-        padding-bottom: 2rem;
-        /* border-color: var(--title-color) */
+        margin: var(--p2-rem) 0 var(--p1-rem) 0;
     }
 
     .resource-list {
@@ -232,37 +266,19 @@ permalink: /resources/
         margin: 0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 2rem;
-        padding-bottom: 4rem;
+        gap: var(--p2-rem);
+        padding-bottom: var(--p4-rem);
     }
-
-    /* .archive-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 2rem;
-        padding-bottom: 4rem;
-    }
-
-    .archive-card img {
-        height: 220px;
-        width: 280px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 1rem;
-    }
-
-    .archive-card p {
-        font-size: var(--fs25-font-size);
-    } */
 
     .resource-list li {
         background: #fff;
         /* padding: 1rem; */
-        border-radius: 1rem;
+        border-radius: var(--p1-rem);
     }
 
     .show-more-btn {
-        margin-top: 1rem;
+        margin-top: var(--p1-rem);
+        color: var(--pink);
         padding: 0.5rem 1.5rem;
         /* color: white; */
         border: none;
@@ -274,6 +290,11 @@ permalink: /resources/
 
     }
 
+    .nl .show-more-btn {
+        margin: 0;
+        height: min-content;
+    }
+
     .img-container {
         position: relative;
     }
@@ -282,35 +303,77 @@ permalink: /resources/
         opacity: 0.7;
     }
 
-    .img-container:hover img {
+    /* .img-container:hover img {
         opacity: 0.5;
-    }
+    } */
 
     .event-date {
         color: var(--title-color);
-        font-size: 16px;
-        padding: 2rem 0 1rem 0;
-        margin-bottom: 2rem;
+        font-size: var(--fs18);
+        padding: var(--p2-rem) 0 var(--p1-rem) 0;
+        margin-bottom: var(--p2-rem);
         text-decoration: underline 1px;
-        text-underline-offset: 1rem;
+        text-underline-offset: var(--p1-rem);
         font-style: italic;
         font-weight: 400;
-        /* line-height: 25.402px; */
     }
 
     .resource-title {
-        padding-bottom: 1rem;
-        /* font-style: italic; */
+        padding-bottom: var(--p1-rem);
         color: var(--title-color);
 
     }
 
     .resource-subtitle {
-        /* padding-top: 2rem; */
-        padding-bottom: 1rem;
+        padding-bottom: var(--p1-rem);
         font-size: 14px;
-        /* font-style: italic; */
         color: var(--title-color);
+    }
+
+    .newsletter-container {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        gap: var(--p2-rem);
+    }
+
+    .newsletter-container .title {
+        font-size: var(--fs18);
+        font-style: italic;
+        color: var(--pink);
+        font-weight: 500;
+    }
+
+    .newsletter-container .subtitle {
+        font-weight: 500;
+        font-size: var(--fs35);
+        padding: var(--p1-rem) 0;
+    }
+
+    .newsletter-container .subscribe-p {
+        color: var(--title-color);
+        font-size: var(--fs18);
+        font-weight: 700;
+        padding: var(--p2-rem) 0 var(--p1-rem) 0;
+    }
+
+    .newsletter-container .subscribe-p span {
+        font-family: Libre Baskerville, var(--default-font-family);
+        font-style: italic;
+        font-weight: 400;
+    }
+
+    .newsletter-container input {
+        margin-top: 0;
+    }
+
+    .newsletter-container .subscribe {
+        font-size: var(--fs18);
+    }
+
+    .newsletter-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: var(--p2-rem);
     }
 
     .newsletter-list .event-date {
@@ -320,13 +383,23 @@ permalink: /resources/
     .financials-list a {
         display: block;
         color: var(--title-color);
-        font-size: 16px;
-        padding: 1rem 0;
-        /* margin-bottom: 2rem; */
+        font-size: var(--fs16);
+        padding: var(--p1-rem) 0;
         text-decoration: underline 1px;
         text-underline-offset: 10px;
         font-style: italic;
         font-weight: 400;
+    }
+
+    @media (max-width: 768px) {
+
+        .resource-list, .newsletter-container, .newsletter-list {
+            grid-template-columns: 1fr;
+        }
+
+        .newsletter-container img {
+            margin: var(--p4-rem) 0;
+        }
     }
 </style>
 
@@ -362,7 +435,7 @@ permalink: /resources/
             // Get nav's height including margin-bottom
             nav.style.boxShadow = 'none';
             const navStyles = getComputedStyle(nav);
-            const navHeight = nav.offsetHeight - parseFloat(navStyles.marginBottom) - 20;
+            const navHeight = nav.offsetHeight - parseFloat(navStyles.marginBottom) - 1;
             const navMarginBottom = parseFloat(navStyles.marginBottom) || 0;
             resourcesNav.style.top = (navHeight + navMarginBottom) + 'px';
         }
@@ -381,12 +454,12 @@ permalink: /resources/
                 if (isExpanded) {
                     // Hide extra items
                     hiddenItems.style.display = 'none';
-                    button.innerHTML = 'Show More &nbsp;&nbsp;<img src="/img/icons/arrow-light-down.svg" alt="down" style="height: 10px;">';
+                    button.innerHTML = 'Show More &nbsp;&nbsp;<img src="/img/icons/arrow-pink-down.svg" alt="down" style="height: 10px;">';
                     button.setAttribute('aria-expanded', 'false');
                 } else {
                     // Show all items
                     hiddenItems.style.display = 'block';
-                    button.innerHTML = 'Hide &nbsp;&nbsp;<img src="/img/icons/arrow-light-up.svg" alt="up" style="height: 10px;">';
+                    button.innerHTML = 'Hide &nbsp;&nbsp;<img src="/img/icons/arrow-pink-up.svg" alt="up" style="height: 10px;">';
                     button.setAttribute('aria-expanded', 'true');
                 }
             });

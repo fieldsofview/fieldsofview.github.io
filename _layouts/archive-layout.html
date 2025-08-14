@@ -69,7 +69,7 @@ layout: default-layout
     }
 
     .title {
-        padding-top: 3rem;
+        padding-top: var(--p3-rem);
     }
 
     .subtitle {
@@ -125,7 +125,7 @@ layout: default-layout
             // Get nav's height including margin-bottom
             nav.style.boxShadow = 'none';
             const navStyles = getComputedStyle(nav);
-            const navHeight = nav.offsetHeight - parseFloat(navStyles.marginBottom) - 20;
+            const navHeight = nav.offsetHeight - parseFloat(navStyles.marginBottom) - 1;
             const navMarginBottom = parseFloat(navStyles.marginBottom) || 0;
             resourcesNav.style.top = (navHeight + navMarginBottom) + 'px';
         }

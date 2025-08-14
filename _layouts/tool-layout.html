@@ -22,8 +22,18 @@ layout: default-layout
             <div class="impact">{{ page.impact }}</div>
         </div>
         <div class="images">
+            {% if page.video-link %}
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/{{ page.video-link}}" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <img src="{{ page.img1 }}" alt="">
+            {% else %}
             <img src="{{ page.img1 }}" alt="">
             <img src="{{ page.img2 }}" alt="">
+            {% endif %}
         </div>
     </div>
     {% if page.banner-img %}
@@ -31,7 +41,7 @@ layout: default-layout
         <img src="{{ page.banner-img }}" alt="">
     </div>
     {% else %}
-    <hr style="margin: 2rem 0;">
+    <hr style="margin: var(--p2-rem) 0;">
     {% endif %}
     <div class="gallery">
         {% for img in page.gallery %}
@@ -45,18 +55,21 @@ layout: default-layout
         position: sticky;
         z-index: 9;
         background: white;
-        padding: 1rem 4rem 2rem 4rem;
+        padding: var(--p1-rem) var(--p4-rem) var(--p2-rem) var(--p4-rem);
         display: flex;
         align-items: center;
-        gap: 2rem;
+        gap: var(--p2-rem);
         transition: box-shadow 1s ease-in-out;
+        width: 100vw;
+        overflow-x: scroll;
+        font-size: var(--fs18);
     }
 
     .tools-nav::after {
         content: "";
         position: absolute;
-        left: 4rem;
-        right: 4rem;
+        left: var(--p4-rem);
+        right: var(--p4-rem);
         bottom: 0;
         height: 1px;
         background: var(--grey-4);
@@ -64,24 +77,25 @@ layout: default-layout
     }
 
     .tools-nav a {
-        padding-right: 5rem;
+        padding-right: var(--p5-rem);
         color: var(--grey-1);
+        text-wrap: nowrap;
     }
 
     .tools-nav a.active {
-        color: var(--orange);
+        color: var(--green);
     }
 
     .back-link {
-        font-size: 16px;
+        font-size: var(--fs16);
         color: var(--grey-2);
     }
 
     .tool-container {
         display: grid;
         grid-template-columns: 2fr 3fr;
-        gap: 6rem;
-        padding: 4rem 0;
+        gap: var(--p6-rem);
+        padding: var(--p4-rem) 0;
         /* height: min-content; */
         align-items: stretch;
     }
@@ -91,12 +105,12 @@ layout: default-layout
     .tool-overview {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: var(--p1-rem);
 
     }
 
     .tool-overview .subtitle {
-        font-size: var(--fs20-font-size);
+        font-size: var(--fs20);
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -109,8 +123,8 @@ layout: default-layout
 
     .tool-overview .objective {
         color: var(--title-color);
-        font-size: var(--fs18-font-size);
-        padding: 2rem 0;
+        font-size: var(--fs18);
+        padding: var(--p2-rem) 0;
     }
 
     .tool-overview .objective~* {
@@ -127,7 +141,24 @@ layout: default-layout
     .images {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: var(--p2-rem);
+        height: 100%;
+    }
+
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        /* 16:9 ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
         height: 100%;
     }
 
@@ -142,26 +173,42 @@ layout: default-layout
 
     .banner {
         background-color: var(--grey-5);
-        padding: 2rem;
-        margin-bottom: 4rem;
+        padding: var(--p2-rem);
+        margin-bottom: var(--p4-rem);
         border-radius: 10px;
     }
 
     .gallery {
         column-count: 2;
-        /* Number of masonry columns */
-        column-gap: 2rem;
-        /* Gap between columns */
+        column-gap: var(--p2-rem);
         width: 100%;
     }
 
     .gallery img {
         width: 100%;
         display: block;
-        margin-bottom: 2rem;
+        margin-bottom: var(--p2-rem);
         border-radius: 10px;
         break-inside: avoid;
-        /* Prevent image break between columns */
+    }
+
+    @media (max-width: 768px) {
+        .tool-container {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .images img {
+            min-height: 200px;
+        }
+
+        .gallery {
+            column-count: 1;
+        }
+
+        .tools-nav::after {
+            height: 0;
+        }
     }
 </style>
 <script>
@@ -172,7 +219,7 @@ layout: default-layout
             // Get nav's height including margin-bottom
             nav.style.boxShadow = 'none';
             const navStyles = getComputedStyle(nav);
-            const navHeight = nav.offsetHeight - parseFloat(navStyles.marginBottom) - 20;
+            const navHeight = nav.offsetHeight - parseFloat(navStyles.marginBottom) - 1;
             const navMarginBottom = parseFloat(navStyles.marginBottom) || 0;
             toolsNav.style.top = (navHeight + navMarginBottom) + 'px';
         }

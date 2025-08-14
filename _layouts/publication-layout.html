@@ -1,0 +1,174 @@
+---
+layout: default-layout
+---
+
+<section class="content">
+    <div class="tabs">
+        <a class="tab-btn active" href="{{site.baseurl}}/resources/#publications">Publications</a>
+        <a class="tab-btn" href="{{site.baseurl}}/resources/#newsletter">Newsletter</a>
+        <a class="tab-btn" href="{{site.baseurl}}/resources/#financials">Financials</a>
+    </div>
+
+    <a class="link" href="{{ site.baseurl }}/resources/#publications">
+        <img src="/img/icons/arrow-light-left.svg" alt="back"
+            style="height: 12px; display: inline;">&nbsp;&nbsp;&nbsp;Back to all publications</a>
+
+    <div class="pub-container">
+        <div class="info">
+            <p class="authors">{{page.subtitle}}</p>
+            <p class="authors">{{page.event_date}}</p>
+            <hr>
+            <a href="{{page.link}}" class="link">Publication Link</a>
+        </div>
+        <div class="pub-content">
+            <h2 class="title">{{page.title}}</h2>
+            <h3 class="subtitle">Abstract</h3>
+            <p>{{page.abstract}}</p>
+
+            {% if page.bibtex != null %}
+            <div>
+                <h3 class="subtitle">Citation</h3>
+                <p>{{page.title}}</p>
+                <p>{{page.subtitle}}</p>
+                <p>{{page.event_date}}
+                    <a class="bib" style="cursor: pointer;">[bib]</a>
+                </p>
+
+                <div class="bibtex">
+                    <div class="outer">
+                        <p class="inner">{{page.bibtex}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    </div>
+
+</section>
+
+<style>
+    .tab-btn.active {
+        color: var(--pink);
+    }
+
+    .tabs {
+        margin-bottom: var(--p2-rem);
+    }
+
+    .link {
+        font-size: var(--fs16);
+        color: var(--pink);
+        font-style: italic;
+    }
+
+    .pub-container {
+        padding-top: var(--p4-rem);
+        display: grid;
+        grid-template-columns: 1fr 6fr;
+        gap: var(--p2-rem);
+    }
+
+    p.authors {
+        color: var(--title-color);
+        padding-bottom: var(--p1-rem);
+    }
+
+    h2.title {
+        color: #000;
+        font-size: var(--fs25);
+        font-weight: 500;
+        max-width: 50vw;
+    }
+
+    h3.subtitle {
+        color: var(--black);
+        font-size: var(--fs18);
+        font-weight: 700;
+        padding: var(--p2-rem) 0;
+    }
+
+    hr {
+        margin: var(--p1-rem) 0;
+    }
+
+    p,
+    a {
+        color: var(--title-color);
+        max-width: 60vw;
+    }
+
+    .bib {
+        display: inline;
+    }
+
+    .bibtex {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(.77, 0, .18, 1);
+        background: var(--grey-5);
+        border-radius: 8px;
+        margin-top: 1rem;
+        text-wrap: nowrap;
+        overflow-x: scroll;
+        max-width: 40vw;
+    }
+
+    .outer {
+        padding: var(--p1-rem);
+    }
+
+    .bibtex.open {
+        max-height: 500px;
+    }
+
+    @media (max-width: 768px) {
+        .pub-container {
+            grid-template-columns: 1fr;
+        }
+
+        .tabs {
+            max-width: 90vw;
+        }
+        
+        .bibtex {
+             max-width: 80vw;
+        }
+
+        p, h2.title{
+            max-width: 100%;
+        }
+    }
+</style>
+<script>
+
+    function setToolsNavTop() {
+        const nav = document.querySelector('nav');
+        const resourcesNav = document.querySelector('.tabs');
+        if (nav && resourcesNav) {
+            // Get nav's height including margin-bottom
+            nav.style.boxShadow = 'none';
+            const navStyles = getComputedStyle(nav);
+            const navHeight = nav.offsetHeight - parseFloat(navStyles.marginBottom) - 1;
+            const navMarginBottom = parseFloat(navStyles.marginBottom) || 0;
+            resourcesNav.style.top = (navHeight + navMarginBottom) + 'px';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.bib').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var bibtexDiv = btn.parentElement.parentElement.querySelector('.bibtex');
+                if (bibtexDiv) {
+                    bibtexDiv.classList.toggle('open');
+                }
+            });
+        });
+    });
+
+    // Set on load and on resize
+    window.addEventListener('DOMContentLoaded', setToolsNavTop);
+    window.addEventListener('resize', setToolsNavTop);
+
+</script>
+<script src="{{ site.baseurl }}/js/bibtex_js.js" type="text/javascript"></script>

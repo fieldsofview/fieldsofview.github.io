@@ -1,0 +1,758 @@
+  -
+    title: Sandesh Sapkota
+    designation: Researcher
+    description: Sandesh is from Nepal and is currently living in Bangalore, India. He has been involved in project management for two years and has received recognition from the Project Management Institute (PMI). He holds a bachelor's degree in BSW from Tribhuvan University, Kathmandu. Now, Sandesh is working at Fields of View as a program coordinator, where he handles the planning and execution of the project as well as its successful completion. Sandesh has additional skills in soft skills, including openness to feedback, growth mindset, team leadership, adaptability, active listening, and work ethic. Sandesh has also led several training and development programs on social issues.
+    img: sandesh.jpg
+    category: team
+    ide: sandesh
+  -
+    title: Akhilesh Kumar Vedam
+    designation: Researcher
+    description: Akhilesh has a master's in Digital Society from IIIT Bangalore. His interest lies in research at the intersection of technology and social science, which he seeks to do so with his experience in programming, prototyping, research and design thinking methodologies.
+    img: akhilesh.jpg
+    category: team
+    ide: akhilesh
+  -
+    title: Rakshan Kalmady
+    designation: Intern
+    email: rskalmady@gmail.com
+    description: Rakshan is pursuing his post-graduation in Public Policy from Jindal School of Public Policy, and holds a Bachelor's degree in Journalism from Manipal Institute of Communication. His areas of interest are Human Rights, Development and Foreign Affairs. He has worked in domains like labour, education and migration prior to doing his masters in Public Policy. Being a cinephile, he spends a lot of his free time either watching or talking about movies and is also an avid reader.
+    img: rakshan.jpg
+    category: team
+    ide: rakshan
+  -
+    title: Sunayana Sriram
+    designation: Intern
+    email: sunayanasriram98@gmail.com
+    description: Sunayana has graduated with an economics degree from Women's Christian College, Chennai. She has worked on a policy brief for a Member of the Lok Sabha on improving healthcare outcomes in Odisha. She is currently pursuing a post-graduate diploma in economics where she is assisting with research on financial inclusion from a behavioural economics lens. Her interests include dancing and listening to podcasts.
+    img: sunayana.jpg
+    category: team
+    ide: sunayana
+  -
+    title: Anya Pathak
+    designation: Intern
+    email: anya.pathak98@gmail.com
+    description: Anya is pursuing her post-graduation in globalisation and labour from TISS, Mumbai. Her research focuses on exploring and designing feasible and flexible micro-pension programmes to extend social protection to impoverished and vulnerable communities in India. She is an avid reader, and enjoys yoga and painting during her free time.
+    img: anya.jpg
+    category: team
+    ide: anya
+  -
+    title: Bharath Moro
+    designation: Researcher
+    email: bharathm@fastmail.in
+    description: Bharath Moro is a researcher at Fields of View. He is presently working on designing large scale agent based simulation platforms in the energy and public transport domains. Before turning a researcher, he led technology and design at a successful travel marketplace startup. He also has worked at Google designing tools and processes in the core search quality group.
+    img: bharathmoro.jpg
+    category: team
+    ide: bharathmoro
+  -
+    title: Swapna Chakraborty
+    designation: Intern
+    email: swapna.chakraborty@terisas.ac.in
+    description: Swapna has graduated in architecture from Bharati Vidyapeeth College of Architecture, Pune. She worked with an urban planning and consultancy firm where she provided planning and design assistance for various government scheme projects such as Pradhan Mantri Awaas Yojana (PMAY-Urban). She is pursuing a post-graduate degree in urban development and management and her research focuses on urban homelessness, affordable housing, and issues of mobility. Her interests include reading about our obliterated ancient history and literature.
+    img: swapna.jpg
+    category: team
+    ide: swapna
+  -
+    title: Celesty Kumari
+    designation: Intern
+    email: ckumari.19@stu.aud.ac.in
+    description: Celesty Kumari did her bachelor's in journalism, history and travel and tourism from Mount Carmel College and is currently pursuing Master's in Social Design from Ambedkar University, Delhi.  Her interests lie in the area of community development through sustainability, environmental issues, public spaces and gender and caste discrimination. She likes drawing, watching anime, and reading novels and mangas.
+    img: celesty.jpg
+    category: team
+    ide: celesty
+  -
+    title: Suruchi Soren
+    designation: Researcher
+    email: suruchi_s@nid.edu
+    description: Suruchi is currently pursuing Masters in Toy and Game Design from National Institute of Design, Gandhinagar. She is also an Accessory Design Graduate from NIFT Gandhinagar. She aspires to bring sustainability and resolve social issues through design. She enjoys swimming, dance, reading manga or watching anime.
+    img: suruchi.jpg
+    category: team
+    ide: suruchi
+  -
+    title: Ketaki Paranjape
+    designation: Researcher
+    email: ketakiparanjape94@gmail.com
+    description: Ketaki a design researcher and a visual designer. She has experience in UX/UI and in graphic and visual design. She has completed graduation in commercial arts from Bharati Vidyapeeth, Pune, and holds a masters in human-centered design from Srishti Institute of Art, Design, and Technology, Bangalore. She is now exploring more in the field of design research. Other than designing she has an interest in music, theater, languages, and literature.
+    img: ketakip.jpg
+    category: team
+    ide: ketakip
+  -
+    title: Anurag Shanker
+    designation: Intern
+    email: anuragshanker@nalsar.ac.in
+    description: Anurag Shanker is a third year student at NALSAR University of Law, Hyderabad. He holds a keen interest in public policy, attempting to make sense of how various facets of policy making drive forward the interests of its main stakeholders - people. In his free time, he can be found cheering on his favourite team or player in any of the (frankly illogical) number of sports he follows.
+    img: anurag.jpg
+    category: team
+    ide: anurag
+  -
+    title: Suchitra Venkatachalam
+    designation: Intern
+    email: su.venkat07@gmail.com
+    description: Suchitra is currently pursuing her Master's degree in Public Policy from Mount Carmel College. She also holds a  Master's in Mass Communication from Bangalore University. Over the last decade she has worked across different fields of education, e-commerce and social work. She has keen interest in policy areas of child wellness, education, environment and employment. Outside the policy domain she is a pranic healer and enjoys writing stories, poetry and traveling.
+    img: suchitra.jpg
+    category: team
+    ide: suchitra
+  -
+    title: Shiv Kanan Choudhury
+    designation: Intern
+    email: shiv.kanan@gmail.com
+    description: Shiv Kanan Choudhury is an undergraduate student at University College London, pursuing a Bachelor of Science in Social Sciences with Quantitative Methods. He is interested in economics and data and would like to develop his understanding on their influence on policy, business and in people’s daily lives. He is keen to work on and build his research and  analytical capabilities.  Shiv is a national level swimmer, likes to ski and white water raft.
+    img: shivkanan.jpg
+    category: team
+    ide: shivkanan
+  -
+    title: Paran Amitava
+    designation: Intern
+    email: paranamitava@gmail.com
+    description: Paran is a student of Christ University, studying history and Political Science. She has a keen interest in politics and anthropology. Currently, she's interested in understanding how to solve community water problems and rural development.
+    img: paran.jpg
+    category: team
+    ide: suchitra
+  -
+    title: Viyona Mohan
+    designation: Intern
+    email: viyona.mohan19_mpg@apu.edu.in
+    description: Viyona is currently pursuing her masters degree in Public Policy and Governance at Azim Premji University. She completed her graduation in Public Policy and Environmental Studies at FLAME University, Pune. She is interested in policy analysis in urban mobility and issues related to water, with a focus on sustainability.
+    img: viyona.jpg
+    category: team
+    ide: viyona
+  -
+    title: Ketaki Sardeshpande
+    designation: Intern
+    email: ketakis97@gmail.com
+    description: Ketaki is currently pursuing her masters in Economics at Madras School of Economics. She finished her undergraduation in Economics from University of Delhi. She hopes to work in the field of development, with a focus on economic issues. 
+    img: ketaki.jpg
+    category: team
+    ide: ketaki
+  -
+    title: Srijan Sil
+    designation: Researcher
+    email: srijan.sil86@gmail.com
+    description: Srijan Sil works on analysing large­ scale socio­-economic data and structuring econometric models. Previously, he has worked with the Indian Institute of Management (IIM­A) and Progressive Media Group. He has completed his post­-graduate studies in Actuarial Economics from Madras School of Economics, Chennai, and graduate studies in Economics from University of Calcutta. He spends hours of leisure listening to music and strumming a guitar.
+    img: srijan.jpg
+    category: team
+    ide: srijan
+  -
+    title: Sharanya Venkataraghavan
+    designation: Intern
+    email: sharanya.venkataraghavan@gmail.com
+    description: Sharanya is currently pursuing a degree in Law at Symbiosis Law School, Pune. She aspires to make law more accessible and integral to daily conversations. She enjoys reading, dancing and binge watching shows.
+    img: sharanya.jpg
+    category: team
+    ide: sharanya
+  -
+    title: Harish R
+    designation: Researcher
+    email: harishr1308@gmail.com
+    description: Harish R is a Computer Science graduate from Amrita Vishwa Vidyapeetham, Bangalore. His research interests include deep learning, cyber security and game development. He has designed and built tools and small scale games in the past.  He spends his free time reading comics, playing computer games or playing football.
+    img: harish.jpg
+    category: team
+    ide: harish
+  -
+    title: Anirudh Thimmaiah
+    designation: Researcher
+    email: anirudht@nls.ac.in
+    description: Anirudh T. has done his Bachelor's in Electronics and Communication Engineering and also has a  Masters degree in Public policy from the National Law School of India University, Bangalore. His vision is to achieve disruptive innovation in policy design and its outcomes by combining policy expertise with technology to deliver solutions. His interests include, theoretical physics, astrophysics and space propulsion, UN SDGs, cycling, travel and martial arts.
+    img: anirudh.jpg
+    category: team
+    ide: anirudh 
+  -
+    title: Kannan Sobti
+    designation: Intern
+    email: kannansobti.cs16@rvce.edu.in
+    description: Kannan is an intern at Fields of View. He is currently pursuing a B.Tech Computer Science Engineering from RV College of Engineering, Bangalore. His hobbies include Trekking, Rock Climbing and traveling.
+    img: kannan.jpg
+    category: team
+    ide: kannan
+  -
+    title: Nandan Agarwal
+    designation: Intern
+    email: nandan3101@gmail.com
+    description: Nandan is a student from Jaypee University of Information and Technology. His area of interest is in coding and to use his skills by working as a developer.
+    img: nandan1.jpg
+    category: team
+    ide: nandan
+  -
+    title: Srinivasan K
+    designation: Intern
+    email: kannansrinivasan6@gmail.com
+    description: Srinivasan is an intern at Fields ofView. He has a Bachelor’s degree in Electronics and Instrumentation Engineering from SCSVMV University, Kanchipuram. He is currently pursuing post graduate diploma in Interaction Design (UI/UX) From DJ Academy of Design, Coimbatore. He is interested in human computer interaction, design research, storytelling, and data visualisation. His hobbies are playing cricket, sketching and swimming.
+    img: srinivasan.jpg
+    category: team
+    ide: srinivasan
+  -
+    title: Sonika Tandon
+    designation: Intern
+    email: sonika200@gmail.com
+    description: Sonika is an intern at Fields of View. She is currently pursuing a bachelors course at FLAME University, Pune, majoring in Public Policy and Administration. Her courses include broadcast journalism, media histories, and theatre. Her interests include reading, television shows, and theatre production.
+    img: sonika.jpg
+    category: team
+    ide: sonika
+  -
+    title: Puja Laginya Raghuraman
+    designation: Intern
+    email: rpuja.18@stu.aud.ac.in
+    description: Puja is an intern at Fields of View. She's currently pursuing her masters in Social design from Ambedkar University, Delhi. She holds Bachelor's degree in Arts, with Sociology as her major and a minor in Psychology. Her interests include human-centric design and making design accessible to different sections of the society, regardless of their social footprint. She is a trained dancer. In her free time, she can be found reading a book  or volunteering at an animal shelter or sleeping.
+    img: puja.jpg
+    category: team
+    ide: puja
+  -
+    title: Prashanth Raghuram
+    designation: Intern
+    email: paghuram1996@gmail.com
+    description: Prashanth is an intern at Fields of View. He is currently pursuing his masters in Game Design from Srishti Institute of Art, Design and Technology, Bengaluru. He holds a Post Graduate Diploma in Digital Media Arts and also a Bachelor of Arts in English Honors with a minor in Psychology and Journalism. He is interested in exploring games and its application as a medium for storytelling, education and other fields beyond entertainment.  His other interests include reading and writing fiction, playing games, cooking, dancing and travelling.
+    img: prashanth.jpg
+    category: team
+    ide: prashanth
+  -
+    title: Jahnavi Koganti
+    designation: Intern
+    email: koganti.jahnavi@gmail.com
+    description: Jahnavi is an intern at Fields of View. She's currently pursuing her masters in design-led innovation from Srishti Institute of Art, Design and Technology, Bengaluru. She holds a Post Graduate Diploma in Information Arts & Information Design Practices and also Bachelor's degree in Commerce, with Accountancy and Finance as her majors. She works as a freelance illustrator and has previously written and illustrated books for children. Her interests include participatory design, speculative design, storytelling, sketching, webcomics, traveling and dance.
+    img: jahnavi.jpg
+    category: team
+    ide: jahnavi
+  -
+    title: Sonakshi Mehra
+    designation: Intern
+    email: sonakshimehra21@gmail.com
+    description: Sonakshi Mehra, a btech student in CSE at SRM Institute of Science and Technology, Chennai. Her area of interest is in coding and to use her skills by working as a developer.
+    img: sonakshi.jpg
+    category: team
+    ide: sonakshi
+  -
+    title: Shambhavi Singh
+    designation: Researcher
+    email: shambhavi990@gmail.com
+    description: Shambhavi is a Visual Designer at Fields of view. A graduate in Art and Design from Srishti Institute of Art, Design and Technology, she also holds a Bachelor’s in Psychology from Delhi University. Her interests lie in design research, game design, character design and narrative building. She likes to use illustration and sketching as a way to engage with different contexts. In her leisure time she likes to draw, paint and read poetry.
+    img: shambhavi.jpg
+    category: team
+    ide: shambhavi
+  -
+    title: Priyam Vadaliya
+    designation: Intern
+    email: pvadaliya.ufp@iihs.ac.in
+    description: Priyam is an intern at Fields of View. She is an Urban Fellow from Indian Institute for Human Settlements(IIHS). She holds a Bachelor's in Product Design from National Institute of Design(NID), Ahmedabad. She believes in interdisciplinary collaborations and is excited by the mutations the design process undergoes in different contexts. Her growing interests revolve around design for changing mindsets, system thinking, participatory design and data visualisation.
+    img: priyam.jpg
+    category: team
+    ide: priyam
+  -
+    title: Ashamary Alexander
+    designation: Intern
+    email: Ashamary.Alexander@terisas.ac.in
+    description: Ashamary Alexander did her Bachelor’s in Civil Engineering from Cochin University of Science and Technology. She is currently pursuing her Master’s in Urban Development and Management from TERI School of Advanced Studies, New Delhi. Her hobbies include sports, dance, DIY craft and travelling.
+    img: asha.jpg
+    category: team
+    ide: asha
+  -
+    title: Bhagyalakshmi Srinivas
+    designation: Researcher
+    email: bhagyalakshmi@fieldsofview.in
+    description: Bhagyalakshmi Srinivas is a Researcher at Fields of View. In the past she was a Field Surveyor, and she digitised maps. She is currently analysing, cleaning and collating data about slums and she has administrative duties. She is interested in learning new skills and working towards improving the conditions for the urban poor. She spends her free time playing with two naughty kids and teaching them.
+    img: bhagya.jpg
+    category: team
+    ide: bhagya
+  -
+    title: Saipriya D. Salla
+    designation: Intern
+    email: saipriya.s@u.nus.edu
+    description: Saipriya is currently pursuing her Master's in Public Policy from Lee Kuan Yew School of Public Policy in Singapore. At LKY, she assists her institution in the capacity of a Graduate Teaching Assistant and occasionally pens articles for the school's alumni newsletter. Prior to her graduate degree, she was working in the education sector, as a Government Relations Associate with Teach for India. She has completed her Bachelors of Technology in Electronics and Instrumentation from SRM University in Chennai, before foraying into the social and policy sphere.
+    img: saipriya.jpg
+    category: team
+    ide: saipriya
+  -
+    title: Vidhi Patel
+    designation: Intern
+    email: vidhi.patel8295@gmail.com
+    description: Vidhi is currently pursuing her M.Sc in Economics and will be specializing in the area of Urban Development from Symbiosis School of Economics, Pune. She also holds bachelor’s degree in Economic (Hons) from Christ University. She has a deep interest in theatre and she engages in social service initiatives in her free time.
+    img: vidhi.jpg
+    category: team
+    ide: vidhi
+  -
+    title: Shubhangi Dubey
+    designation: Intern
+    email: shubhangidubey10@gmail.com
+    description: Shubhangi has a background in commerce and is currently pursuing M.Sc. Economics from Symbiosis School of Economics, Pune. In her leisure time, she listens to music and does binge-watching.
+    img: shubhangi.jpg
+    category: team
+    ide: shubhangi
+  -
+    title: Abraham Lukose
+    designation: Intern
+    email: ablukose@gmail.com
+    description: Abraham is a student of transport technology at KTH, Royal Institute of Technology, Sweden . As a master's student, he is completing his thesis on public transportation in Bangalore as part of the ongoing 'Joint Road Forward’ project at FoV. He spends hours of leisure with his TV, garden and doing jiu-jitsu.
+    img: abraham.jpg
+    category: team
+    ide: abraham
+  -
+    title: Srijib Das
+    designation: Intern
+    email: srijibdas@hotmail.com
+    description: After completing his graduation in Economics from Symbiosis International University, Srijib is currently pursuing MA Development at Azim Premji University, Bangalore. He takes a keen interest in urban governance and policy making, focusing on urban poverty, transportation and housing patterns. When not buried under submissions or engaged in intense discussions, he loves to cook, drive, read and watch sports.
+    img: srijib.jpg
+    category: team
+    ide: srijib
+  -
+    title: Shishira Krishnamurthy
+    designation: Intern
+    email: arihsihs@gmail.com
+    description: Shishira is an architect currently pursuing her masters in Industrial Arts and Design Practices. Her focus is on a design approach that fosters harmony between the building, the furniture and interior decor.
+    img: shishira.jpg
+    category: team
+    ide: shishira
+  -
+    title: Rashmi Verma
+    designation: Intern
+    email: rashmi.verma17_mad@apu.edu.in
+    description: Rashmi has done her graduation in Sociology (H) from Delhi University and is currently pursuing MA in Development at Azim Premji University, Bangalore. Her interest lies in the field of legal system reforms, constitutional rights, citizenship, urban governance and policy making. Apart from this, she loves to cook and play Foosball in her free time.
+    img: rashmi.jpg
+    category: team
+    ide: rashmi
+  -
+    title: Md. Hifzur Rahman
+    designation : Intern 
+    email: md.rahman@students.teriuniversity.ac.in
+    description: Md. Hifzur Rahman has a background in civil engineering and is studying M.Tech. in Urban Development and Management at TERI School of Advanced Studies, New Delhi. He is working on the Platform for Integrated Governance project in Chennai at Fields of View.
+    img: hifzur.jpg
+    categories: team
+    ide: hifzur
+  -
+    title: Abhinash Sahu
+    designation : Intern  
+    email: abhinash.sahu@iiitb.org
+    description: 
+    img: abhinash.jpg
+    categories: team
+    ide: abhinash
+  -
+    title: Aditi Murthy
+    designation: Researcher
+    email: adithi.murthy@gmail.com
+    description: A computer science engineer by training, Aditi Murthy is a researcher working in the areas of game design, networks and urban governance. Her research interests are municipal budgets, structure of social schemes, economics of informal sectors and complex social systems. She teaches mathematics in her spare time and loves dancing, theatre and exploring romantic literature.
+    img: aditi.jpg
+    categories: team
+    ide: aditi
+  -
+    title: Akshata Bhat
+    designation : Intern  
+    email: akshata.b.94@gmail.com
+    description: 
+    img: akshata.jpg
+    categories: team
+    ide: akshata
+  -
+    title: Amar Chadgar
+    designation: Researcher
+    email: amaruc@gmail.com
+    description: Amar Chadgar was a full-time researcher at Fields of View. He is a designer who, over the past 3 years, has developed visualisations, icons, interfaces and websites. He is interested in interaction design and product design, and is currently pursuing a degree in Industrial Design at the Savannah College of Art and Design.
+    img: amar.jpg
+    categories: team
+    ide: amar
+  -
+    title: Andreas Frank
+    designation: Intern
+    email: a.f.c.frank@tudelft.nl
+    description: Andreas Frank is currently pursuing his Master's degree at the Royal Institute of Technology, KTH in Stockholm, Sweden. Having written his Bachelor's thesis concerning sustainability in civil engineering, he is interested in matters concerning issues in ecology and sustainability. In his free time he enjoys cooking, being out in the nature and powerlifting.
+    img: andreas.jpg
+    categories: team
+    ide: andreas
+  -
+    title: Ankita Victor
+    designation: Intern
+    email: Ankita.Victor@iiitb.org
+    description: Ankita is currently pursuing her Integrated Masters degree in Information Technology from IIIT-B. 
+    img: ankita.jpg
+    categories: team
+    ide: ankita
+  -
+    title: Arun Kumar
+    designation: Researcher
+    email: arun.s@arkinfo.co.in
+    description: 
+    img: arun.jpg
+    categories: team
+    ide: arun
+  -
+    title: Bauke Bakker
+    designation: Intern
+    email: baukebakker@gmail.com
+    description: Bauke Bakker is a Bachelor graduate working as an intern at Fields of View. Sent out by the MediaLAB Amsterdam he is working on the Nextwave Project. This is his first project after finishing the Media and Culture course at the University of Amsterdam, specialized in New Media. With a passion for breakdancing and music he likes to see things in another perspective, being creative and original are important in his way of working.
+    img: bauke.jpg
+    categories: team
+    ide: bauke
+  -
+    title: Daksh Varshneya
+    designation: Intern
+    email: Daksh.Varshneya@iiitb.org
+    description: Daksh Varshneya is currently pursuing his Integrated Masters degree in Information Technology from IIIT-B. He enjoys working on computer graphics and GUI based programming. In his free time, he engages himself in playing guitar and sports like cricket and badminton.
+    img: daksh.jpg
+    categories: team
+    ide: daksh
+  -
+    title: Girish Krishnan
+    designation: Intern
+    email: girish.r@nid.edu
+    description: Girish Krishnan Ramdas is a student at National Institute of Design, Gandhinagar. He conducted an online survey and interviews about people's perceptions of cycle lanes in Jayanagar, and he developed mock-ups for an awareness game about these cycle lanes.
+    img: girish.jpg
+    categories: team
+    ide: girish
+  -
+    title: Iain Kettles
+    designation: Intern
+    email: ikettles@gmail.com
+    description: Iain is a Software Developer/Computer fanatic from the UK. Having completed 2 years of a Computer Science degree at the University of Hertfordshire followed by a 5 month internship at MediaLAB Amsterdam, he worked full time in software development before joining Fields of View as an intern for the Ecosense project. Iain enjoys experimenting with innovative web technologies and how they can be combined to build intelligent systems. Expanding from his experience in business focused projects he's now exploring the wide topic of smart cities and consumption of personal electronics in a cross cultural context.
+    img: iain.jpg
+    categories: team
+    ide: iain
+  -
+    title: Kshiraja Krishnan
+    designation: Visual Designer
+    email: kshirajakrishnan@gmail.com
+    description: Kshiraja is an illustrator and graphic designer. A graduate from MIT institute of Design, Pune, she is currently focusing on gender and sexuality. She hopes to pursue long-form visual journalism through graphic novels. She loves reading, theatre, jazz, and the sea.
+    img: kshiraja.jpg
+    categories: team
+    ide: kshiraja
+  -
+    title: Lisanne Binhammer
+    designation: Intern
+    email: lisannebinhammer@gmail.com
+    description: Lisanne is a graduate of Ontario College of Art and Design University, where she received a BDes with Distinction in Graphic Design. While a research assistant for sLab in Toronto, Lisanne developed an avid interest in what design can do for complex social issues. Sent by MediaLABAmsterdam (where she previously interned), she is currently working on the Ecosense Project at Fields of View. She is excited to be working in a cross-cultural context with a multidisciplinary team, and to start to unravel various problems that are deeply routed in the cityscape. Oh, and she's a bit of a typography/printed ephemera nerd.
+    img: lisanne.jpg
+    categories: team
+    ide: lisanne
+  -
+    title: Maanavi Panwar
+    designation: Intern
+    email: maanavipanwar@gmail.com
+    description: Maanavi Panwar is an intern working on the Inclusive Wealth Index and Rubbish projects at Fields of View. She is currently pursuing her Masters in Urban Policy and Governance from the Tata Institute of Social Sciences, Mumbai. Her areas of interests include alternative education, tracing patterns of use in open public spaces and finding interesting ways of interfacing with policy. She loves reading, watching and designing for films. She studied business and psychology at the National University of Singapore.
+    img: maanavi.jpg
+    categories: team
+    ide: maanavi
+  -
+    title: Marissa Memelink
+    designation: Intern
+    email: m.l.memelink@gmail.com
+    description: Marissa is a researcher from the University of Amsterdam, soon holder of a bachelor's degree in New Media and Digital Culture. She is specialized in business information systems and is deeply interested in sustainable information management and knowledge transmission. Sent by the MediaLAB Amsterdam, she's excited to join Field of View's team to focus more on information design in context of larger social issues.
+    img: marissa.jpg
+    categories: team
+    ide: mariss
+  -
+    title: Megha Jois
+    designation: Researcher
+    email: jois.megha@gmail.com
+    description: Megha is an engineer who exchanged her software job for a career in 3D animation. She holds a Masters degree in Digital Character Animation from Teesside University, UK and is very passionate about the art. She is currently working as a CG Generalist and Game designer on games and simulations. Her other interests include contemporary dance, acting, graphic design and sketching.
+    img: megha.jpg
+    categories: team
+    ide: megha
+  -
+    title: Merlyn Matthews
+    designation: Intern
+    email: merlyn.mthw@gmail.com
+    description: Merlyn is a Masters student of Urban Policy and Governance at the Tata Institute of Social Sciences, Mumbai. Her interest areas include sanitation and solid waste management in cities, planning in the city and municipal and infrastructure finance. She finds tracing the history and evolution of places and studying the context in which people gravitate towards certain places over others intriguing. At Fields of View, she will be designing and conducting surveys to collect water and sanitation data in slums of Bangalore.
+    img: merlyn.jpg
+    categories: team
+    ide: merlyn
+  -
+    title: Miguel Ramos Carretero
+    designation: Researcher
+    email: miguel.ramos@sth.kth.se
+    description: Miguel Ramos Carretero is a computer science engineer specialized in the area of computer graphics. A former research engineer at the KTH Royal Institute of Technology in Stockholm, he is currently spending a semester as a visitor at Fields of View, working on projects related to interactive urban simulations, visualization and virtual reality. He has also great interest in anything related to art and storytelling, and he believes that research and imagination are two of the most powerful tools to inspire change in the world.
+    img: miguel.jpg
+    categories: team
+    ide: miguel    
+  -
+    title: Mosa al Husseini
+    designation: Intern
+    email: mosaalhusseini@gmail.com
+    description: Mosa is an exchange student from Malmö University in Sweden, studying for his bachelor degree in Interaction Design. He is currently studying his fifth semester at IIIT-B and assisting in various projects at Fields Of View. His interests lie in finding new ways of interaction with different sorts of media. In his free time he plays games, programs graphical toys for android devices, reads books and enjoys cooking.
+    img: mosa.jpg
+    categories: team
+    ide: mosa
+  -
+    title: Murali Krishna G
+    designation: Researcher
+    email: muralikrishna.ganji@gmail.com
+    description: Murali holds a Masters degree in IT from JNTU - Hyderabad. At Fields of View, he is interested in exploring the use of modelling and simulation techniques in infrastructures and social systems. In past, he has worked on developing serious games in the area of electricity markets and on tools to help in decision making.
+    img: murali.jpg
+    categories: team
+    ide: murali
+  -
+    title: Nafisa N Crishna
+    designation: Researcher
+    email: nafisa.crishna@gmail.com
+    description: Nafisa is an Illustrator and Communication Designer based out of Bangalore. She graduated from Srishti School of Art Design and Technology in 2008 with a diploma in Textile Design. Since then, her approach to her work has been a multi-faceted one, honing in on illustration and information design. In Fields of View, she works on multiple projects designing communication material, as well as working on the visualisation of various data and information. In her free time, she doodles on what ever scrap of paper she can find, if her sketchbook isn't handy.
+    img: nafisa.jpg
+    categories: team
+    ide: nafisa
+  -
+    title: Onkar Hoysala
+    designation: Researcher
+    email: mail@onkarhoysala.com
+    description: Onkar Hoysala is a researcher at Fields of View. His background is in Computer Science and he is currently pursuing Master of Science (by Research) in IT and Society at the Center for IT and Public Policy, IIIT-B. His research interests lie in developing, and studying the practices of, simulation and gaming methods in policy design and planning.
+    img: onkar.jpg
+    categories: team
+    ide: onkar
+  -
+    title: Paromita Bathija
+    designation: Intern
+    email: paro2401@gmail.com
+    description: 
+    img: paromita.jpg
+    categories: team
+    ide: paromita
+  -
+    title: Pawan Dhananjay
+    designation: Researcher
+    email: pawandhananjay@gmail.com
+    description: Pawan is currently pursuing his Integrated Masters degree in Information Technology from IIIT-B.
+    img: pawan.jpg
+    categories: team
+    ide: pawan
+  -
+    title: Prashant Aswal
+    designation: Intern
+    email: prashant.aswal@iiitb.org
+    description: 
+    img: prashant.jpg
+    categories: team
+    ide: prashant
+  -
+    title: Rajat Upadhyay
+    designation: Researcher
+    email: rajat0709@gmail.com
+    description: Rajat Upadhyay is a graduate of the International Institute of Information Technology, Bangalore. He has worked in the storage industry for over 5 years. Apart from being interested in mathematics and physics, he is a distance running enthusiast and loves to bicycle.
+    img: rajat.jpg
+    categories: team
+    ide: rajat
+  -
+    title: Rufael Negash
+    designation: Intern
+    email: rufael.negash@gmail.com
+    description: Rufael Negash is an Interaction design student at Malmö University, currently at IIIT-B and Fields of View on an exchange program. Rufael is interested in creating interactions that can help people in learning and exploring different concepts. He is also interested in exploring experience through interactive media and generative art. At Fields of View he would like to create concepts that raise awareness about issues regarding human rights in India and the world.
+    img: rufael.jpg
+    categories: team
+    ide: rufael
+  -
+    title: Sandro Miccoli
+    designation: Intern
+    email: smiccoli@gmail.com
+    description: Sandro Miccoli is an interactive media developer/designer from Brazil sent by the MediaLAB Amsterdam to join the team of Fields of View in Bangalore. For the past years his mind has been shifting from a linear "coder" thinking to a more creative "designer" perspective. Lately his passion is approaching problems in a more imaginative humanist point of view with the goal to create solutions that makes a difference. Projects involving physical computing, interactive installations, serious games, video mapping and data visualizations are in his repertoire of skills and expertise.
+    img: sandro.jpg
+    categories: team
+    ide: sandro
+  -
+    title: Shailee Patel
+    designation: Intern
+    email: shailee.patel29@gmail.com
+    description: 
+    img: shailee.jpg
+    categories: team
+    ide: shailee
+  -
+    title: Sieta van Horck
+    designation: Intern
+    email: sietavanhorck@gmail.com
+    description: Sieta is an New Media and Digital Culture student. Trained as a skilled researcher during her education, she's able to see projects in an broader social context. And this is exactly where her passion lies; in the sociological changes in society caused by the Digital Age.
+    img: sieta.jpg
+    categories: team
+    ide: sieta
+  -
+    title: Tanmayee Narendra
+    designation: Intern
+    email: tanmayee.narendra@iiitb.org
+    description: Tanmayee is currently pursuing her Integrated Masters degree in Information Technology from IIIT-B. 
+    img: tanmayee.jpg
+    categories: team
+    ide: tanmayee
+  -
+    title: Tarun Dutt
+    designation: Intern
+    email: tarun.dutt@iiitb.org
+    description: Tarun is currently pursuing his Integrated Masters degree in Information Technology from IIIT-B. 
+    img: tarun_dutt.jpg
+    categories: team
+    ide: tarun_dutt
+  -
+    title: Tarun Vishwanath
+    designation: Intern
+    email: tarunv0407@gmail.com
+    description: Tarun is a student of development studies at Azim Premji University. Prior to this he had completed his Bachelors in Law and has now developed a keen interest in the policy space.  Currently he is focusing on policies for transportation, water and land-use distribution as part of different on-going projects at FoV. He spends his leisure spend time playing football and reading novels.
+    img: tarun_vishwanath.jpg
+    categories: team
+    ide: tarun_vishwanath
+  - 
+    title: Vardhan Varma
+    designation: Researcher
+    email: vardhan@fieldsofview.in
+    description: Vardhan is an Animaton graduate and Researcher at Fields of View. Over the past 3 years he has worked in the Indian film industry as an associate director and is currently developing serious games at Fields of View. His areas of interests include game design and development, film making and psychology. In his free time he plays games at the professional level, reads and watches movies.
+    img: vardhan.jpg
+    categories: team
+    ide: vardhan
+  -
+    title: Yashvanth Kondi
+    designation: Intern
+    email: yashvanth.kondi@iiitb.org
+    description: Yashvanth is currently pursuing his Integrated Masters in IT from IIIT-B. Being a firm believer in that everything can be rationalized, he is out to interpret the world through algorithms. At Fields of View, he was learning how to systematically analyze social issues and explore potential technical solutions. Besides casual gaming, his free time revolves around books (comic and otherwise) and instant noodles.
+    img: yashvanth.jpg
+    categories: team
+    ide: yashvanth
+  -
+    title: Vigdís Eva Steinþórsdóttir
+    designation: Intern
+    email: vigdisevas@gmail.com
+    description: Vigdís is a filmmaker from Iceland who came to India wanting to do something purposeful. She is currently working on a video project for Fields of View. When she is not worrying about the state of our planet, she likes to go hiking, do yoga, watch movies/TV shows and explore new places.
+    img: vidgis.jpg
+    category: team
+    ide: vidgis
+
+    title: Ursula Uday
+    designation: Researcher
+    email: ursula@fieldsofview.in
+    description: Ursula is a Narratives and Visual Designer who holds a Bachelor of Design degree from Srishti Institute of Arts, Design and Technology, Bangalore. You will mostly find her playing tabletop games or reading about mythology or young fiction.
+    img: ursula.jpg
+    category: team
+    ide: ursula
+  - 
+    title: Harsha Krishna
+    designation: Researcher
+    email: harsha@fieldsofview.in
+    description: 
+    img: harsha.jpg
+    category: team
+    ide: harsha
+  - 
+    title: Vaibhav Dutt
+    designation: Researcher
+    email: vaibhav@fieldsofview.in
+    description: 
+    img: vaibhav.jpg
+    category: team
+    ide: harsha
+  -
+    title: Anaga Sivaramakrishnan
+    designation: Intern
+    email: 
+    description: 
+    img: anaga.jpg
+    category: team
+    ide: anaga
+  -
+    title: Anna Jacob
+    designation: Intern
+    email: Anna holds a bachelor’s degree in Psychology, and is currently pursuing her master’s in Behavioural Science. She believes in the regenerative power of the arts, and has experience with creative placemaking and public art and pedagogic practices. At Fields of View, she is learning to merge the best of her left-brained researcher with her right-brained creative.
+    description: 
+    img: anna.jpg
+    category: team
+    ide: anna
+  -
+    title: A. Selva
+    designation: Researcher
+    email: selva@fieldsofview.in
+    description: A. Selva is a researcher at Fields of View. He has had seven years of experience working in various industries, including information, hospitality and handicraft. His interests include interior designing, wood crafting, riding bikes, trekking, photography, and listening to music. He is interested in working toward improving services for the urban poor.
+    img: selva.jpg
+    category: team
+    ide: selva
+  -
+    title: Bharath M. Palavalli
+    designation: Researcher
+    email: bharath@fieldsofview.in
+    description: Bharath M. Palavalli is a researcher with a focus on complex systems. His modelling work has led to tools such as games and simulations to improve public policy. Bharath was elected to the <a href="http://bit.ly/bmpashoka">Ashoka Fellowship</a> in 2018 for nurturing this innovative idea of designing tools and methods to allow different stakeholders to collaborate on creating relevant and usable policy. His work has been published across domains ranging from urban planning, disaster management, energy, transport and poverty.
+    img: bharath.jpg
+    category: team
+    ide: bharath
+  -
+    title: Sruthi Krishnan
+    designation: Researcher
+    email: sruthi@fieldsofview.in
+    description: Sruthi K is a writer and researcher, whose focus is participatory media. She has co-authored <a href="https://mitpress.mit.edu/books/we-are-not-users"> "We are not users - dialogues, diversity, and design" </a>, published by MIT Press in February 2020. The book is a call to reclaim and rethink the field of designing as a liberal art where diverse voices come together to shape the material world. She has a degree in computer science and engineering and a post-graduate diploma in journalism. She reported on technology at The Hindu and continues to write for different publications on the intersections of technology and culture.
+    img: sruthi.jpg
+    category: team
+    ide: sruthi
+  -
+    title: Pranav Chazhiyill
+    designation: Intern
+    email: 
+    description: Currently in the final year of his Bachelor's in Agricultural Marketing from UAS, Bangalore, Pranav aspires to research and study the interaction between agriculture and the environment, it's implications on and off the farmland- the economic and social life of farmers, society and policies that bring about a balance between the two while ensuring the well-being and growth of the people.
+    img: pranav.jpg
+    category: team
+    ide: pranav
+  -
+    title: Sneha Maria
+    designation: Intern
+    email: 
+    description: Sneha holds a bachelor's degree in architecture from Bangalore University. Her interest lies in diagnosing problems and providing solutions to urban and development issues and creating a sustainable impact on people's lives. Being an inquisitive and introspective individual, she wishes to explore different allied fields that will contribute to her learning.
+    img: sneha.jpg
+    category: team
+    ide: sneha
+  -
+    title: Chinmay Hegde
+    designation: Intern
+    email: 
+    description: A lawyer in-the-making, Chinmay has an interest in the way public policy interjects with daily life. At FoV, he hopes to understand game and simulation design processes and the fuctioning of policy through research. When he is free, he enjoys reading and writing fiction, video games, and trekking.
+    img: chinmay.jpg
+    category: team
+    ide: chinmay
+  -
+    title: Shivangi Singhal
+    designation: Intern
+    email: 
+    description: Shivangi holds a Bachelor's degree in Economics and Public Policy from FLAME University, Pune and is currently pursuing her final year in Public Policy. Her passion lies in Environmental, Economic and Development Policy, and she is dedicated to expanding her expertise in this field in order to make a meaningful impact in the policy realm. In addition to her policy puruits, Shivangi nurtures a keen interest in painting, music, banking and badminton.
+    img: shivangi.png
+    category: team
+    ide: shivangi
+  -
+    title: Darshini Ashok
+    designation: Intern
+    email: 
+    description: Darshini completed her bachelor's in electrical and electronics engineering from VIT, Chennai.  Currently she's pursuing her master's in Digital Society at IIIT Bangalore and hopes she could bridge the gap between people and development. She likes to read fictional books and binge watch tv series. She actually believes that the true purpose of innovation/invention could only be attained if it is accessible by everyone. At Fields of View, she is interested in  methods on how a proper design of policy is achieved with the aid of engineering as well as social sciences.
+    img: darshini.jpg
+    category: team
+    ide: darshini
+  -
+    title: Kavvya Sankritik
+    designation: Intern
+    email: 
+    description: Kavvya holds a bachelor's degree in Sociology and Public Policy from Flame University and is going to pursue her masters in Social Anthropology from September. She is interesting in forming connections between theory and practice through her experiences and exposure in sociology and policy and her areas of interest include gender, development and structural issues. More than anything,  Kavvya has a deep rooted curiosity to uncover the why behind who we are and how our social world works.  In addition to her career pursuits, Kavvya enjoys reading, travelling and painting.
+    img: kavvya.png
+    category: team
+    ide: kavvya
+  -
+    title: Meera Prajapati
+    designation: Researcher
+    email: meera@fieldsofview.in
+    description: Meera holds a bachelor's degree in urban planning from CEPT University, Ahmedabad along with a master's degree in Urbanism and Strategic Planning from KU Leuven, Belgium. She has exposure to the Asian and European contexts in the domains of planning and design research with projects from a neighbourhood to regional scale on bottom-up planning, transportation, climate vulnerability, and smart urban districts. At FoV, Meera is keen to learn aspects of public policy, tool building and modelling.
+    img: meera.jpg
+    category: team
+    ide: meera
+  -
+    title: Mehr Amina
+    designation: Intern
+    email: 
+    description: Mehr is a fourth-year Industrial Design student at the National Institute of Design, Assam. Her interests lie in Design for Play, Design Research and Critical Design.She has worked on play-related projects mostly including children as a target audience. In her free time, she likes to bake, read, and take pictures.
+    img: mehr.jpg
+    category: team
+    ide: mehr
+  -
+    title: Trina Talukdar
+    designation: Researcher
+    email: trina@fieldsofview.in
+    description: Trina Talukdar started working in Kalighat, one of Asia's largest red light areas, at the age of 18. Her interaction with commercial sex workers spurred  her passion to co-found Kranti at the age of 22. Kranti empowers girls from Mumbai’s Red Light Areas to become social change leaders.</p><p class="simple-content">Trina was Director of Venture and Fellowship, South Asia, for Ashoka, a global organisation across 90 countries, investing in the leading social entrepreneurs of our times. Trina worked for Ashoka both in South Asia and Southern Africa. Trina worked with American Express, Philanthropy, in the U.S.A., building leadership in non-profit professionals. Trina continues to be a serial social entrepreneur, kick-starting critical development work in the field of 21st century leadership. Her most recent venture is Bolti Bandh, that builds dialogue between politically polarised people.
+    img: trina.jpg
+    category: team
+    ide: trina
+  -
+    title: Pragati Gupta
+    designation: Researcher
+    email: pragati@fieldsofview.in
+    description: Pragati is an early-career social anthropologist who has recently graduated with a master's degree in social anthropology from SOAS, London. Her research interests span a wide array of social dimensions, including gender, caste, class, higher education, mental health, kinship, and health and medicine, etc. Pragati's master's thesis focuses on unraveling the intricacies of caste dynamics in higher education and its implications for the mental well-being of marginalized caste students. Her ultimate aspiration is to drive positive change and inclusivity within systems and institutions through her academic.
+    img: pragati.png
+    category: team
+    ide: pragati
+  -
+    title: Sumit Sute
+    designation: Researcher
+    email: sumit@fieldsofview.in
+    description: Sumit claims to have found his game at Fields of View as a Communications Manager after chancing through mechanical engineering at IIT Madras, documentary photography for The Wire, the Maharashtra government, and IIHS Bengaluru, and photo editing for Hindustan Times and The Caravan. He plans and designs our social media presence and outreach campaigns at FoV. He is also frequently seen rolling his dice and sleeves up as a lens-based visual artist to to converge the personal and the political.
+    img: sumit.jpg
+    category: team
+    ide: sumit

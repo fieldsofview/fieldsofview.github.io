@@ -11,12 +11,16 @@
         #1915, 5th Cross, 18th 'A' Main, JP Nagar 2nd Phase,<br /> Bangalore - 560 078
     </p>
     <ul class="icons">
-        <a>
+        <a target="_blank" href="https://github.com/fieldsofview">
             <img src="{{ site.baseurl }}/img/icons/github.svg" alt="github">
         </a>
-        <a> <img src="{{ site.baseurl }}/img/icons/linkedin.svg" alt="linkedin"> </a>
-        <a> <img src="{{ site.baseurl }}/img/icons/youtube.svg" alt="youtube"> </a>
-        <a> <img src="{{ site.baseurl }}/img/icons/instagram.svg" alt="instagram">
+        <a target="_blank" href="https://www.linkedin.com/company/fovlabs"> <img
+                src="{{ site.baseurl }}/img/icons/linkedin.svg" alt="linkedin"> </a>
+        <a target="_blank" href="https://www.youtube.com/@fovlabs"> <img src="{{ site.baseurl }}/img/icons/youtube.svg"
+                alt="youtube">
+        </a>
+        <a target="_blank" href="https://www.instagram.com/fieldsofview.in/"> <img
+                src="{{ site.baseurl }}/img/icons/instagram.svg" alt="instagram">
         </a>
     </ul>
 </footer>
@@ -26,7 +30,7 @@
     /* ======================================================================================== */
 
     .hr-wrapper {
-        margin-top: 2.5rem;
+        margin-top: var(--p3-rem);
     }
 
     .custom-hr {
@@ -42,16 +46,16 @@
         height: 8rem;
         background-color: white;
         display: flex;
-        padding-top: 3rem;
-        padding-left: 4rem;
+        padding: var(--p3-rem) var(--p4-rem) var(--p2-rem) var(--p4-rem);
+
     }
 
     footer p {
         color: var(--grey-3);
-        font-size: var(--fs13-font-size);
+        font-size: var(--fs13);
         width: 30rem;
         height: 2.2rem;
-        margin-right: 3rem;
+        margin-right: var(--p3-rem);
     }
 
     footer .icons {
@@ -59,5 +63,30 @@
         right: 4rem;
         display: flex;
         gap: 1.1rem;
+    }
+
+    @media (max-width: 1100px) {
+        footer {
+            /* gap: var(--p2-rem); */
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        footer p {
+            width: 40%;
+            height: min-content
+        }
+
+        footer .icons {
+            position: relative;
+            left: 0;
+            top: 0;
+            padding: var(--p2-rem);
+        }
+
+        footer .icons a {
+            height: var(--p3-rem);
+            width: var(--p3-rem);
+        }
     }
 </style>

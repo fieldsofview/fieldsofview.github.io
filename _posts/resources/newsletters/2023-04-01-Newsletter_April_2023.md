@@ -4,6 +4,7 @@ category: newsletter
 subcategory: 2023
 event_date: April 2023
 permalink: /newsletter/april-2023
+title: Chronicles of Engaged Innovations
 ---
 <html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraph.org/schema/"><head>
         

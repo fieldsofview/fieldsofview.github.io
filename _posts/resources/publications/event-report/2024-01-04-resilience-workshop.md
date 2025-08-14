@@ -6,4 +6,5 @@ category: publications
 subcategory: Event Report
 event_date: Jul 2025
 permalink: /resources/resilience-workshop
+doc: /docs/Resilience Workshop Report.pdf
 ---

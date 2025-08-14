@@ -4,6 +4,7 @@ category: newsletter
 subcategory: 2023
 event_date: February 2023
 permalink: /newsletter/february-2023
+title: FoV is 11 years old
 ---
 <html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraph.org/schema/"><head>
         

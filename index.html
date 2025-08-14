@@ -57,7 +57,7 @@ layout: default-layout
     {% endif %}
 
 
-    <hr style="margin: 6rem 0" />
+    <hr style="margin: var(--p6-rem) 0" />
 
     <!-- {% if site.categories['update'] %}
     <div class="updates-container">
@@ -84,7 +84,7 @@ layout: default-layout
             We have been working on
             <span>lorem ipsum</span>
         </p>
-        <div style="position: relative; padding-top: 3rem;">
+        <div style="position: relative; padding-top: var(--p3-rem);">
             <script src="https://static.elfsight.com/platform/platform.js" async></script>
             <div class="elfsight-app-cf90864e-841f-4a44-94bc-4ebfce2c81c2" data-elfsight-app-lazy></div>
         </div>
@@ -107,8 +107,8 @@ layout: default-layout
                 <button class="subscribe" type="submit">subscribe</button>
             </form>
         </div>
-        <a href="{{site.baseurl}}/newsletter/latest" class="img-container">
-            <img src="{{ site.baseurl }}/img/newsletter/latest-nl-cover.jpg" alt="Newsletter cover image">
+        <a href="{{site.baseurl}}/newsletter/latest" class="img-container" target="_blank">
+            <img src="{{ site.baseurl }}/img/newsletter/latest-nl-cover.png" alt="Newsletter cover image">
             <div class="img-overlay"></div>
         </a>
 
@@ -153,7 +153,7 @@ layout: default-layout
     }
 
     .hero-content .description {
-        padding: 3rem 0;
+        padding: var(--p3-rem) 0;
         max-width: 22vw;
     }
 
@@ -212,5 +212,33 @@ layout: default-layout
 
     .illustration:hover #s03 {
         transform: rotate(-9deg) translateY(20px) translateX(10px);
+    }
+
+    @media (max-width: 768px) {
+        .hero-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            height: auto;
+        }
+
+        .hero-content .description {
+            max-width: 100%;
+        }
+
+        .illustration {
+            margin: var(--p4-rem) 0;
+        }
+
+        .newsletter-container {
+            grid-template-columns: 1fr;
+        }
+
+        .newsletter-container img {
+            margin: var(--p4-rem) 0;
+        }
+
+        .projects-container {
+            grid-template-columns: 1fr;
+        }
     }
 </style>

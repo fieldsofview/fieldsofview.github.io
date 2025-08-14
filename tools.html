@@ -13,10 +13,7 @@ permalink: /tools/
         {% for post in site.categories['tool'] %}
         <a href="{{site.baseurl}}{{post.url}}" class="project-card">
             <div style="position: relative;">
-                <!-- Foreground image -->
                 <img src="{{site.baseurl}}{{post.main-img}}" alt="project 1" />
-
-                <!-- Hover effect -->
                 <div class="img-overlay"></div>
             </div>
 
@@ -37,13 +34,15 @@ permalink: /tools/
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
-        gap: 2rem;
-        padding-top: 5rem;
+        padding-top: var(--p5-rem);
+        align-items: center;
+        gap: var(--p4-rem);
     }
 
     .tools-container .project-card {
         width: 100%;
         object-fit: cover;
+
     }
 
     img {
@@ -51,5 +50,15 @@ permalink: /tools/
         width: auto;
         margin: auto;
         border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .tools-container {
+            grid-template-columns: 1fr;
+        }
+
+        .tools-container .project-card {
+            padding: var(--p2-rem) 0;
+        }
     }
 </style>
