@@ -347,4 +347,8 @@ p {
   *:hover .img-overlay {
     opacity: 0 !important;
   }
+
+  .newsletter-container .nl-img {
+    width: 100%;
+  }
 }

@@ -83,7 +83,7 @@ layout: default-layout
         Here are our latest
         <span>updates</span>
     </h2>
-    <div style="position: relative; padding-top: var(--p3-rem);">
+    <div class="linkedin-feed" style="position: relative; padding-top: var(--p3-rem);">
         <script src="https://static.elfsight.com/platform/platform.js" async></script>
         <div class="elfsight-app-cf90864e-841f-4a44-94bc-4ebfce2c81c2" data-elfsight-app-lazy></div>
     </div>
@@ -111,13 +111,18 @@ layout: default-layout
 
     </div>
     <a href="{{site.baseurl}}/newsletter/latest" class="img-container" target="_blank">
-        <img class="nl-img" src="{{ site.baseurl }}/img/newsletter/latest-nl-cover.webp" alt="Latest newsletter cover image" loading="lazy">
+        <img class="nl-img" src="{{ site.baseurl }}/img/newsletter/latest-nl-cover.webp"
+            alt="Latest newsletter cover image" loading="lazy">
         <div class="img-overlay"></div>
     </a>
 
 </section>
 
 <style>
+    /* * { */
+    /* border: 1px solid black; */
+    /* } */
+
     /* ======================================================================================== */
     /* Home - Hero Section Styles */
     /* ======================================================================================== */
@@ -236,11 +241,16 @@ layout: default-layout
         }
 
         .newsletter-container img {
-            margin: var(--p4-rem) 0;
+            margin: var(--p4-rem) auto;
         }
 
         .projects-container {
             grid-template-columns: 1fr;
+        }
+
+        .linkedin-feed {
+            max-width: 70vw;
+            margin: auto;
         }
     }
 </style>

@@ -18,7 +18,9 @@ layout: default-layout
             <p class="objective">{{ page.objective }}</p>
             <p>{{ page.description }}</p>
             {{ page.summary }}
+            {% if page.impact %}
             <div class="impact">{{ page.impact }}</div>
+            {% endif %}
             <p>For more information or to explore collaboration opportunities, please contact us at <a
                     href="mailto:info@fieldsofview.in">info@fieldsofview.in</a>.</p>
         </div>
@@ -43,7 +45,7 @@ layout: default-layout
         <img src="{{ page.banner-img }}" alt="">
     </div>
     {% endif %}
-     {% if page.gallery %}
+    {% if page.gallery %}
     <hr style="margin: var(--p2-rem) 0;">
     <div class="gallery">
         {% for img in page.gallery %}
@@ -206,6 +208,7 @@ layout: default-layout
         .tool-container {
             display: grid;
             grid-template-columns: 1fr;
+            gap: var(--p4-rem);
         }
 
         .images img {
@@ -218,6 +221,10 @@ layout: default-layout
 
         .tools-nav::after {
             height: 0;
+        }
+
+        .tool-overview {
+            max-width: 90vw;
         }
     }
 </style>
