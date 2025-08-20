@@ -13,7 +13,7 @@ layout: default-layout
             <p class="title">{{ page.title }}</p>
             <p class="subtitle">{{ page.subtitle }}</p>
             {% if page.live-site %}
-            <a href="{{ page.live-site }}">view the live site!</a>
+            <a class="live-site" href="{{ page.live-site }}">view the live site!</a>
             {% endif %}
             <p class="objective">{{ page.objective }}</p>
             <p>{{ page.description }}</p>
@@ -33,10 +33,15 @@ layout: default-layout
                     allowfullscreen>
                 </iframe>
             </div>
-            <img src="{{ page.img1 }}" alt="">
+            <img style="grid-column: span 2;" src="{{ page.img1 }}" alt="">
             {% else %}
-            <img src="{{ page.img1 }}" alt="">
+            <img style="grid-column: span 2; max-height: 30vh;" src="{{ page.img1 }}" alt="">
+            {% if page.img3 %}
             <img src="{{ page.img2 }}" alt="">
+            <img src="{{ page.img3 }}" alt="">
+            {% else %}
+            <img src="{{ page.img2 }}" style="grid-column: span 2;" alt="">
+            {% endif %}
             {% endif %}
         </div>
     </div>
@@ -105,18 +110,21 @@ layout: default-layout
         grid-template-columns: 1fr 1fr;
         gap: var(--p8-rem);
         padding: var(--p4-rem) 0;
-        /* height: min-content; */
-        align-items: stretch;
+        height: min-content;
+        align-items: start;
     }
 
     /* Left Column Content */
 
+
+
     .tool-overview {
         display: flex;
         flex-direction: column;
-        gap: var(--p1-rem);
+        gap: var(--p2-rem);
         max-width: 40vw;
         /* margin: auto; */
+        height: min-content;
     }
 
     .tool-overview .subtitle {
@@ -130,31 +138,59 @@ layout: default-layout
     .tool-overview a {
         font-weight: 600;
         color: var(--black);
+        position: relative;
+        width: fit-content;
+    }
+
+    .live-site::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: opacity(0);
+        transition: filter 0.3s ease-in-out;
+        mix-blend-mode: multiply;
+        background-image: url("/../../img/hover/tools-bg.svg");
+    }
+
+    .live-site:hover::before {
+        filter: opacity(1);
     }
 
     .tool-overview .objective {
         color: var(--body-color);
         font-style: italic;
         font-size: var(--fs18);
-        padding: var(--p2-rem) 0;
+        /* padding: var(--p1-rem) 0; */
     }
 
-    .tool-overview .objective~* {
+    /* .tool-overview .objective~* {
         padding: 0.5rem 0;
-    }
+    } */
 
     .tool-overview ul {
         list-style-type: disc;
         padding-left: 1.5rem;
     }
 
-
-    /* Right column images */
-    .images {
+    .impact {
         display: flex;
         flex-direction: column;
         gap: var(--p2-rem);
-        height: 100%;
+    }
+
+
+    /* Right column images */
+    .images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: var(--p2-rem);
+        /* height: 100%; */
     }
 
     .video-container {
@@ -164,6 +200,7 @@ layout: default-layout
         height: 0;
         overflow: hidden;
         max-width: 100%;
+        grid-column: span 2;
     }
 
     .video-container iframe {

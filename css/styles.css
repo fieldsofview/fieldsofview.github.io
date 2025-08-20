@@ -9,6 +9,7 @@
   --grey-3: #b0b0b0;
   --grey-4: #e0e0e0;
   --grey-5: #f3f3f3;
+  --hr-grey: #C8C8C8;
   --black: #231f20;
   --orange: #d34c1b;
   --green: #009900;
@@ -72,6 +73,10 @@ p {
   line-height: 130%;
 }
 
+hr {
+  border-color: var(--hr-grey);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -101,8 +106,8 @@ p {
 
 .title {
   font-family: "Satoshi", var(--default-font-family);
-  font-weight: 900;
-  font-size: var(--fs42);
+  font-weight: 700;
+  font-size: var(--fs35);
   line-height: 124%;
   color: var(--title-color);
 }
@@ -115,8 +120,8 @@ p {
 
 .subtitle {
   font-family: "Satoshi", var(--default-font-family);
-  font-weight: 900;
-  font-size: var(--fs42);
+  font-weight: 700;
+  font-size: var(--fs35);
   line-height: 124%;
   color: var(--title-color);
 }
@@ -185,13 +190,6 @@ p {
 
 .link {
   color: var(--pink);
-}
-
-.tab-subtitle {
-  font-size: var(--fs25);
-  padding: var(--p1-rem) var(--p4-rem) var(--p4-rem) 0;
-  color: var(--body-color);
-  font-weight: 400;
 }
 
 /* ======================================================================================== */

@@ -6,7 +6,7 @@ permalink: /get-involved/
 <section class="get-involved-container">
     <div class="contact-container">
         <div>
-            <h2 class="title">We want to <span>hear from you</span></h2>
+            <h2 class="title">We want to hear from you</h2>
             <div class="contact-items">
                 <img src="{{ site.baseurl }}/img/icons/phone.svg" alt="">
                 <span>Phone : +91 80 40977237</span>
@@ -27,24 +27,32 @@ permalink: /get-involved/
         </div>
 
     </div>
-    <!-- {% if site.categories['jd'] %}
-        <section class="job-container">
-            <p class="subtitle">
-                We want to <span>work with you</span>
-            </p>
-            {% for post in site.categories['jd'] %}
-            <div class="job-card">
-                <div class="job-header">
-                    <p class="job-title">{{post.title}}</p>
-                    <p class="job-date">{{post.display-date}}</p>
-                    <hr>
-                    <a href="mailto:work@fieldsofview.in">Apply here</a>
-                </div>
-                <p class="job-desc">{{post.description}}</p>
+    <section class="job-container">
+        <p class="subtitle">
+            We want to work with you
+        </p>
+        <hr>
+
+        {% if site.categories['jd'] %}
+
+        {% for post in site.categories['jd'] %}
+        <div class="job-card">
+            <div class="job-header">
+                <p class="job-title">{{post.title}}</p>
+                <p class="job-date">{{post.display-date}}</p>
+                <hr>
+                <a href="mailto:work@fieldsofview.in">Apply here</a>
             </div>
-            {% endfor %}
-        </section>
-        {% endif %} -->
+            <p class="job-desc">{{post.description}}</p>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p style="padding-top: var(--p2-rem);">We are not hiring for full-time or part time positions at the moment.
+            <br> Please reach out to us to explore
+            collaborations and volunteering opportunities.</p>
+        {% endif %}
+
+    </section>
 
 
 
@@ -52,7 +60,8 @@ permalink: /get-involved/
 
 <section class="pif-container">
 
-    <h2 class="subtitle">We want to <span>pay it forward</span></h2>
+    <h2 class="subtitle">We want to pay it forward</h2>
+    <hr>
 
     <div class="pif-layout">
 
@@ -101,9 +110,12 @@ permalink: /get-involved/
     /* ======================================================================================== */
     /* Get Involved */
     /* ======================================================================================== */
+    
+    .subtitle {
+        padding-bottom: var(--p1-rem);
+    }
 
     .get-involved-container {
-        padding-right: var(--p5-rem);
         display: flex;
         flex-direction: column;
         gap: var(--p8-rem);
@@ -205,12 +217,13 @@ permalink: /get-involved/
     /* ======================================================================================== */
 
     .pif-layout p {
-        margin: var(--p2-rem) var(--p2-rem) var(--p2-rem) 0;
+        margin: 0 var(--p2-rem) var(--p2-rem) 0;
     }
 
     .pif-layout {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin-top: var(--p2-rem);
     }
 
     .pif-images {

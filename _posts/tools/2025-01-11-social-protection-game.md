@@ -9,6 +9,7 @@ main-img: /img/tools/spgame-img-1.webp
 
 img1: /img/tools/spgame-img-1.webp
 img2: /img/tools/spgame-img-2.webp
+img3: /img/tools/spgame-img-3.webp
 objective: What if communities could articulate what kind of resilience mechanisms works for them? Could that help policy strategize for resilience with more nuance?
 description: Jee-van is a game that helps people explore their expenditure priorities and their preferences for social protection measures across various scenarios. 
 summary: <p>
@@ -27,6 +28,4 @@ impact:
   <p>
   The game can be customised with data tailored to specific communities and can include a variety of relevant social protection schemes and shock scenarios. 
   </p>
-gallery:
-  - /img/tools/spgame-img-3.webp
 ---

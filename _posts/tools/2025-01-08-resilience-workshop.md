@@ -1,7 +1,7 @@
 ---
 layout: tool-layout
 title: Reimagining Resilience
-subtitle: A participatory workshop exploring social protection measures.
+subtitle: A Participatory Workshop Exploring Social Protection Measures.
 category: tool
 tag: Workshop
 permalink: /tools/resilience-workshop/
@@ -11,6 +11,7 @@ main-img: /img/tools/resilience-1.webp
 # video-link: OTRdGvcRf6Y
 img1: /img/tools/resilience-1.webp
 img2: /img/tools/resilience-2.webp
+img3: /img/tools/resilience-3.webp
 objective: Can we create a space where diverse actors within the advocacy ecosystem come together to experiment, collaborate, and reimagine what resilience means?
 description: Reimagining Resilience is a hands-on, participatory workshop that brings together a wide range of stakeholders – including civil society organisations, funders, researchers, journalists, and policymakers – to develop a shared language around social protection and explore ways to strengthen the resilience of vulnerable communities.
 summary: <p>
@@ -24,6 +25,5 @@ summary: <p>
   </p>
 impact: Reimagining Resilience is adaptable and can be tailored to represent different communities, and contexts – making it relevant to a variety of scenarios and challenges.
 gallery:
-  - /img/tools/resilience-3.webp
   - /img/tools/resilience-4.webp
 ---

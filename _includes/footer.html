@@ -10,7 +10,7 @@
     <p class="address">
         #1915, 5th Cross, 18th 'A' Main, JP Nagar 2nd Phase,<br /> Bangalore - 560 078
     </p>
-    <p>
+    <p class="contact">
         Phone: +918040977237<br>
         E-mail: <a href="mailto:info@fieldsofview.in">info@fieldsofview.in</a>
     </p>
@@ -59,7 +59,8 @@
         background-color: white;
         display: flex;
         padding: var(--p3-rem) var(--p4-rem) var(--p2-rem) var(--p4-rem);
-
+        justify-content: space-between;
+        align-items: center;
     }
 
     footer p {
@@ -71,11 +72,21 @@
     }
 
     footer .icons {
-        position: absolute;
-        right: 4rem;
+        /* position: absolute; */
+        /* right: 4rem; */
         display: flex;
         gap: 1.1rem;
-        border-left: 1px solid #5c5c5c; padding-left:var(--p2-rem);
+        border-left: 1px solid #797979;
+        padding-left: var(--p1-rem);
+    }
+
+    footer .icons img {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .contact {
+        text-align: end;
     }
 
     @media (max-width: 1100px) {
@@ -95,12 +106,16 @@
         }
 
         footer .icons {
-            position: relative;
-            left: 0;
-            top: 0;
+            /* position: relative; */
+            /* left: 0; */
+            /* top: 0; */
             padding: var(--p2-rem);
             gap: 0.5rem;
             border: none;
+        }
+
+        .contact {
+            text-align: start;
         }
 
         footer .icons>li>a>img {

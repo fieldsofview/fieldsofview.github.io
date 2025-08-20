@@ -7,6 +7,9 @@ layout: default-layout
 
 <section class="hero-container">
     <div class="hero-content">
+        <div class="illustration">
+            <img src="{{ site.baseurl }}/img/illustration.svg" alt="Main illustration">
+        </div>
         <h1 class="title">
             We make tools to
             engage with the nuances of
@@ -19,9 +22,7 @@ layout: default-layout
             </p> -->
         <a href="{{ site.baseurl }}/about/">learn more about us!</a>
     </div>
-    <div class="illustration">
-        {% include illustration.html %}
-    </div>
+
 </section>
 {% if site.categories['tool-highlight'] %}
 <section>
@@ -29,6 +30,7 @@ layout: default-layout
         Take a look at our
         <span>tools</span>
     </h2>
+    <hr>
     <div class="projects-container">
         {% for post in site.categories['tool-highlight'] %}
         <a href="{{ site.baseurl }}{{ post.tool-link }}" class="project-card">
@@ -44,8 +46,8 @@ layout: default-layout
 
             <p class="tool-title">{{ post.title }}</p>
             <p class="subtitle">{{ post.subtitle }}</p>
-            <hr>
-            <p class="tag">{{ post.tag }}</p>
+            <!-- <hr> -->
+            <p class="tag" style="margin-top: var(--p1-rem);">{{ post.tag }}</p>
         </a>
 
 
@@ -56,7 +58,7 @@ layout: default-layout
 {% endif %}
 
 
-<hr style="margin: var(--p6-rem) 0" />
+<!-- <hr style="margin: var(--p6-rem) 0" /> -->
 
 <!-- {% if site.categories['update'] %}
     <div class="updates-container">
@@ -78,11 +80,12 @@ layout: default-layout
     {% endif %} -->
 
 <!-- LinkedIn Feed -->
-<section>
+<section style="margin-top: var(--p6-rem);">
     <h2 class="subtitle">
         Here are our latest
         <span>updates</span>
     </h2>
+    <hr>
     <div class="linkedin-feed" style="position: relative; padding-top: var(--p3-rem);">
         <script src="https://static.elfsight.com/platform/platform.js" async></script>
         <div class="elfsight-app-cf90864e-841f-4a44-94bc-4ebfce2c81c2" data-elfsight-app-lazy></div>
@@ -123,20 +126,30 @@ layout: default-layout
     /* border: 1px solid black; */
     /* } */
 
+    .subtitle {
+        padding-bottom: var(--p1-rem);
+    }
+
     /* ======================================================================================== */
     /* Home - Hero Section Styles */
     /* ======================================================================================== */
 
     .hero-container {
-        display: grid;
-        grid-template-columns: 1.15fr 2fr;
+        /* display: grid;
+        grid-template-columns: 1.15fr 2fr; */
+
         height: 90vh;
         padding-bottom: 15vh;
         align-items: center;
+        text-align: center;
     }
 
     .hero-container .title {
         padding-bottom: var(--p2-rem);
+    }
+
+    .hero-container img {
+        margin: auto;
     }
 
     .hero-container a {

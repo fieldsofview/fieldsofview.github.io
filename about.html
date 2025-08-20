@@ -17,13 +17,15 @@ permalink: /about/
         <!-- <p class="title">
                 Our approach towards engaging with the nuances of <span>vulnerability</span>
             </p> -->
-        <p style="padding-bottom: var(--p2-rem);">
-            We are an inter-disciplinary team developing games, simulations, and workshops to engage with wicked
-            problems. We focus on addressing vulnerability through data-informed and participatory policy-making.
+        <p class="title" style="padding-bottom: var(--p2-rem);">
+            We are an inter-disciplinary team developing <span>games, simulations, and workshops</span> to engage with
+            wicked
+            problems.
         </p>
         <p style="padding-bottom: var(--p2-rem);">
             For the last 12 years, we have been making tools to help individuals, organisations, and policymakers
-            understand the messiness and complexity of their landscapes.
+            understand the messiness and complexity of their landscapes. We focus on addressing vulnerability through
+            data-informed and participatory policy-making.
         </p>
         <a href="{{ site.baseurl }}/tools/">learn more about our tools</a>
     </div>
@@ -36,7 +38,8 @@ permalink: /about/
     </div>
 </section>
 <section id="partners" class="tab-content">
-    <h2 class="subtitle">Meet our <span>partners</span></h2>
+    <h2 class="subtitle">Meet our partners</h2>
+    <hr>
     <div>
         <div class="partner-logos" id="partnerLogos">
             {% for logo in site.data.partners %}
@@ -57,7 +60,8 @@ permalink: /about/
 
 <section id="team" class="tab-content">
 
-    <h2 class="subtitle">Meet our <span>team</span></h2>
+    <h2 class="subtitle">Meet our team</h2>
+    <hr>
     <div class="team-container">
         {% assign sorted_team = site.data.team | sort: "name" %}
 
@@ -92,7 +96,8 @@ permalink: /about/
                     </div>
                 </div>
                 <div class="team-details">
-                    <img class="team-arrow-close" src="{{ site.baseurl }}/img/icons/arrow-blue-down.svg" alt="close button">
+                    <img class="team-arrow-close" src="{{ site.baseurl }}/img/icons/arrow-blue-down.svg"
+                        alt="close button">
                     <p class="team-description">{{ member.description }}</p>
                     <a class="team-email" href="mailto:{{ member.email }}">{{ member.email }}</a>
                 </div>
@@ -103,7 +108,8 @@ permalink: /about/
 </section>
 
 <section id="board" class="tab-content">
-    <h2 class="subtitle">Meet our <span>board</span></h2>
+    <h2 class="subtitle">Meet our board</h2>
+    <hr style="margin-bottom: var(--p2-rem);">
     <div class="board-container">
         {% assign sorted_board = site.data.board | sort: "name" %}
 
@@ -112,8 +118,8 @@ permalink: /about/
             <p class="name">{{ member.name }}</p>
             <p class="designation">{{ member.designation }}</p>
             {% if member.linkedin %}
-            <a style="font-size: var(--fs13); background-color: #0095FF; height: min-content; width: min-content; padding:calc(var(--p1-rem) * 0.3) var(--p1-rem); border-radius: 20px; color: white;"
-                href="{{ member.linkedin }}" target="_blank">LinkedIn</a>
+            <a style="font-size: var(--fs13); background-color: #0095FF; height: min-content; width: fit-content; padding:calc(var(--p1-rem) * 0.3) var(--p1-rem); border-radius: 20px; color: white;"
+                href="{{ member.linkedin }}" target="_blank">Learn more</a>
             {% endif %}
         </div>
         {% endfor %}
@@ -121,7 +127,8 @@ permalink: /about/
 </section>
 
 <section id="alumni" class="tab-content">
-    <h2 class="subtitle">Meet our <span>alumni</span></h2>
+    <h2 class="subtitle">Meet our alumni</h2>
+    <hr>
     <div class="alumni-container">
         {% assign sorted_alumni = site.data.alumni | sort: "title" %}
 
@@ -274,6 +281,7 @@ permalink: /about/
         font-size: 1em;
         margin-bottom: 1rem;
         color: var(--grey-1);
+        text-align: left;
     }
 
     .team-email {
@@ -315,9 +323,12 @@ permalink: /about/
     /* ================= ABOUT CONTENT ==================== */
 
 
-    .title,
-    .subtitle {
+    .title {
         padding-bottom: var(--p3-rem);
+    }
+
+    .subtitle {
+        padding-bottom: var(--p1-rem);
     }
 
     .about-images-grid {

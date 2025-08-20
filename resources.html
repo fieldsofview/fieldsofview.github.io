@@ -15,7 +15,7 @@ permalink: /resources/
 {% assign publications = site.posts | where: "category", "publications" %}
 {% assign pub_subcategories = publications | map: "subcategory" | uniq %}
 <section class="tab-content active" id="tab-publications">
-    <p class="tab-subtitle">We want to push the boundaries of how we think of and engage with vulnerability. Take a look
+    <p>We want to push the boundaries of how we think of and engage with vulnerability. Take a look
         at the ways we have
         been shifting the conversation around resilience.</p>
     {% for subcat in pub_subcategories %}
@@ -82,12 +82,12 @@ permalink: /resources/
 {% assign nl_subcategories = newsletters | map: "subcategory" | uniq %}
 
 <section class="tab-content" id="tab-newsletter">
-    <p class="tab-subtitle">Our approach to solving problems is constantly adapting to changing circumstances. Stay
+    <p>Our approach to solving problems is constantly adapting to changing circumstances. Stay
         updated with our work
         with our newsletter.</p>
     <div class="newsletter-container">
         <div>
-            <h2 class="title">
+            <h2 class="subcat-title">
                 Latest Newsletter
             </h2>
             <h3 class="subtitle">
@@ -296,7 +296,7 @@ permalink: /resources/
         display: grid;
         grid-template-columns: 2fr 3fr;
         gap: var(--p2-rem);
-        margin: var(--p2-rem) 0;
+        margin: var(--p4-rem) 0;
     }
 
     .newsletter-container .title {
