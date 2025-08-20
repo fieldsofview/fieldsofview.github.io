@@ -1,7 +1,7 @@
 ---
 layout: tool-layout
 title: Reimagining Resilience
-subtitle: A Participatory Workshop Exploring Social Protection Measures.
+subtitle: A Participatory Workshop Exploring Social Protection Measures
 category: tool
 tag: Workshop
 permalink: /tools/resilience-workshop/
@@ -24,6 +24,4 @@ summary: <p>
   The workshop also provides an opportunity for organisations, researchers, and journalists to move beyond common implementation hurdles and access issues. Instead, the focus shifts to understanding and designing a comprehensive safety net for households, using a simulation-based approach and data-driven insights.
   </p>
 impact: Reimagining Resilience is adaptable and can be tailored to represent different communities, and contexts – making it relevant to a variety of scenarios and challenges.
-gallery:
-  - /img/tools/resilience-4.webp
 ---

@@ -38,7 +38,7 @@ permalink: /about/
     </div>
 </section>
 <section id="partners" class="tab-content">
-    <h2 class="subtitle">Meet our partners</h2>
+    <h2 class="subtitle">Meet our <span>partners</span></h2>
     <hr>
     <div>
         <div class="partner-logos" id="partnerLogos">
@@ -60,7 +60,7 @@ permalink: /about/
 
 <section id="team" class="tab-content">
 
-    <h2 class="subtitle">Meet our team</h2>
+    <h2 class="subtitle">Meet our <span>team</span></h2>
     <hr>
     <div class="team-container">
         {% assign sorted_team = site.data.team | sort: "name" %}
@@ -108,7 +108,7 @@ permalink: /about/
 </section>
 
 <section id="board" class="tab-content">
-    <h2 class="subtitle">Meet our board</h2>
+    <h2 class="subtitle">Meet our <span>board</span></h2>
     <hr style="margin-bottom: var(--p2-rem);">
     <div class="board-container">
         {% assign sorted_board = site.data.board | sort: "name" %}
@@ -127,7 +127,7 @@ permalink: /about/
 </section>
 
 <section id="alumni" class="tab-content">
-    <h2 class="subtitle">Meet our alumni</h2>
+    <h2 class="subtitle">Meet our <span>alumni</span></h2>
     <hr>
     <div class="alumni-container">
         {% assign sorted_alumni = site.data.alumni | sort: "title" %}
@@ -477,6 +477,14 @@ permalink: /about/
 <script>
     const logos = document.getElementById('partnerLogos');
     let scrollAmount = 1; // speed
+
+    logos.addEventListener('mouseenter', () => {
+        scrollAmount = 0;
+    });
+
+    logos.addEventListener('mouseleave', () => {
+        scrollAmount = 1;
+    });
 
     function autoScroll() {
         if (logos.scrollLeft >= logos.scrollWidth / 2 + 15) {

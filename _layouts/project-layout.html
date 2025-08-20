@@ -1,0 +1,259 @@
+---
+layout: default-layout
+bg-url: {{page.bg-url}}
+---
+<section class="content">
+    <div class="container">
+        <div class="row">
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h2 class="about title" id="current_about">{{page.title}}</h2>
+                <hr>
+                <ul class="project-meta">
+                    {% if page.intended %}
+                    <li>
+                        <h4>Intended Audience</h4>{{page.intended}}
+                    </li>
+                    {% endif %}
+                    {% if page.keywords %}
+                    <li>
+                        <h4>Keywords</h4>{{page.keywords}}
+                    </li>
+                    {% endif %}
+                    {% if page.type %}
+                    <li>
+                        <h4>Type</h4>{{page.type}}
+                    </li>
+                    {% endif %}
+                    {% if page.duration %}
+                    <li>
+                        <h4>Duration</h4>{{page.duration}}
+                    </li>
+                    {% endif %}
+                    {% if page.players %}
+                    <li>
+                        <h4>Number of Players</h4>{{page.players}}
+                    </li>
+                    {% endif %}
+                    {% if page.notitle %}
+                    <li>{{page.notitle}}</li>
+                    {% endif %}
+                </ul>
+            </aside>
+
+            <!-- Main Content -->
+            <section class="main">
+                <!-- Videos -->
+                {% if page.video %}
+                <div class="video-wrapper">
+                    <iframe allowfullscreen src="{{ page.video }}"></iframe>
+                    <p class="caption">{{ page.vidcaption }}</p>
+                </div>
+                {% endif %}
+
+                {% if page.video2 %}
+                <div class="video-wrapper">
+                    <iframe allowfullscreen src="{{ page.video2 }}"></iframe>
+                    <p class="caption">{{ page.vidcaption2 }}</p>
+                </div>
+                {% endif %}
+
+                <!-- Description -->
+                <div class="project-description">
+                    <p class="intro">{{ page.intro }}</p>
+                    <p>{{ page.description }}</p>
+
+                    {% if page.brochure %}
+                    <a href="{{ page.brochure }}" class="download">Download Brochure</a><br><br>
+                    {% endif %}
+
+                    {% if page.brochure2 %}
+                    <a href="{{ page.brochure2 }}" class="download">Download the 74th Amendment Act Comic Book</a>
+                    {% endif %}
+
+                    <a href="mailto:info@fieldsofview.in?subject={{ page.title }}" class="mail">Mail us to know
+                        more.</a>
+
+                    {% if page.collaborations %}
+                    <h4 style="font-weight: 600; padding-top: 1rem; padding-bottom: 2rem;">Collaborations and Funders
+                    </h4>
+                    <div class="collaborations">{{ page.collaborations }}</div>
+                    {% endif %}
+
+                    {% if page.icons %}
+                    <p class="icon-attribution">{{ page.icons }}</p>
+                    {% endif %}
+
+                    {% if page.play %}
+                    <a href="{{ site.baseurl }}/events/game-sessions/" class="italic">{{ page.play }}</a>
+                    {% endif %}
+
+                    {% if page.donate %}
+                    <a href="{{ site.baseurl }}/donate/rubbish" class="italic">{{ page.donate }}</a>
+                    {% endif %}
+
+                    <h4 style="font-weight: 600; padding: 2rem 0;" id="pub-specifics" class="hidden">Publications</h4>
+                    {% for pub in site.categories['publication'] %}
+                    {% if pub.projectid contains page.ide %}
+                    <a href="{{ pub.permalink }}">
+                        <p>{{ pub.title }}</p>
+                    </a>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            document.getElementById("pub-specifics").classList.remove("hidden");
+                        });
+                    </script>
+                    {% endif %}
+                    {% endfor %}
+
+                    <!-- <a href="mailto:info@fieldsofview.in?Subject=Collaborating with FoV on {{ page.title }}"
+                        class="italic">Collaborate with us.</a>
+                    <a href="mailto:info@fieldsofview.in?Subject=Funding {{ page.title }} at FoV" class="italic">Fund
+                        this project.</a> -->
+                </div>
+
+
+                <!-- Sidebar Images -->
+                <aside class="images">
+                    <img src="{{ page.img1 }}" alt="">
+                    {% if page.img2 %}<img src="{{ page.img2 }}" alt="">{% endif %}
+                    {% if page.img3 %}<img src="{{ page.img3 }}" alt="">{% endif %}
+                </aside>
+            </section>
+        </div>
+    </div>
+</section>
+<style>
+    /* Container & Row */
+    .container {
+        /* max-width: 1200px; */
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .row {
+        display: flex;
+        /* flex-wrap: wrap; */
+        gap: 4rem;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        flex: 1 1 20%;
+        min-width: 200px;
+        max-width: 20vw;
+    }
+
+    .sidebar h2 {
+        margin-bottom: 1rem;
+    }
+
+    .project-meta {
+        list-style: none;
+        padding: 0;
+        padding-top: var(--p2-rem);
+        margin: 0;
+    }
+
+    .project-meta li {
+        margin-bottom: 1rem;
+    }
+
+    .project-meta h4 {
+        margin: 0 0 0.5rem;
+        font-weight: bold;
+    }
+
+    /* Main content */
+    .main {
+        flex: 1 1 50%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 50vw;
+        gap: 2rem;
+    }
+
+    .video-wrapper {
+        margin-bottom: 2rem;
+        text-align: center;
+        grid-column: span 2;
+    }
+
+    .video-wrapper iframe {
+        width: 100%;
+        min-height: 300px;
+        aspect-ratio: 16/9;
+        border: none;
+    }
+
+    .caption {
+        font-style: italic;
+        font-size: 0.9rem;
+        color: #555;
+    }
+
+    .project-description p {
+        margin-bottom: 1rem;
+    }
+
+    .project-description .intro {
+        font-weight: 500;
+        color: #727272;
+        font-style: italic;
+        font-size: 1.2rem;
+    }
+
+    .download,
+    .mail,
+    .italic {
+        display: inline-block;
+        /* margin-top: 1rem; */
+        font-size: 1rem;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .mail {
+        font-weight: 600;
+        text-underline-position: from-font;
+        margin-bottom: 2rem;
+    }
+
+    /* Images */
+    .images {
+        flex: 1 1 30%;
+        min-width: 200px;
+    }
+
+    .images img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Helpers */
+    .hidden {
+        display: none;
+    }
+
+    .main ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+    }
+
+    .main ol {
+        padding: 2rem 0;
+        list-style-type:lower-roman;
+        padding-left: 2rem;
+    }
+
+    .main a:hover {
+        text-decoration: underline;
+    }
+
+    * {
+        text-underline-position: from-font;
+    }
+</style>

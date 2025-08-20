@@ -17,7 +17,9 @@ layout: default-layout
         <p class="authors">{{page.subtitle}}</p>
         <p class="authors">{{page.event_date}}</p>
         <hr>
-        <a href="{{page.link}}" class="link">Publication Link</a>
+        {% if page.link %}
+        <a href="{{page.link}}" class="link" target="_blank">Publication Link</a>
+        {% endif %}
     </section>
     <section class="pub-content">
         <h2 class="title">{{page.title}}</h2>

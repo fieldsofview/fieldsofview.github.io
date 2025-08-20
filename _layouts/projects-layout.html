@@ -1,0 +1,163 @@
+---
+layout: default-layout
+---
+<section class="content">
+    <div class="container">
+        <div class="grid">
+            <!-- Sidebar: Categories -->
+            <div class="sidebar">
+                <h2 class="about title" id="all">All Projects</h2>
+                <ul>
+                    {% for category in page.categories %}
+                    <li class="about_nav" id="{{ category.ide }}">{{ category.title }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Projects -->
+            <div class="projects">
+                {% for post in site.categories['project'] %}
+                <div id="{{ post.ide }}" class="project {{ post.tag }}">
+                    <a href="{{ site.baseurl }}/projects/{{ post.ide }}">
+                        <img src="/img/projects/{{ post.ide }}-thumb.jpg" alt="{{ post.title }} thumbnail" />
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Description -->
+            <div class="description">
+                <div id="our-work-description">
+                    <p class="simple-content">
+                        Our goal is to design better policy using games and simulations. Our work involves three
+                        inter-related
+                        threads: <br><b>PolicyLab</b> where we undertake research at the intersection of art, social
+                        sciences, and technology to design games and simulations; <br><b>School of Policy</b> where we
+                        train policymakers and civil society groups in the use of these tools; <br><b>Policy in Play</b>
+                        where we design artefacts such as graphic novels and games to make policy more accessible.
+                    </p><br>
+                    <p class="simple-content">
+                        Some of our current projects include: Building a game for the UN for students of economics and
+                        sustainability studies to understand the Inclusive Wealth Indicator (IWI), an indicator proposed
+                        as a complement to the GDP and HDI; ₹ubbish! a game on waste management in Bangalore; SimCity -
+                        building simulations to understand and plan for cities in the Indian context; and building a
+                        game for the Institute of Plasma Research, a Government of India undertaking.
+                    </p>
+                </div>
+
+                {% for category in page.categories %}
+                <div class="category-desc" id="{{ category.ide }}-content">
+                    <p class="simple-content">{{ category.description }}</p>
+                </div>
+                {% endfor %}
+
+                <a href="/docs/brochures/FoVBrochure.pdf" class="mailid">Download our brochure here.</a><br/><br>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    /* Layout */
+    .content {
+        min-height: 600px;
+        padding: 2rem 1rem;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1.5fr;
+        /* sidebar / projects / description */
+        gap: 2rem;
+    }
+
+    /* Sidebar */
+    .sidebar h2 {
+        margin-bottom: 1rem;
+    }
+
+    .about_nav {
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+    }
+
+    .about_nav.active {
+        font-weight: bold;
+    }
+
+    /* Projects */
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding-top: var(--p4-rem);
+    }
+
+    .project {
+        flex: 1 1 calc(50% - 1.5rem);
+        /* 2 per row */
+    }
+
+    .project img {
+        width: 100%;
+        display: block;
+        padding-bottom: 1rem;
+        cursor: pointer;
+    }
+
+    /* Description */
+    .description {
+        padding-top: var(--p4-rem);
+
+    }
+
+    .category-desc {
+        display: none;
+        /* shown dynamically with JS */
+    }
+
+    .mailid {
+        font-size: 14pt;
+        display: inline-block;
+        margin-top: 1rem;
+        font-weight: 600;
+        text-decoration: underline;
+        text-underline-position: from-font;
+    }
+
+    .italic {
+        font-style: italic;
+        display: block;
+        margin-top: 0.5rem;
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        {% for category in page.categories %}
+        document.getElementById("{{category.ide}}").addEventListener("click", function () {
+            document.querySelectorAll(".project").forEach(el => el.style.display = "none");
+            document.querySelectorAll(".{{category.ide}}").forEach(el => el.style.display = "block");
+
+            document.querySelectorAll(".about_nav").forEach(el => el.classList.remove("active"));
+            this.classList.add("active");
+
+            document.querySelectorAll(".category-desc").forEach(el => el.style.display = "none");
+            document.getElementById("{{category.ide}}-content").style.display = "block";
+            document.getElementById("our-work-description").style.display = "none";
+        });
+        {% endfor %}
+
+        document.getElementById("all").addEventListener("click", function () {
+            document.querySelectorAll(".project").forEach(el => el.style.display = "block");
+            document.querySelectorAll(".about_nav").forEach(el => el.classList.remove("active"));
+            document.getElementById("our-work-description").style.display = "block";
+            document.querySelectorAll(".category-desc").forEach(el => el.style.display = "none");
+        });
+    });
+
+
+</script>
