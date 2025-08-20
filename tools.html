@@ -4,14 +4,16 @@ title: Tools
 permalink: /tools/
 ---
 
-<hr style="margin-top: var(--p1-rem); padding-bottom: var(--p1-rem);">
-<p class="tab-subtitle">We have integrated technology, social sciences, and art to design a suite of tools that work in
+<!-- <hr style="margin-top: var(--p1-rem); padding-bottom: var(--p1-rem);"> -->
+<div style="max-width: 60vw;">
+<p class="subtitle" style="font-size: var(--fs35); margin-bottom: var(--p2-rem); font-weight: 700;">We have integrated technology, social sciences, and art to design a suite of tools that work in
     tandem to address
-    the multi-dimensional nature of vulnerability.
-    <br>
+    the <span>multi-dimensional nature of vulnerability</span>.</p>
+<p class="tab-subtitle">
     The tools can be used individually or in combination by stakeholders seeking to better understand their
     communities and design effective resilience building mechanisms.
 </p>
+</div>
 <div class="tools-container">
 
     {% for post in site.categories['tool'] %}
@@ -20,7 +22,7 @@ permalink: /tools/
             <img src="{{site.baseurl}}{{post.main-img}}" alt="" />
             <div class="img-overlay"></div>
         </div>
-        <p class="title">{{ post.title }}</p>
+        <p class="tool-title">{{ post.title }}</p>
         <p class="subtitle">{{ post.subtitle }}</p>
         <hr>
         <p class="tag">{{ post.tag }}</p>

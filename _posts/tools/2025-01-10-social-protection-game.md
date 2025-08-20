@@ -5,10 +5,10 @@ subtitle: A Data Collection Game on Social Protection needs of communities
 category: tool
 tag: Game
 permalink: /tools/social-protection-game/
-main-img: /img/tools/spgame-img-1.jpg
+main-img: /img/tools/spgame-img-1.webp
 
-img1: /img/tools/spgame-img-2.jpg
-img2: /img/tools/spgame-img-3.jpg
+img1: /img/tools/spgame-img-1.webp
+img2: /img/tools/spgame-img-2.webp
 objective: What if communities could articulate what kind of resilience mechanisms works for them? Could that help policy strategize for resilience with more nuance?
 description: Jee-van is a game that helps people explore their expenditure priorities and their preferences for social protection measures across various scenarios. 
 summary: <p>
@@ -28,7 +28,5 @@ impact:
   The game can be customised with data tailored to specific communities and can include a variety of relevant social protection schemes and shock scenarios. 
   </p>
 gallery:
-  - /img/tools/spgame-img-4.jpg
-  - /img/tools/spgame-img-5.jpg
-  - /img/tools/spgame-img-6.jpg
+  - /img/tools/spgame-img-3.webp
 ---

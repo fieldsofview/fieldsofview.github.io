@@ -35,14 +35,14 @@ layout: default-layout
             <div style="position: relative;">
 
                 <!-- Foreground image -->
-                <img src="{{site.baseurl}}{{post.img}}" alt="" />
+                <img src="{{site.baseurl}}{{post.img}}" alt="" loading="lazy" />
 
                 <!-- Hover effect -->
                 <div class="img-overlay"></div>
             </div>
 
 
-            <p class="title">{{ post.title }}</p>
+            <p class="tool-title">{{ post.title }}</p>
             <p class="subtitle">{{ post.subtitle }}</p>
             <hr>
             <p class="tag">{{ post.tag }}</p>
@@ -106,12 +106,12 @@ layout: default-layout
             <label for="mce-EMAIL" class="visually-hidden">Email address</label>
             <input type="email" id="mce-EMAIL" name="EMAIL" placeholder="Your email address..." required>
 
-            <button class="subscribe" type="submit">Subscribe</button>
+            <button class="subscribe" type="submit">subscribe</button>
         </form>
 
     </div>
     <a href="{{site.baseurl}}/newsletter/latest" class="img-container" target="_blank">
-        <img src="{{ site.baseurl }}/img/newsletter/latest-nl-cover.png" alt="Latest newsletter cover image">
+        <img class="nl-img" src="{{ site.baseurl }}/img/newsletter/latest-nl-cover.webp" alt="Latest newsletter cover image" loading="lazy">
         <div class="img-overlay"></div>
     </a>
 

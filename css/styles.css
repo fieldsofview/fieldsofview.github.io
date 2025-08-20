@@ -10,11 +10,12 @@
   --grey-4: #e0e0e0;
   --grey-5: #f3f3f3;
   --black: #231f20;
-  --orange: #ff9874;
-  --green: #67b967;
-  --blue: #0095ff;
-  --pink: #ea7ad2;
+  --orange: #d34c1b;
+  --green: #009900;
+  --blue: #005eff;
+  --pink: #ce00a2;
   --title-color: #939393;
+  --subtitle-color: #555555;
   --body-color: #5e5e5e;
   --btn-color: #231f20;
 
@@ -53,6 +54,10 @@
 /* Global Styles */
 /* ======================================================================================== */
 
+body {
+  font-display: swap;
+}
+
 main {
   font-family: "Satoshi", var(--default-font-family);
   font-size: var(--fs18);
@@ -86,6 +91,9 @@ p {
   }
 }
 
+* {
+  font-family: "Satoshi", var(--default-font-family);
+}
 
 /* ======================================================================================== */
 /* All page content Styles */
@@ -97,6 +105,12 @@ p {
   font-size: var(--fs42);
   line-height: 124%;
   color: var(--title-color);
+}
+
+.tool-title {
+  font-size: var(--fs25);
+  font-weight: 500;
+  line-height: 248%;
 }
 
 .subtitle {
@@ -144,7 +158,8 @@ p {
   transition: box-shadow 1s ease-in-out;
   width: calc(100vw - var(--p4-rem) - 10px);
   overflow-x: scroll;
-  font-size: var(--fs18);
+  font-size: var(--fs20);
+  font-weight: 600;
 }
 
 .tab-btn {
@@ -173,9 +188,9 @@ p {
 }
 
 .tab-subtitle {
-  font-size: var(--fs20);
+  font-size: var(--fs25);
   padding: var(--p1-rem) var(--p4-rem) var(--p4-rem) 0;
-  color: var(--title-color);
+  color: var(--body-color);
   font-weight: 400;
 }
 
@@ -220,6 +235,7 @@ p {
   font-weight: 400;
   line-height: 131%;
   font-style: italic;
+  color: var(--subtitle-color);
 }
 
 .project-card hr {
@@ -314,8 +330,12 @@ p {
   cursor: pointer;
 }
 
-.newsletter-container img {
+.newsletter-container .nl-img {
   border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  height: 40vh;
+  width: 60vw;
+  object-fit: cover;
 }
 
 .newsletter-container .img-container:hover .img-overlay {

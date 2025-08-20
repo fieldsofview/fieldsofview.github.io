@@ -1,11 +1,11 @@
 ---
 layout: default-layout
 
-title: Resilience Workshop
-subtitle: Hege, Yenu, Yeshtu&#58; Reimagining Resilience
+title: Reimagining Resilience
+subtitle: A workshop exploring social protection measures.
 tag: Event
-img: /img/tools/eqlt-img-3.jpg
-tool-link: /tools/e-qlt/
+img: /img/tools/resilience-1.webp
+tool-link: /tools/resilience-workshop/
 
 category: tool-highlight
 

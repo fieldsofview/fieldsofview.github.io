@@ -9,34 +9,41 @@
         </a>
     </div>
 
-    <!-- Mobile nav toggle -->
-    <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
-        <img src="{{ site.baseurl }}/img/icons/hamburger.svg" alt="">
-    </button>
+    <div>
+        <!-- Mobile nav toggle -->
+        <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
+            <img src="{{ site.baseurl }}/img/icons/hamburger.svg" alt="">
+        </button>
 
-    <nav aria-label="Main navigation">
-        <ul id="main-nav">
-            <li class="{% if page.url == '/about/' %}active{% endif %}">
-                <a href="{{ site.baseurl }}/about/">about</a>
-            </li>
-            <li class="{% if page.url contains '/tools/' %}active{% endif %}">
-                <a href="{{ site.baseurl }}/tools/">tools</a>
-            </li>
-            <li class="group {% if page.url == '/resources/' %}active{% endif %}">
-                <a href="{{ site.baseurl }}/resources/" aria-haspopup="true" aria-expanded="false">
-                    resources
-                </a>
-                <ul class="dropdown" aria-label="submenu">
-                    <li><a href="{{ site.baseurl }}/resources/#publications">publications</a></li>
-                    <li><a href="{{ site.baseurl }}/resources/#newsletter">newsletter</a></li>
-                    <li><a href="{{ site.baseurl }}/resources/#financials">financials</a></li>
-                </ul>
-            </li>
-            <li class="{% if page.url == '/get-involved/' %}active{% endif %}">
-                <a href="{{ site.baseurl }}/get-involved/">get involved</a>
-            </li>
-        </ul>
-    </nav>
+        <nav aria-label="Main navigation">
+            <ul id="main-nav">
+                <li class="nav-close">
+                    <button class="nav-close-btn" aria-label="Close menu">
+                        <img src="{{ site.baseurl }}/img/icons/cross.svg" alt="">
+                    </button>
+                </li>
+                <li class="{% if page.url == '/about/' %}active{% endif %}">
+                    <a href="{{ site.baseurl }}/about/">about</a>
+                </li>
+                <li class="{% if page.url contains '/tools/' %}active{% endif %}">
+                    <a href="{{ site.baseurl }}/tools/">tools</a>
+                </li>
+                <li class="group {% if page.url == '/resources/' %}active{% endif %}">
+                    <a href="{{ site.baseurl }}/resources/" aria-haspopup="true" aria-expanded="false">
+                        resources
+                    </a>
+                    <ul class="dropdown" aria-label="submenu">
+                        <li><a href="{{ site.baseurl }}/resources/#publications">publications</a></li>
+                        <li><a href="{{ site.baseurl }}/resources/#newsletter">newsletter</a></li>
+                        <li><a href="{{ site.baseurl }}/resources/#financials">financials</a></li>
+                    </ul>
+                </li>
+                <li class="{% if page.url == '/get-involved/' %}active{% endif %}">
+                    <a href="{{ site.baseurl }}/get-involved/">get involved</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 
@@ -185,6 +192,23 @@
         width: clamp(20px, 3vw, 30px);
     }
 
+    .nav-close {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        padding: 0;
+    }
+
+    .nav-close-btn {
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        line-height: 1;
+        color: var(--black);
+        width: clamp(20px, 3vw, 30px);
+    }
+
     /* Sidebar styles */
     nav>ul {
         transition: transform 0.3s;
@@ -242,7 +266,7 @@
 
 <script>
     const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('header>nav>ul');
+    const navMenu = document.querySelector('header>div>nav>ul');
     const resourcesLink = document.querySelector('.group > a');
 
     // Sticky header shadow
@@ -259,6 +283,14 @@
     navToggle.addEventListener('click', function () {
         const isOpen = navMenu.classList.toggle('open');
         navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+
+    const navCloseBtn = document.querySelector('.nav-close-btn');
+
+    navCloseBtn.addEventListener('click', function () {
+        navMenu.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', false);
     });
 
     // Resources submenu (keyboard + toggle support)
