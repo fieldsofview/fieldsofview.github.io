@@ -2,50 +2,47 @@
 layout: default-layout
 ---
 
-<section class="content">
-    <div class="tabs">
-        <a class="tab-btn active" href="{{site.baseurl}}/resources/#publications">Publications</a>
-        <a class="tab-btn" href="{{site.baseurl}}/resources/#newsletter">Newsletter</a>
-        <a class="tab-btn" href="{{site.baseurl}}/resources/#financials">Financials</a>
-    </div>
+<nav aria-label="Resources tabs" class="tabs">
+    <a class="tab-btn active" href="{{site.baseurl}}/resources/#publications">Publications</a>
+    <a class="tab-btn" href="{{site.baseurl}}/resources/#newsletter">Newsletter</a>
+    <a class="tab-btn" href="{{site.baseurl}}/resources/#financials">Financials</a>
+</nav>
 
-    <a class="link" href="{{ site.baseurl }}/resources/#publications">
-        <img src="/img/icons/arrow-light-left.svg" alt="back"
-            style="height: 12px; display: inline;">&nbsp;&nbsp;&nbsp;Back to all publications</a>
+<a class="link" href="{{ site.baseurl }}/resources/#publications">
+    <img src="/img/icons/arrow-light-left.svg" alt="" style="height: 12px; display: inline;">&nbsp;&nbsp;&nbsp;Back
+    to all publications</a>
 
-    <div class="pub-container">
-        <div class="info">
-            <p class="authors">{{page.subtitle}}</p>
-            <p class="authors">{{page.event_date}}</p>
-            <hr>
-            <a href="{{page.link}}" class="link">Publication Link</a>
-        </div>
-        <div class="pub-content">
-            <h2 class="title">{{page.title}}</h2>
-            <h3 class="subtitle">Abstract</h3>
-            <p>{{page.abstract}}</p>
+<div class="pub-container">
+    <section class="info">
+        <p class="authors">{{page.subtitle}}</p>
+        <p class="authors">{{page.event_date}}</p>
+        <hr>
+        <a href="{{page.link}}" class="link">Publication Link</a>
+    </section>
+    <section class="pub-content">
+        <h2 class="title">{{page.title}}</h2>
+        <h3 class="subtitle">Abstract</h3>
+        <p>{{page.abstract}}</p>
 
-            {% if page.bibtex != null %}
-            <div>
-                <h3 class="subtitle">Citation</h3>
-                <p>{{page.title}}</p>
-                <p>{{page.subtitle}}</p>
-                <p>{{page.event_date}}
-                    <a class="bib" style="cursor: pointer;">[bib]</a>
-                </p>
+        {% if page.bibtex != null %}
+        <div>
+            <h3 class="subtitle">Citation</h3>
+            <p>{{page.title}}</p>
+            <p>{{page.subtitle}}</p>
+            <p>{{page.event_date}}
+                <a class="bib" style="cursor: pointer;" aria-label="Show bibtex">[bib]</a>
+            </p>
 
-                <div class="bibtex">
-                    <div class="outer">
-                        <p class="inner">{{page.bibtex}}</p>
-                    </div>
+            <div class="bibtex">
+                <div class="outer">
+                    <p class="inner">{{page.bibtex}}</p>
                 </div>
             </div>
-            {% endif %}
         </div>
-    </div>
-    </div>
+        {% endif %}
+    </section>
+</div>
 
-</section>
 
 <style>
     .tab-btn.active {
@@ -63,7 +60,7 @@ layout: default-layout
     }
 
     .pub-container {
-        padding-top: var(--p4-rem);
+        padding-top: var(--p2-rem);
         display: grid;
         grid-template-columns: 1fr 6fr;
         gap: var(--p2-rem);
@@ -130,12 +127,13 @@ layout: default-layout
         .tabs {
             max-width: 90vw;
         }
-        
+
         .bibtex {
-             max-width: 80vw;
+            max-width: 80vw;
         }
 
-        p, h2.title{
+        p,
+        h2.title {
             max-width: 100%;
         }
     }
@@ -143,7 +141,7 @@ layout: default-layout
 <script>
 
     function setToolsNavTop() {
-        const nav = document.querySelector('nav');
+        const nav = document.querySelector('header');
         const resourcesNav = document.querySelector('.tabs');
         if (nav && resourcesNav) {
             // Get nav's height including margin-bottom

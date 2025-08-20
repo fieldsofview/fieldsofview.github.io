@@ -1,7 +1,7 @@
 ---
 layout: tool-layout
-title: Social Protection Game
-subtitle: Understanding social protection
+title: Jee-van
+subtitle: A Data Collection Game on Social Protection needs of communities 
 category: tool
 tag: Game
 permalink: /tools/social-protection-game/
@@ -9,17 +9,24 @@ main-img: /img/tools/spgame-img-1.jpg
 
 img1: /img/tools/spgame-img-2.jpg
 img2: /img/tools/spgame-img-3.jpg
-objective: Jee-van is a game designed to gather community needs related to social protection measures and to bring to light the various types of shocks they experience.
-description: Jee-van, is set in a fictional world where players manage their orchard and makes decisions in terms of allocating expenditures towards the health of their trees, earning potential and future prospects of their orchard. In the game, players navigate through various shocks making strategic choices towards ensuring their wellbeing. Through the game, data on people’s priorities on expenditure and their preference for social protection measures is captured. 
+objective: What if communities could articulate what kind of resilience mechanisms works for them? Could that help policy strategize for resilience with more nuance?
+description: Jee-van is a game that helps people explore their expenditure priorities and their preferences for social protection measures across various scenarios. 
 summary: <p>
- The game is intented to be used by CSOs to understand their community’s priorities during shocks like climatic events or loss of livelihood, which expenditures they prioritise, and what are their needs from social protection. The data that comes from the game, can be used by CSOs to advocate for their community's needs from social protection with policymakers. 
+  Set in a fictional world, players manage their own orchard and make decisions such as allocating resources to maintain the health of their trees, enhance earning potential, and secure the future of their orchard. As they navigate different shocks—such as climatic events or loss of livelihood—players make strategic choices to safeguard their well-being. 
   </p>
-usecase: <ul>
-    <li> For CSOs to understand the expenditure priorities of the communities they work with. </li>
-    <li> For CSOs to understand the priorities and needs of their communtiies, during shocks. </li>
-    <li> To use this data towards advocacy. </li>
-  </ul>
-impact: Through the game, communities are able to articulate their expenditure priorities, their preference for social  protection, and shift in priorities during shocks.
+  <p>
+  Throughout the game, data is collected on participants’ spending priorities and their preferences for social protection, especially in times of crisis. 
+  </p>
+  <p>
+  Developed to support civil society organisations, the game provides insights into how communities prioritise their spending during normal times and in response to shocks. It helps identify which expenses are considered essential, and what kind of support individuals need from social protection systems. 
+  </p>
+impact: 
+  <p>
+  Jee-van empowers communities to express their needs and preferences, while enabling organisations to use this data for evidence-based advocacy and to inform programme and policy design. 
+  </p>
+  <p>
+  The game can be customised with data tailored to specific communities and can include a variety of relevant social protection schemes and shock scenarios. 
+  </p>
 gallery:
   - /img/tools/spgame-img-4.jpg
   - /img/tools/spgame-img-5.jpg

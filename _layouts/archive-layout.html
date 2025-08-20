@@ -11,7 +11,7 @@ layout: default-layout
         <a href="{{site.baseurl}}/resources/#financials" class="tab-btn" data-tab="financials">Financials</a>
     </div>
     <a class="back-link" href="{{ site.baseurl }}/resources/#archive">
-        <img src="/img/icons/arrow-light-left.svg" alt="back"
+        <img src="/img/icons/arrow-light-left.svg" alt=""
             style="height: 12px; display: inline;">&nbsp;&nbsp;&nbsp;Back to archive</a>
     <div class="tool-content">
         <div>
@@ -119,7 +119,7 @@ layout: default-layout
     });
 
     function setToolsNavTop() {
-        const nav = document.querySelector('nav');
+        const nav = document.querySelector('header');
         const resourcesNav = document.querySelector('.tabs');
         if (nav && resourcesNav) {
             // Get nav's height including margin-bottom

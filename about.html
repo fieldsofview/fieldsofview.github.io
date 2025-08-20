@@ -4,138 +4,140 @@ title: About
 permalink: /about/
 ---
 
-<section class="content">
-    <div class="tabs">
-        <button class="tab-btn active" data-tab="about">About</button>
-        <button class="tab-btn" data-tab="partners">Partners</button>
-        <button class="tab-btn" data-tab="team">Team</button>
-        <button class="tab-btn" data-tab="board">Board</button>
-        <button class="tab-btn" data-tab="alumni">Alumni</button>
-    </div>
+<nav aria-label="About page tabs" class="tabs">
+    <button class="tab-btn active" data-tab="about">About</button>
+    <button class="tab-btn" data-tab="partners">Partners</button>
+    <button class="tab-btn" data-tab="team">Team</button>
+    <button class="tab-btn" data-tab="board">Board</button>
+    <button class="tab-btn" data-tab="alumni">Alumni</button>
+</nav>
 
-    <div class="about-content tab-content" id="about">
-        <div>
-            <p class="title">
+<section class="about-content tab-content" id="about">
+    <div>
+        <!-- <p class="title">
                 Our approach towards engaging with the nuances of <span>vulnerability</span>
-            </p>
-            <p style="padding-bottom: var(--p2-rem);">
-                We are an inter-disciplinary team developing tools to engage with wicked problems. We focus on
-                addressing vulnerability through data-informed and participatory policy-making.  
-            </p>
-            <p style="padding-bottom: var(--p2-rem);">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <a href="{{ site.baseurl }}/tools/">learn more about our tools</a>
-        </div>
-
-        <div class="about-images-grid">
-            <img src="{{ site.baseurl }}/img/about/img1.svg" alt="">
-            <img src="{{ site.baseurl }}/img/about/img2.svg" alt="">
-            <img src="{{ site.baseurl }}/img/about/img3.svg" alt="">
-            <img src="{{ site.baseurl }}/img/about/img4.svg" alt="">
-        </div>
-    </div>
-    <div id="partners" class="tab-content">
-        <p class="subtitle">We have been <span>collaboratively working with</span></p>
-        <div>
-            <div class="partner-logos">
-                {% for logo in site.data.partners %}
-                <img src="{{ site.baseurl }}{{ logo }}" alt="Partner logo for {{ project.project }}">
-                {% endfor %}
-            </div>
-        </div>
+            </p> -->
+        <p style="padding-bottom: var(--p2-rem);">
+            We are an inter-disciplinary team developing games, simulations, and workshops to engage with wicked
+            problems. We focus on addressing vulnerability through data-informed and participatory policy-making.
+        </p>
+        <p style="padding-bottom: var(--p2-rem);">
+            For the last 12 years, we have been making tools to help individuals, organisations, and policymakers
+            understand the messiness and complexity of their landscapes.
+        </p>
+        <a href="{{ site.baseurl }}/tools/">learn more about our tools</a>
     </div>
 
-    <div id="team" class="tab-content">
+    <div class="about-images-grid">
+        <img src="{{ site.baseurl }}/img/about/img1.svg" alt="">
+        <img src="{{ site.baseurl }}/img/about/img2.svg" alt="">
+        <img src="{{ site.baseurl }}/img/about/img3.svg" alt="">
+        <img src="{{ site.baseurl }}/img/about/img4.svg" alt="">
+    </div>
+</section>
+<section id="partners" class="tab-content">
+    <h2 class="subtitle">Meet our <span>partners</span></h2>
+    <div>
+        <div class="partner-logos" id="partnerLogos">
+            {% for logo in site.data.partners %}
+            {% assign filename = logo | split: '/' | last %}
+            {% assign filename = filename | split: '.' | first %}
+            <img src="{{ site.baseurl }}{{ logo }}" alt="{{ filename }}">
+            {% endfor %}
+            <div></div>
+            <!-- duplicate once for infinite loop -->
+            {% for logo in site.data.partners %}
+            <img src="{{ site.baseurl }}{{ logo }}" alt="{{ filename }}">
+            {% endfor %}
+            <div></div>
+        </div>
 
-        <p class="subtitle">Our <span>team</span></p>
-        <div class="team-container">
-            {% assign sorted_team = site.data.team | sort: "name" %}
+    </div>
+</section>
 
-            {% for member in sorted_team %}
-            <div class="team-member">
-                <div class="team-img-container">
-                    <img src="{{ site.baseurl }}{{ member.img }}" alt="{{ member.name }}">
+<section id="team" class="tab-content">
 
-                    <div class="team-overlay">
+    <h2 class="subtitle">Meet our <span>team</span></h2>
+    <div class="team-container">
+        {% assign sorted_team = site.data.team | sort: "name" %}
 
-                        <button class="team-arrow-open" aria-label="Show details">
-                            <img class="team-card" src="{{ site.baseurl }}/img/about/team-card.svg" alt="">
-                        </button>
+        {% for member in sorted_team %}
+        <div class="team-member">
+            <div class="team-img-container">
+                <img src="{{ site.baseurl }}{{ member.img }}" alt="{{ member.name }}">
 
-                        <div class="overlay-details">
-                            <div class="col-left">
-                                <div class="row-1">
-                                    <p class="team-name">{{ member.name }}</p>
-                                    <p>{{ member.designation }}</p>
-                                </div>
-                                <div class="row-2">
-                                    <a style="font-size: var(--fs13); background-color: #D9D9D9; height: min-content;padding:calc(var(--p1-rem) * 0.3) var(--p1-rem); border-radius: 20px;"
-                                        href="mailto:{{ member.email }}">Email</a>
-                                    {% if member.linkedin %}
-                                    <a style="font-size: var(--fs13); background-color: #0095FF; height: min-content;padding:calc(var(--p1-rem) * 0.3) var(--p1-rem); border-radius: 20px; color: white;"
-                                        href="{{ member.linkedin }}" target="_blank">LinkedIn</a>
-                                    {% endif %}
-                                </div>
+                <div class="team-overlay">
+
+                    <button class="team-arrow-open" aria-label="Show details">
+                        <img class="team-card" src="{{ site.baseurl }}/img/about/team-card.svg" alt="">
+                    </button>
+
+                    <div class="overlay-details">
+                        <div class="col-left">
+                            <div class="row-1">
+                                <p class="team-name">{{ member.name }}</p>
+                                <p>{{ member.designation }}</p>
                             </div>
-                            <img src="{{ site.baseurl }}{{ member.logo }}" alt="" style="height: 100%;width: auto;">
-
+                            <div class="row-2">
+                                <a style="font-size: var(--fs13); background-color: #D9D9D9; height: min-content;padding:calc(var(--p1-rem) * 0.3) var(--p1-rem); border-radius: 20px;"
+                                    href="mailto:{{ member.email }}">Email</a>
+                                {% if member.linkedin %}
+                                <a style="font-size: var(--fs13); background-color: #0095FF; height: min-content;padding:calc(var(--p1-rem) * 0.3) var(--p1-rem); border-radius: 20px; color: white;"
+                                    href="{{ member.linkedin }}" target="_blank">LinkedIn</a>
+                                {% endif %}
+                            </div>
                         </div>
-                    </div>
-                    <div class="team-details">
-                        <img class="team-arrow-close" src="{{ site.baseurl }}/img/icons/arrow-blue-down.svg" alt="">
-                        <p class="team-description">{{ member.description }}</p>
-                        <a class="team-email" href="mailto:{{ member.email }}">{{ member.email }}</a>
+                        <img src="{{ site.baseurl }}{{ member.logo }}" alt="" style="height: 100%;width: auto;">
+
                     </div>
                 </div>
+                <div class="team-details">
+                    <img class="team-arrow-close" src="{{ site.baseurl }}/img/icons/arrow-blue-down.svg" alt="close button">
+                    <p class="team-description">{{ member.description }}</p>
+                    <a class="team-email" href="mailto:{{ member.email }}">{{ member.email }}</a>
+                </div>
             </div>
-            {% endfor %}
         </div>
+        {% endfor %}
     </div>
-
-    <div id="board" class="tab-content">
-        <p class="subtitle">Our <span>board</span></p>
-        <div class="board-container">
-            {% assign sorted_board = site.data.board | sort: "name" %}
-
-            {% for member in sorted_board %}
-            <div class="board-member">
-                <p class="name">{{ member.name }}</p>
-                <p class="designation">{{ member.designation }}</p>
-                {% if member.linkedin %}
-                <a style="font-size: var(--fs13); background-color: #0095FF; height: min-content; width: min-content; padding:calc(var(--p1-rem) * 0.3) var(--p1-rem); border-radius: 20px; color: white;"
-                    href="{{ member.linkedin }}" target="_blank">LinkedIn</a>
-                {% endif %}
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-
-    <div id="alumni" class="tab-content">
-        <p class="subtitle">Our <span>alumni</span></p>
-        <div class="alumni-container">
-            {% assign sorted_alumni = site.data.alumni | sort: "title" %}
-
-            {% for member in sorted_alumni %}
-            <div class="alumni-member">
-                <img src="{{ site.baseurl }}/img/about/alumni/{{ member.img }}" alt="">
-                <p class="name">{{ member.title }}</p>
-            </div>
-            {% endfor %}
-
-        </div>
-    </div>
-
-
 </section>
-<style>
-    .tabs {
-        max-width: 90vw;
-    }
 
-    .content {
-        padding-top: 0;
+<section id="board" class="tab-content">
+    <h2 class="subtitle">Meet our <span>board</span></h2>
+    <div class="board-container">
+        {% assign sorted_board = site.data.board | sort: "name" %}
+
+        {% for member in sorted_board %}
+        <div class="board-member">
+            <p class="name">{{ member.name }}</p>
+            <p class="designation">{{ member.designation }}</p>
+            {% if member.linkedin %}
+            <a style="font-size: var(--fs13); background-color: #0095FF; height: min-content; width: min-content; padding:calc(var(--p1-rem) * 0.3) var(--p1-rem); border-radius: 20px; color: white;"
+                href="{{ member.linkedin }}" target="_blank">LinkedIn</a>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="alumni" class="tab-content">
+    <h2 class="subtitle">Meet our <span>alumni</span></h2>
+    <div class="alumni-container">
+        {% assign sorted_alumni = site.data.alumni | sort: "title" %}
+
+        {% for member in sorted_alumni %}
+        <div class="alumni-member">
+            <img src="{{ site.baseurl }}/img/about/alumni/{{ member.img }}" alt="">
+            <p class="name">{{ member.title }}</p>
+        </div>
+        {% endfor %}
+
+    </div>
+</section>
+
+<style>
+    .tabs::after {
+        right: var(--p4-rem);
     }
 
     .tab-btn.active {
@@ -162,6 +164,7 @@ permalink: /about/
         aspect-ratio: 2/3;
         display: flex;
         align-items: stretch;
+        max-width: 350px;
     }
 
     .team-img-container {
@@ -291,8 +294,14 @@ permalink: /about/
         gap: var(--p2-rem);
         margin-bottom: var(--p4-rem);
         padding-bottom: var(--p2-rem);
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        scroll-behavior: auto;
     }
 
+    .partner-logos::-webkit-scrollbar {
+        display: none;
+    }
 
     .partner-logos img {
         height: 80px;
@@ -323,15 +332,18 @@ permalink: /about/
         width: 100%;
         height: auto;
         object-fit: contain;
-        padding: 1.5rem var(--p3-rem);
+        /* padding: var(--p1-rem) var(--p3-rem); */
     }
 
     .about-content {
         display: grid;
-        grid-template-columns: 5fr 7fr;
-        gap: 7rem;
-        padding-bottom: var(--p8-rem);
-        padding-top: var(--p4-rem);
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-columns: 5fr 7fr; */
+        gap: var(--p6rem);
+        /* padding-bottom: var(--p4-rem); */
+        /* padding-top: var(--p4-rem); */
+        padding: var(--p2-rem) 0;
+        align-items: center;
     }
 
     .about-content a {
@@ -451,6 +463,21 @@ permalink: /about/
     }
 </style>
 <script>
+    const logos = document.getElementById('partnerLogos');
+    let scrollAmount = 1; // speed
+
+    function autoScroll() {
+        if (logos.scrollLeft >= logos.scrollWidth / 2 + 15) {
+            // reset seamlessly to the start half
+            logos.scrollLeft = 0;
+        } else {
+            logos.scrollLeft += scrollAmount;
+        }
+    }
+    // autoScroll();
+    setInterval(autoScroll, 30); // adjust speed by changing interval or scrollAmount
+
+
     document.querySelectorAll('.team-arrow-open').forEach(btn => {
         btn.addEventListener('click', function (e) {
             const card = btn.closest('.team-member');
@@ -465,7 +492,7 @@ permalink: /about/
     });
 
     function setToolsNavTop() {
-        const nav = document.querySelector('nav');
+        const nav = document.querySelector('header');
         const resourcesNav = document.querySelector('.tabs');
         if (nav && resourcesNav) {
             // Get nav's height including margin-bottom
@@ -495,7 +522,7 @@ permalink: /about/
 
     const tabs = document.querySelectorAll('.tab-btn');
     const sections = document.querySelectorAll('.tab-content');
-    const nav = document.querySelector('nav');
+    const nav = document.querySelector('header');
     const tabsDiv = document.querySelector('.tabs');
 
     // Click handler

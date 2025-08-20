@@ -5,61 +5,60 @@
 layout: default-layout
 ---
 
-<section class="content">
-    <div class="hero-container">
-        <div class="hero-content">
-            <p class="title">
-                We make tools to
-                engage with the nuances of
-                <span>vulnerability</span>
-            </p>
-            <p class="description">
+<section class="hero-container">
+    <div class="hero-content">
+        <h1 class="title">
+            We make tools to
+            engage with the nuances of
+            <span>vulnerability</span>
+        </h1>
+        <!-- <p class="description">
                 We are an inter-disciplinary team developing tools to engage with
                 wicked problems. We focus on addressing vulnerability through
                 data-informed and participatory policy-making.
-            </p>
-            <a href="{{ site.baseurl }}/about/">learn more about us!</a>
-        </div>
-        <div class="illustration">
-            {% include illustration.html %}
-        </div>
+            </p> -->
+        <a href="{{ site.baseurl }}/about/">learn more about us!</a>
     </div>
-    {% if site.categories['tool-highlight'] %}
-    <div>
-        <p class="subtitle">
-            We have been working on
-            <span>lorem ipsum</span>
-        </p>
-        <div class="projects-container">
-            {% for post in site.categories['tool-highlight'] %}
-            <a href="{{ site.baseurl }}{{ post.tool-link }}" class="project-card">
-                <div style="position: relative;">
-
-                    <!-- Foreground image -->
-                    <img src="{{site.baseurl}}{{post.img}}" alt="{{post.title}}" />
-
-                    <!-- Hover effect -->
-                    <div class="img-overlay"></div>
-                </div>
-
-
-                <p class="title">{{ post.title }}</p>
-                <p class="subtitle">{{ post.subtitle }}</p>
-                <hr>
-                <p class="tag">{{ post.tag }}</p>
-            </a>
-
-
-            {% endfor %}
-        </div>
+    <div class="illustration">
+        {% include illustration.html %}
     </div>
+</section>
+{% if site.categories['tool-highlight'] %}
+<section>
+    <h2 class="subtitle">
+        Take a look at our
+        <span>tools</span>
+    </h2>
+    <div class="projects-container">
+        {% for post in site.categories['tool-highlight'] %}
+        <a href="{{ site.baseurl }}{{ post.tool-link }}" class="project-card">
+            <div style="position: relative;">
 
-    {% endif %}
+                <!-- Foreground image -->
+                <img src="{{site.baseurl}}{{post.img}}" alt="" />
+
+                <!-- Hover effect -->
+                <div class="img-overlay"></div>
+            </div>
 
 
-    <hr style="margin: var(--p6-rem) 0" />
+            <p class="title">{{ post.title }}</p>
+            <p class="subtitle">{{ post.subtitle }}</p>
+            <hr>
+            <p class="tag">{{ post.tag }}</p>
+        </a>
 
-    <!-- {% if site.categories['update'] %}
+
+        {% endfor %}
+    </div>
+</section>
+
+{% endif %}
+
+
+<hr style="margin: var(--p6-rem) 0" />
+
+<!-- {% if site.categories['update'] %}
     <div class="updates-container">
         {% for post in site.categories['update'] %}
         <div class="update-card">
@@ -78,41 +77,43 @@ layout: default-layout
     </div>
     {% endif %} -->
 
-    <!-- LinkedIn Feed -->
+<!-- LinkedIn Feed -->
+<section>
+    <h2 class="subtitle">
+        Here are our latest
+        <span>updates</span>
+    </h2>
+    <div style="position: relative; padding-top: var(--p3-rem);">
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-cf90864e-841f-4a44-94bc-4ebfce2c81c2" data-elfsight-app-lazy></div>
+    </div>
+
+</section>
+
+
+<section class="newsletter-container">
     <div>
-        <p class="subtitle">
-            We have been working on
-            <span>lorem ipsum</span>
-        </p>
-        <div style="position: relative; padding-top: var(--p3-rem);">
-            <script src="https://static.elfsight.com/platform/platform.js" async></script>
-            <div class="elfsight-app-cf90864e-841f-4a44-94bc-4ebfce2c81c2" data-elfsight-app-lazy></div>
-        </div>
+        <h2 class="subtitle">
+            Subscribe to our
+            <span>
+                newsletter
+            </span>
+        </h2>
+        <form
+            action="https://fieldsofview.us6.list-manage.com/subscribe/post?u=13324657f9f9f9443ccb89cb1&amp;id=685a335226"
+            method="post" id="subscribe-form" name="subscribe-form" target="_blank" novalidate>
+
+            <label for="mce-EMAIL" class="visually-hidden">Email address</label>
+            <input type="email" id="mce-EMAIL" name="EMAIL" placeholder="Your email address..." required>
+
+            <button class="subscribe" type="submit">Subscribe</button>
+        </form>
 
     </div>
-
-
-    <div class="newsletter-container">
-        <div>
-            <p class="subtitle">
-                Subscribe to our
-                <span>
-                    newsletter
-                </span>
-            </p>
-            <form
-                action="https://fieldsofview.us6.list-manage.com/subscribe/post?u=13324657f9f9f9443ccb89cb1&amp;id=685a335226"
-                method="post" id="subscribe-form" name="subscribe-form" target="_blank" novalidate>
-                <input type="email" placeholder="Your email address..." name="EMAIL" required>
-                <button class="subscribe" type="submit">subscribe</button>
-            </form>
-        </div>
-        <a href="{{site.baseurl}}/newsletter/latest" class="img-container" target="_blank">
-            <img src="{{ site.baseurl }}/img/newsletter/latest-nl-cover.png" alt="Newsletter cover image">
-            <div class="img-overlay"></div>
-        </a>
-
-    </div>
+    <a href="{{site.baseurl}}/newsletter/latest" class="img-container" target="_blank">
+        <img src="{{ site.baseurl }}/img/newsletter/latest-nl-cover.png" alt="Latest newsletter cover image">
+        <div class="img-overlay"></div>
+    </a>
 
 </section>
 
@@ -125,6 +126,12 @@ layout: default-layout
         display: grid;
         grid-template-columns: 1.15fr 2fr;
         height: 90vh;
+        padding-bottom: 15vh;
+        align-items: center;
+    }
+
+    .hero-container .title {
+        padding-bottom: var(--p2-rem);
     }
 
     .hero-container a {
@@ -150,11 +157,6 @@ layout: default-layout
 
     .hero-container a:hover::before {
         filter: opacity(1);
-    }
-
-    .hero-content .description {
-        padding: var(--p3-rem) 0;
-        max-width: 22vw;
     }
 
     .hero-illustration img {

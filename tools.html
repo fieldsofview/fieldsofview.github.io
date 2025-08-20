@@ -3,31 +3,32 @@ layout: default-layout
 title: Tools
 permalink: /tools/
 ---
-<section class="content">
-    <p class="title">
-        Here are a few tools we have <br>
-        been <span>working on</span>
-    </p>
-    <div class="tools-container">
 
-        {% for post in site.categories['tool'] %}
-        <a href="{{site.baseurl}}{{post.url}}" class="project-card">
-            <div style="position: relative;">
-                <img src="{{site.baseurl}}{{post.main-img}}" alt="project 1" />
-                <div class="img-overlay"></div>
-            </div>
+<hr style="margin-top: var(--p1-rem); padding-bottom: var(--p1-rem);">
+<p class="tab-subtitle">We have integrated technology, social sciences, and art to design a suite of tools that work in
+    tandem to address
+    the multi-dimensional nature of vulnerability.
+    <br>
+    The tools can be used individually or in combination by stakeholders seeking to better understand their
+    communities and design effective resilience building mechanisms.
+</p>
+<div class="tools-container">
 
+    {% for post in site.categories['tool'] %}
+    <a href="{{site.baseurl}}{{post.url}}" class="project-card">
+        <div style="position: relative;">
+            <img src="{{site.baseurl}}{{post.main-img}}" alt="" />
+            <div class="img-overlay"></div>
+        </div>
+        <p class="title">{{ post.title }}</p>
+        <p class="subtitle">{{ post.subtitle }}</p>
+        <hr>
+        <p class="tag">{{ post.tag }}</p>
+    </a>
+    {% endfor %}
 
-            <p class="title">{{ post.title }}</p>
-            <p class="subtitle">{{ post.subtitle }}</p>
-            <hr>
-            <p class="tag">{{ post.tag }}</p>
-        </a>
-        {% endfor %}
+</div>
 
-    </div>
-
-</section>
 
 <style>
     .tools-container {
@@ -51,6 +52,8 @@ permalink: /tools/
         margin: auto;
         border-radius: 10px;
     }
+
+
 
     @media (max-width: 768px) {
         .tools-container {

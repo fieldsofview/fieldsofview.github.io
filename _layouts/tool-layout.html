@@ -2,11 +2,11 @@
 layout: default-layout
 ---
 
-<div class="tools-nav">
+<nav aria-label="Tool tabs" class="tools-nav">
     {% for post in site.categories['tool'] %}
     <a class="{% if post.title == page.title %}active{% endif %}" href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
     {% endfor %}
-</div>
+</nav>
 <section class="content">
     <div class="tool-container">
         <div class="tool-overview">
@@ -18,8 +18,9 @@ layout: default-layout
             <p class="objective">{{ page.objective }}</p>
             <p>{{ page.description }}</p>
             {{ page.summary }}
-            <div class="usecase">{{ page.usecase }}</div>
             <div class="impact">{{ page.impact }}</div>
+            <p>For more information or to explore collaboration opportunities, please contact us at <a
+                    href="mailto:info@fieldsofview.in">info@fieldsofview.in</a>.</p>
         </div>
         <div class="images">
             {% if page.video-link %}
@@ -55,12 +56,14 @@ layout: default-layout
         position: sticky;
         z-index: 9;
         background: white;
-        padding: var(--p1-rem) var(--p4-rem) var(--p2-rem) var(--p4-rem);
+        /* padding: var(--p1-rem) var(--p4-rem) var(--p2-rem) var(--p4-rem); */
+        padding-bottom: var(--p1-rem);
         display: flex;
         align-items: center;
         gap: var(--p2-rem);
         transition: box-shadow 1s ease-in-out;
-        width: 100vw;
+        /* width: 100vw; */
+        width: calc(100vw - var(--p4-rem) - 10px);
         overflow-x: scroll;
         font-size: var(--fs18);
     }
@@ -68,7 +71,7 @@ layout: default-layout
     .tools-nav::after {
         content: "";
         position: absolute;
-        left: var(--p4-rem);
+        left: 0;
         right: var(--p4-rem);
         bottom: 0;
         height: 1px;
@@ -93,8 +96,9 @@ layout: default-layout
 
     .tool-container {
         display: grid;
-        grid-template-columns: 2fr 3fr;
-        gap: var(--p6-rem);
+        /* grid-template-columns: 2fr 3fr; */
+        grid-template-columns: 1fr 1fr;
+        gap: var(--p8-rem);
         padding: var(--p4-rem) 0;
         /* height: min-content; */
         align-items: stretch;
@@ -106,7 +110,8 @@ layout: default-layout
         display: flex;
         flex-direction: column;
         gap: var(--p1-rem);
-
+        max-width: 40vw;
+        /* margin: auto; */
     }
 
     .tool-overview .subtitle {
@@ -213,7 +218,7 @@ layout: default-layout
 </style>
 <script>
     function setToolsNavTop() {
-        const nav = document.querySelector('nav');
+        const nav = document.querySelector('header');
         const toolsNav = document.querySelector('.tools-nav');
         if (nav && toolsNav) {
             // Get nav's height including margin-bottom

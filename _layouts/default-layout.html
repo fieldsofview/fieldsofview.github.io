@@ -3,10 +3,11 @@
 {% include head.html %}
 
 <body>
+    <a href="#main-content" style="position: absolute; top: -100px;">Skip to main content</a>
     {% include nav.html %}
-    <div>
+    <main id="main-content">
         {{content}}
-    </div>
+    </main>
     {% include footer.html %}
 </body>
 
