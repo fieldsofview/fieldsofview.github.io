@@ -55,10 +55,6 @@
 /* Global Styles */
 /* ======================================================================================== */
 
-html, body {
-  overflow-x: hidden;   /* hides horizontal scroll */
-}
-
 body {
   font-display: swap;
 }
