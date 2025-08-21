@@ -121,7 +121,7 @@ layout: default-layout
     }
 
     .mailid {
-        font-size: 14pt;
+        font-size: 0.9rem;
         display: inline-block;
         margin-top: 1rem;
         font-weight: 600;
@@ -133,6 +133,12 @@ layout: default-layout
         font-style: italic;
         display: block;
         margin-top: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+        .grid {
+            grid-template-columns: 1fr;
+        }
     }
 </style>
 <script>

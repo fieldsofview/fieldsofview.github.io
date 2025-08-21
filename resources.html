@@ -15,7 +15,8 @@ permalink: /resources/
 {% assign publications = site.posts | where: "category", "publications" %}
 {% assign pub_subcategories = publications | map: "subcategory" | uniq %}
 <section class="tab-content active" id="tab-publications">
-    <p style="padding-top: var(--p2-rem);">We want to push the boundaries of how we think of and engage with vulnerability. Take a look
+    <p style="padding-top: var(--p2-rem);">We want to push the boundaries of how we think of and engage with
+        vulnerability. Take a look
         at the ways we have
         been shifting the conversation around resilience.</p>
     {% for subcat in pub_subcategories %}
@@ -82,7 +83,8 @@ permalink: /resources/
 {% assign nl_subcategories = newsletters | map: "subcategory" | uniq %}
 
 <section class="tab-content" id="tab-newsletter">
-    <p style="padding-top: var(--p2-rem);">Our approach to solving problems is constantly adapting to changing circumstances. Stay
+    <p style="padding-top: var(--p2-rem);">Our approach to solving problems is constantly adapting to changing
+        circumstances. Stay
         updated with our work
         with our newsletter.</p>
     <div class="newsletter-container">
@@ -100,12 +102,20 @@ permalink: /resources/
             <form
                 action="https://fieldsofview.us6.list-manage.com/subscribe/post?u=13324657f9f9f9443ccb89cb1&amp;id=685a335226"
                 method="post" id="subscribe-form" name="subscribe-form" target="_blank" novalidate>
-                <input type="email" placeholder="Your email address..." name="EMAIL" required>
+
+                <label for="mce-EMAIL" class="visually-hidden">Email address</label>
+                <input type="email" id="mce-EMAIL" name="EMAIL" placeholder="Your email address..." required>
+
+
                 <button class="subscribe" type="submit">subscribe</button>
+                <div id="email-error" style="color: red; font-size: 0.9em; margin-top: 5px; display: none;">
+                    Please enter a valid email
+                </div>
             </form>
         </div>
         <a href="{{site.baseurl}}/newsletter/latest" class="img-container" style="margin: auto;" target="_blank">
-            <img class="nl-img" src="{{ site.baseurl }}/img/newsletter/latest-nl-cover.webp" alt="Latest newsletter cover image">
+            <img class="nl-img" src="{{ site.baseurl }}/img/newsletter/latest-nl-cover.webp"
+                alt="Latest newsletter cover image">
 
             <div class="img-overlay"></div>
 
@@ -439,4 +449,26 @@ permalink: /resources/
 
     window.addEventListener('DOMContentLoaded', activateTabFromHash);
     window.addEventListener('hashchange', activateTabFromHash);
+
+    const form = document.getElementById('subscribe-form');
+    const emailInput = document.getElementById('mce-EMAIL');
+    const errorMsg = document.getElementById('email-error');
+
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    form.addEventListener('submit', function (e) {
+        if (!isValidEmail(emailInput.value)) {
+            e.preventDefault(); // stop form submission
+            errorMsg.style.display = 'block'; // show error
+            emailInput.focus();
+        } else {
+            errorMsg.style.display = 'none'; // hide error if valid
+        }
+    });
+
+    emailInput.addEventListener('input', () => {
+        errorMsg.style.display = 'none';
+    });
 </script>

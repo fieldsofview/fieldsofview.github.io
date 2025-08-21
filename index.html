@@ -98,9 +98,7 @@ layout: default-layout
     <div>
         <h2 class="subtitle">
             Subscribe to our
-            <span>
-                newsletter
-            </span>
+            <span>newsletter</span>
         </h2>
         <form
             action="https://fieldsofview.us6.list-manage.com/subscribe/post?u=13324657f9f9f9443ccb89cb1&amp;id=685a335226"
@@ -109,22 +107,24 @@ layout: default-layout
             <label for="mce-EMAIL" class="visually-hidden">Email address</label>
             <input type="email" id="mce-EMAIL" name="EMAIL" placeholder="Your email address..." required>
 
-            <button class="subscribe" type="submit">subscribe</button>
-        </form>
 
+            <button class="subscribe" type="submit">subscribe</button>
+            <div id="email-error" style="color: red; font-size: 0.9em; margin-top: 5px; display: none;">
+                Please enter a valid email
+            </div>
+        </form>
     </div>
     <a href="{{site.baseurl}}/newsletter/latest" class="img-container" target="_blank">
         <img class="nl-img" src="{{ site.baseurl }}/img/newsletter/latest-nl-cover.webp"
             alt="Latest newsletter cover image" loading="lazy">
         <div class="img-overlay"></div>
     </a>
-
 </section>
 
 <style>
-    /* * { */
-    /* border: 1px solid black; */
-    /* } */
+    /* * {
+    border: 1px solid black;
+    } */
 
     .subtitle {
         padding-bottom: var(--p1-rem);
@@ -139,7 +139,7 @@ layout: default-layout
         grid-template-columns: 1.15fr 2fr; */
 
         height: 90vh;
-        padding-bottom: 15vh;
+        margin-bottom: 10vh;
         align-items: center;
         text-align: center;
     }
@@ -261,9 +261,41 @@ layout: default-layout
             grid-template-columns: 1fr;
         }
 
-        .linkedin-feed {
-            max-width: 70vw;
-            margin: auto;
-        }
     }
 </style>
+<script>
+    function resizeHero() {
+        const navbarHeight = document.querySelector('header').offsetHeight;
+        const hero = document.querySelector('.hero-container');
+        if (window.innerWidth >= 992) {
+            hero.style.height = `${window.innerHeight - navbarHeight}px`;
+        } else {
+            hero.style.height = 'auto'; // mobile: reset to natural height
+        }
+    }
+
+    window.addEventListener('resize', resizeHero);
+    window.addEventListener('load', resizeHero);
+
+    const form = document.getElementById('subscribe-form');
+    const emailInput = document.getElementById('mce-EMAIL');
+    const errorMsg = document.getElementById('email-error');
+
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    form.addEventListener('submit', function (e) {
+        if (!isValidEmail(emailInput.value)) {
+            e.preventDefault(); // stop form submission
+            errorMsg.style.display = 'block'; // show error
+            emailInput.focus();
+        } else {
+            errorMsg.style.display = 'none'; // hide error if valid
+        }
+    });
+
+    emailInput.addEventListener('input', () => {
+        errorMsg.style.display = 'none';
+    });
+</script>

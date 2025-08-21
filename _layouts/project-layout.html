@@ -245,7 +245,7 @@ bg-url: {{page.bg-url}}
 
     .main ol {
         padding: 2rem 0;
-        list-style-type:lower-roman;
+        list-style-type: lower-roman;
         padding-left: 2rem;
     }
 
@@ -253,7 +253,29 @@ bg-url: {{page.bg-url}}
         text-decoration: underline;
     }
 
-    * {
+    a {
         text-underline-position: from-font;
+    }
+
+    @media (max-width: 1024px) {
+        .main {
+            grid-template-columns: 1fr;
+            max-width: 100%;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .sidebar {
+            max-width: 100%;
+        }
+
+        .video-wrapper {
+            grid-column: span 1;
+        }
+
     }
 </style>
