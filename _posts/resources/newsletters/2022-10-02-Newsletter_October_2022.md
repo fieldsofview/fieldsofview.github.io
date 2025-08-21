@@ -1,5 +1,4 @@
 ---
-layout: newsletter-layout
 category: newsletter
 subcategory: 2022
 event_date: October 2022

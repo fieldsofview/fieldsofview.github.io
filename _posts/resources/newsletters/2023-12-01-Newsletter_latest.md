@@ -1,5 +1,4 @@
 ---
-layout: newsletter-layout
 permalink: /newsletter/latest
 ---
 <html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraph.org/schema/"> <head>

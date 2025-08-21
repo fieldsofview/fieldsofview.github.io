@@ -1,5 +1,4 @@
 ---
-layout: newsletter-layout
 category: newsletter
 subcategory: 2023
 event_date: December 2023

@@ -80,13 +80,13 @@ layout: default-layout
     {% endif %} -->
 
 <!-- LinkedIn Feed -->
-<section style="margin-top: var(--p6-rem);">
+<section class="linkedin-feed">
     <h2 class="subtitle">
         Here are our latest
         <span>updates</span>
     </h2>
     <hr>
-    <div class="linkedin-feed" style="position: relative; padding-top: var(--p3-rem);">
+    <div style="position: relative; padding-top: var(--p3-rem);">
         <script src="https://static.elfsight.com/platform/platform.js" async></script>
         <div class="elfsight-app-cf90864e-841f-4a44-94bc-4ebfce2c81c2" data-elfsight-app-lazy></div>
     </div>
@@ -128,11 +128,15 @@ layout: default-layout
 
     main {
         padding-top: 0;
-        overflow: hidden;
     }
 
     .subtitle {
         padding-bottom: var(--p1-rem);
+    }
+
+    .linkedin-feed {
+        margin-top: var(--p6-rem);
+        overflow-x: hidden;
     }
 
     /* ======================================================================================== */
