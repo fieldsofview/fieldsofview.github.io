@@ -1,4 +1,5 @@
 ---
+layout: none
 category: newsletter
 subcategory: 2023
 event_date: January 2023

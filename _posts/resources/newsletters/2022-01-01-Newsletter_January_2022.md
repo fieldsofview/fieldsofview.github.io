@@ -1,4 +1,5 @@
 ---
+layout: none
 category: newsletter
 subcategory: 2022
 event_date: January 2022

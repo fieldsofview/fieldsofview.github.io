@@ -1,4 +1,5 @@
 ---
+layout: none
 category: newsletter
 subcategory: 2025
 event_date: August 2025
