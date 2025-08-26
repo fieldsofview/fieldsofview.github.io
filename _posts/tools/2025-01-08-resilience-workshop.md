@@ -4,7 +4,7 @@ title: Reimagining Resilience
 subtitle: A Participatory Workshop Exploring Social Protection Measures
 category: tool
 tag: Workshop
-permalink: /tools/resilience-workshop/
+permalink: /tools/reimagining-resilience/
 main-img: /img/tools/resilience-1.webp
 # live-site: https://www.eqlt.in
 

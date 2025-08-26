@@ -4,7 +4,7 @@ title: Jee-van
 subtitle: A Data Collection Game on Social Protection Needs of Communities 
 category: tool
 tag: Game
-permalink: /tools/social-protection-game/
+permalink: /tools/jee-van/
 main-img: /img/tools/spgame-img-1.webp
 
 img1: /img/tools/spgame-img-1.webp
