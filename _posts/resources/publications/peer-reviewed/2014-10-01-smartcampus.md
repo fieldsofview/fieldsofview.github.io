@@ -3,7 +3,7 @@ layout: publication-layout
 title: Modelling technology, policy and behaviour to manage electricity consumption.
 subtitle: Harsha Krishna, Onkar Hoysala, Murali Krishna G., Bharath M. Palavalli and Eswaran Subrahmanian
 category: publications
-subcategory: Peer Reviewed
+subcategory: 2014
 event_date: Oct 2014
 permalink: /publications/smart-campus/
 

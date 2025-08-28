@@ -7,6 +7,9 @@ layout: default-layout
     <a class="{% if post.title == page.title %}active{% endif %}" href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
     {% endfor %}
 </nav>
+<a class="back-link" href="{{ site.baseurl }}/tools/">
+    <img src="/img/icons/arrow-green-left.svg" alt="" style="height: 12px; width: 15px; display: inline;">&nbsp;&nbsp;&nbsp;Back
+    to all tools</a>
 <section class="content">
     <div class="tool-container">
         <div class="tool-overview">
@@ -61,6 +64,11 @@ layout: default-layout
 </section>
 
 <style>
+    .back-link {
+        display: none;
+        color: var(--green);
+    }
+
     .tools-nav {
         position: sticky;
         z-index: 9;
@@ -97,11 +105,6 @@ layout: default-layout
 
     .tools-nav a.active {
         color: var(--green);
-    }
-
-    .back-link {
-        font-size: var(--fs16);
-        color: var(--grey-2);
     }
 
     .tool-container {
@@ -262,6 +265,14 @@ layout: default-layout
 
         .tool-overview {
             max-width: 90vw;
+        }
+
+        .tools-nav {
+            display: none;
+        }
+
+        .back-link {
+            display: block;
         }
     }
 </style>

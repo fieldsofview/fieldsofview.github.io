@@ -3,7 +3,7 @@ layout: publication-layout
 title: Scenario based analysis of change in fares for public transport, ridership, congestion and emissions in Bangalore
 subtitle: Yashwin Iddya, Srinidhi Santosh, Suruchi Soren, Bharath M. Palavalli
 category: publications
-subcategory: Peer Reviewed
+subcategory: 2020
 event_date: Mar 2020
 permalink: /publications/bmtcfarescenarios/
 

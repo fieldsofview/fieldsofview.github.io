@@ -3,7 +3,7 @@ layout: publication-layout
 title: Social Inclusion through Play, A New Methodology for Public Transport Planning in the Indian Context
 subtitle: Bharath M. Palavalli, Harsha Krishna, Srijan Sil and Anirudh Thimmaiah
 category: publications
-subcategory: Peer Reviewed
+subcategory: 2019
 event_date: Oct 2019
 permalink: /publications/thredbo2019/
 

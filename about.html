@@ -27,6 +27,7 @@ permalink: /about/
             understand the messiness and complexity of their landscapes. We focus on addressing vulnerability through
             data-informed and participatory policy-making.
         </p>
+        <!-- Backgroung image - blue -->
         <a href="{{ site.baseurl }}/tools/">learn more about our tools</a>
     </div>
 
@@ -213,9 +214,11 @@ permalink: /about/
 
     .team-member .team-arrow-close {
         cursor: pointer;
-        height: var(--p1-rem);
+        height: 0.8rem;
         width: auto;
         object-fit: contain;
+        justify-self: center;
+        margin-bottom: var(--p1-rem);
 
     }
 
@@ -242,9 +245,12 @@ permalink: /about/
         transition: top 0.4s cubic-bezier(.77, 0, .18, 1);
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
         height: 100%;
+
+        &>.team-email {
+            margin-top: auto;
+            align-self: flex-start;
+        }
     }
 
     .overlay-details {
@@ -289,6 +295,8 @@ permalink: /about/
         font-size: 0.95em;
         text-decoration: underline;
         word-break: break-all;
+        text-align: left;
+        margin-bottom: var(--p1-rem);
     }
 
     /* ================= PARTNERS ==================== */
@@ -366,17 +374,18 @@ permalink: /about/
     .about-content a::before {
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        top: -0.1rem;
+        left: -0.5rem;
+        right: -0.5rem;
+        bottom: -0.1rem;
+        background-image: url("../img/hover/about-bg-blue.svg");
         background-position: center;
         background-repeat: no-repeat;
+        background-size: cover;
         filter: opacity(0);
         transition: filter 0.3s ease-in-out;
         mix-blend-mode: multiply;
-        background-image: url("../img/hover/about-bg.svg");
-        background-size: cover;
+        z-index: -1;
     }
 
     .about-content a:hover::before {
@@ -452,10 +461,17 @@ permalink: /about/
 
     .alumni-member img {
         border-radius: 10px;
+        width: 220px;
+        height: 146px;
+        object-fit: cover;
     }
 
     @media (max-width: 768px) {
 
+        .tabs {
+            display: none;
+            height: 0;
+        }
 
         .tabs::after {
             height: 0;
@@ -471,6 +487,14 @@ permalink: /about/
 
         .team-container {
             grid-template-columns: 1fr;
+        }
+
+        .team-details {
+            justify-content: space-between;
+
+            &>.team-email {
+                margin-top: 0;
+            }
         }
     }
 </style>
@@ -547,14 +571,20 @@ permalink: /about/
 
     // Click handler
     tabs.forEach(btn => {
+        const tabId = btn.dataset.tab;
+        const section = document.getElementById(tabId);
+        // check if mobile
+        if (screen.width < 900) {
+            section.style.scrollMarginTop = nav.offsetHeight + 10 + 'px';
+        } else {
+            section.style.scrollMarginTop = nav.offsetHeight + tabsDiv.offsetHeight + 10 + 'px';
+        }
         btn.addEventListener('click', function () {
             tabs.forEach(b => b.classList.remove('active'));
             sections.forEach(tc => tc.classList.remove('active'));
 
             btn.classList.add('active');
-            const tabId = btn.dataset.tab;
-            const section = document.getElementById(tabId);
-            section.style.scrollMarginTop = nav.offsetHeight + tabsDiv.offsetHeight + 'px';
+
 
             if (section) {
                 section.scrollIntoView({ behavior: 'smooth', block: 'start' });

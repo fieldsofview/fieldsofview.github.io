@@ -1,7 +1,6 @@
 ---
 layout: default-layout
 ---
-
 <section class="hero-container">
     <div class="hero-content">
         <div class="illustration">
@@ -42,9 +41,10 @@ layout: default-layout
 
 
             <p class="tool-title">{{ post.title }}</p>
+            <hr style="margin: 0.6rem 0;">
             <p class="subtitle">{{ post.subtitle }}</p>
             <!-- <hr> -->
-            <p class="tag" style="margin-top: var(--p1-rem);">{{ post.tag }}</p>
+            <!-- <p class="tag" style="margin-top: var(--p1-rem);">{{ post.tag }}</p> -->
         </a>
 
 
@@ -113,7 +113,7 @@ layout: default-layout
             </div>
         </form>
     </div>
-    <a href="{{site.baseurl}}/newsletter/latest" class="img-container" target="_blank">
+    <a href="{{site.baseurl}}/newsletter/august-2025" class="img-container" target="_blank">
         <img class="nl-img" src="{{ site.baseurl }}/img/newsletter/latest-nl-cover.webp"
             alt="Latest newsletter cover image" loading="lazy">
         <div class="img-overlay"></div>
@@ -135,16 +135,16 @@ layout: default-layout
 
     .linkedin-feed {
         margin-top: var(--p6-rem);
-        /* overflow-x: hidden; */
 
         &>div {
             display: flex;
             flex-wrap: wrap;
             gap: var(--p4-rem);
+            overflow-x: scroll;
         }
 
         & iframe {
-            flex: 1 1 30%;
+            flex: 0 1 30%;
         }
     }
 
@@ -161,9 +161,16 @@ layout: default-layout
         grid-template-columns: 1.15fr 2fr; */
 
         height: 90vh;
-        margin-bottom: 10vh;
-        align-items: center;
+        /* margin-bottom: 10vh; */
+        /* align-items: center; */
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+
+        &>div {
+            padding-bottom: var(--p8-rem);
+        }
     }
 
     .hero-container .title {
@@ -183,16 +190,18 @@ layout: default-layout
     .hero-container a::before {
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        top: -0.1rem;
+        left: -0.5rem;
+        right: -0.5rem;
+        bottom: -0.1rem;
+        background-image: url("../img/hover/about-bg.svg");
         background-position: center;
         background-repeat: no-repeat;
+        background-size: cover;
         filter: opacity(0);
         transition: filter 0.3s ease-in-out;
         mix-blend-mode: multiply;
-        background-image: url("../img/hover/about-bg.svg");
+        z-index: -1;
     }
 
     .hero-container a:hover::before {
@@ -282,21 +291,31 @@ layout: default-layout
             grid-template-columns: 1fr;
         }
 
+        .linkedin-feed>div {
+            gap: 0;
+            flex-wrap: nowrap;
+
+            & iframe {
+                transform: scale(0.9);
+                transform-origin: top left;
+            }
+        }
+
     }
 </style>
 <script>
-    function resizeHero() {
-        const navbarHeight = document.querySelector('header').offsetHeight;
-        const hero = document.querySelector('.hero-container');
-        if (window.innerWidth >= 992) {
-            hero.style.height = `${window.innerHeight - navbarHeight}px`;
-        } else {
-            hero.style.height = 'auto'; // mobile: reset to natural height
-        }
-    }
+    // function resizeHero() {
+    //     const navbarHeight = document.querySelector('header').offsetHeight;
+    //     const hero = document.querySelector('.hero-container');
+    //     if (window.innerWidth >= 992) {
+    //         hero.style.height = `${window.innerHeight - navbarHeight}px`;
+    //     } else {
+    //         hero.style.height = 'auto'; // mobile: reset to natural height
+    //     }
+    // }
 
-    window.addEventListener('resize', resizeHero);
-    window.addEventListener('load', resizeHero);
+    // window.addEventListener('resize', resizeHero);
+    // window.addEventListener('load', resizeHero);
 
     const form = document.getElementById('subscribe-form');
     const emailInput = document.getElementById('mce-EMAIL');

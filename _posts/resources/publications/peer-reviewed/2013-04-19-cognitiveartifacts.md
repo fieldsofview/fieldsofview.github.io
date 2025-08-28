@@ -3,7 +3,8 @@ layout: publication-layout
 title: Context, collaboration and complexity in designing - The pivotal role of cognitive artifacts.
 subtitle: Subrahmanian Eswaran, Reich Yoram, Sruthi Krishnan
 category: publications
-subcategory: Peer Reviewed
+subcategory: 2013
+# subcategory: Peer Reviewed
 event_date: Apr 2013
 permalink: /publications/cognitiveartifacts/
 

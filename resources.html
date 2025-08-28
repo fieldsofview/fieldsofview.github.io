@@ -4,7 +4,6 @@ title: Resources
 permalink: /resources/
 ---
 
-
 <nav aria-label="Resources tabs" class="tabs">
     <button class="tab-btn active" data-tab="publications">Publications</button>
     <button class="tab-btn" data-tab="newsletter">Newsletter</button>
@@ -15,10 +14,10 @@ permalink: /resources/
 {% assign publications = site.posts | where: "category", "publications" %}
 {% assign pub_subcategories = publications | map: "subcategory" | uniq %}
 <section class="tab-content active" id="tab-publications">
-    <p style="padding-top: var(--p2-rem);">We want to push the boundaries of how we think of and engage with
+    <!-- <p style="padding-top: var(--p2-rem);">We want to push the boundaries of how we think of and engage with
         vulnerability. Take a look
         at the ways we have
-        been shifting the conversation around resilience.</p>
+        been shifting the conversation around resilience.</p> -->
     {% for subcat in pub_subcategories %}
     {% assign visible_posts = publications | where: "subcategory", subcat | slice: 0, 3 %}
     {% assign hidden_posts = publications | where: "subcategory", subcat | slice: 3, 99 %}
@@ -83,10 +82,10 @@ permalink: /resources/
 {% assign nl_subcategories = newsletters | map: "subcategory" | uniq %}
 
 <section class="tab-content" id="tab-newsletter">
-    <p style="padding-top: var(--p2-rem);">Our approach to solving problems is constantly adapting to changing
+    <!-- <p style="padding-top: var(--p2-rem);">Our approach to solving problems is constantly adapting to changing
         circumstances. Stay
         updated with our work
-        with our newsletter.</p>
+        with our newsletter.</p> -->
     <div class="newsletter-container">
         <div>
             <h2 class="subcat-title">
@@ -96,16 +95,15 @@ permalink: /resources/
                 Reimagining Resilience
             </h3>
 
-            <a class="link" href="{{site.baseurl}}/newsletter/latest" target="_blank"> read newsletter <img
+            <a class="link" href="{{site.baseurl}}/newsletter/august-2025" target="_blank"> read newsletter <img
                     style="display: inline;" src="{{ site.baseurl }}/img/icons/arrow-pink-right.svg" alt=""></a>
-            <p class="subscribe-p">Subscribe to our <span>newsletter</span></p>
-            <form
+            <!-- <p class="subscribe-p">Subscribe to our <span>newsletter</span></p> -->
+            <form style="margin-top: var(--p2-rem);"
                 action="https://fieldsofview.us6.list-manage.com/subscribe/post?u=13324657f9f9f9443ccb89cb1&amp;id=685a335226"
                 method="post" id="subscribe-form" name="subscribe-form" target="_blank" novalidate>
 
                 <label for="mce-EMAIL" class="visually-hidden">Email address</label>
                 <input type="email" id="mce-EMAIL" name="EMAIL" placeholder="Your email address..." required>
-
 
                 <button class="subscribe" type="submit">subscribe</button>
                 <div id="email-error" style="color: red; font-size: 0.9em; margin-top: 5px; display: none;">
@@ -113,7 +111,7 @@ permalink: /resources/
                 </div>
             </form>
         </div>
-        <a href="{{site.baseurl}}/newsletter/latest" class="img-container" style="margin: auto;" target="_blank">
+        <a href="{{site.baseurl}}/newsletter/august-2025" class="img-container" style="margin: auto;" target="_blank">
             <img class="nl-img" src="{{ site.baseurl }}/img/newsletter/latest-nl-cover.webp"
                 alt="Latest newsletter cover image">
 
@@ -341,6 +339,10 @@ permalink: /resources/
 
     .newsletter-container .subscribe {
         font-size: var(--fs18);
+
+        &::before {
+            background-image: url("../img/hover/subscribe-bg-pink.svg");
+        }
     }
 
     .newsletter-list {
@@ -365,6 +367,10 @@ permalink: /resources/
     }
 
     @media (max-width: 768px) {
+
+        .tabs {
+            display: none;
+        }
 
         .resource-list,
         .newsletter-container,

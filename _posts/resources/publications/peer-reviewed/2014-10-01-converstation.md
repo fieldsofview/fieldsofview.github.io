@@ -3,7 +3,7 @@ layout: publication-layout
 title: An Interdisciplinary, Dialogic Approach to Develop an Electronic Device to Enhance Freedom and Mobility of Women in Public Spaces in the Indian Context - Illustrated by the Case of Convers[t]ation.
 subtitle: Yashvanth M. Kondi, Daksh V., Sruthi Krishnan, Madhav Rao
 category: publications
-subcategory: Peer Reviewed
+subcategory: 2014
 event_date: Oct 2014
 permalink: /publications/converstation/
 

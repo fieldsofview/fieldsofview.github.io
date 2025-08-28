@@ -3,7 +3,7 @@ layout: publication-layout
 title: Developing Resilience Scenarios and Strategies through Participatory Simulations – Case of Metropolitan Chennai - Case Study 3
 subtitle: Poornima Dore, Sruthi Parija and Simrat Swani
 category: publications
-subcategory: Peer Reviewed
+subcategory: 2019
 event_date: Sep 2019
 permalink: /publications/tataresilience/
 

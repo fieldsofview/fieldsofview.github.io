@@ -3,7 +3,8 @@ layout: publication-layout
 title: Designing Energy Policy through the Indian Energy Game.
 subtitle: Debraj Roy, Michael Harold Lees, Bharath M. Palavalli, Karin Pfeffer, M.A.Peter Sloot
 category: publications
-subcategory: Peer Reviewed
+subcategory: 2014
+# subcategory: Peer Reviewed
 event_date: May 2014
 permalink: /publications/emergenceslums/
 

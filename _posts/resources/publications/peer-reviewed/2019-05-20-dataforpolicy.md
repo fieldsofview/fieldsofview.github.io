@@ -3,7 +3,7 @@ layout: publication-layout
 title: Imagining Futures - A generative scenario&#45;based methodology to improve planning and decision&#45;support systems for policymakers
 subtitle: Vaibhav Dutt, Srijan Sil, Harsha Krishna and Bharath M. Palavalli
 category: publications
-subcategory: Peer Reviewed
+subcategory: 2019
 event_date: May 2019
 permalink: /publications/dataforpolicy/
 

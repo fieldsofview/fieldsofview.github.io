@@ -13,7 +13,7 @@
   --black: #231f20;
   --orange: #d34c1b;
   --green: #009900;
-  --blue: #005eff;
+  --blue: #0182de;
   --pink: #ce00a2;
   --title-color: #939393;
   --subtitle-color: #555555;
@@ -115,7 +115,8 @@ hr {
 .tool-title {
   font-size: var(--fs25);
   font-weight: 500;
-  line-height: 248%;
+  /* line-height: 248%; */
+  padding-top: var(--p2-rem);
 }
 
 .subtitle {
@@ -129,13 +130,13 @@ hr {
 .title span {
   font-family: Libre Baskerville, var(--default-font-family);
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .subtitle span {
   font-family: Libre Baskerville, var(--default-font-family);
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .img-overlay {
@@ -348,5 +349,10 @@ hr {
 
   .newsletter-container .nl-img {
     width: 100%;
+  }
+
+  .tabs,
+  .tools-nav {
+    flex-wrap: wrap;
   }
 }

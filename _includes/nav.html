@@ -25,20 +25,38 @@
                 <li class="{% if page.url == '/about/' %}active{% endif %}">
                     <a href="{{ site.baseurl }}/about/">about</a>
                 </li>
+                <ul class="inner-nav">
+                    <!-- <li><a href="{{ site.baseurl }}/about/#about">about</a></li> -->
+                    <li><a href="{{ site.baseurl }}/about/#partners">partners</a></li>
+                    <li><a href="{{ site.baseurl }}/about/#team">team</a></li>
+                    <li><a href="{{ site.baseurl }}/about/#board">board</a></li>
+                    <li><a href="{{ site.baseurl }}/about/#alumni">alumni</a></li>
+                </ul>
                 <li class="{% if page.url contains '/tools/' %}active{% endif %}">
                     <a href="{{ site.baseurl }}/tools/">tools</a>
                 </li>
+                <ul class="inner-nav">
+                    {% for post in site.categories['tool'] %}
+                    <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                </ul>
                 <li class="group {% if page.url == '/resources/' %}active{% endif %}">
                     <a href="{{ site.baseurl }}/resources/" aria-haspopup="true" aria-expanded="false">
                         resources
                     </a>
                     <ul class="dropdown" aria-label="submenu">
                         <li><a href="{{ site.baseurl }}/resources/#publications">publications</a></li>
-                        <li><a href="{{ site.baseurl }}/resources/#newsletter">newsletter</a></li>
+                        <li><a href="{{ site.baseurl }}/resources/#newsletter">newsletters</a></li>
                         <li><a href="{{ site.baseurl }}/resources/#financials">financials</a></li>
                         <li><a href="{{ site.baseurl }}/projects">archive</a></li>
                     </ul>
                 </li>
+                <ul class="inner-nav">
+                    <li><a href="{{ site.baseurl }}/resources/#publications">publications</a></li>
+                    <li><a href="{{ site.baseurl }}/resources/#newsletter">newsletters</a></li>
+                    <li><a href="{{ site.baseurl }}/resources/#financials">financials</a></li>
+                    <li><a href="{{ site.baseurl }}/projects">archive</a></li>
+                </ul>
                 <li class="{% if page.url == '/get-involved/' %}active{% endif %}">
                     <a href="{{ site.baseurl }}/get-involved/">get involved</a>
                 </li>
@@ -61,7 +79,7 @@
         align-items: center;
         z-index: 10;
         background-color: white;
-        padding: var(--p2-rem) var(--p4-rem);
+        padding: var(--p2-rem) var(--p1-rem) var(--p2-rem) var(--p4-rem);
         /* margin-bottom: var(--p8-rem); */
         transition: box-shadow 1s ease-in-out;
 
@@ -81,6 +99,10 @@
         margin-right: var(--p2-rem);
     }
 
+    .inner-nav {
+        display: none;
+    }
+
     nav>ul>li {
         padding: var(--p1-rem);
         cursor: pointer;
@@ -88,7 +110,7 @@
     }
 
     nav>ul>li::before {
-        content: "";
+        /* content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -99,7 +121,20 @@
         filter: opacity(0);
         transition: filter 0.3s ease-in-out;
         mix-blend-mode: multiply;
-        pointer-events: none;
+        pointer-events: none; */
+        content: "";
+        position: absolute;
+        top: var(--p1-rem);
+        left: calc(var(--p1-rem) * 0.5);
+        right: calc(var(--p1-rem) * 0.5);
+        bottom: var(--p1-rem);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: opacity(0);
+        transition: filter 0.3s ease-in-out;
+        mix-blend-mode: multiply;
+        z-index: -1;
     }
 
     nav>ul>li:hover::before {
@@ -114,15 +149,15 @@
         background-image: url("/img/hover/about-nav.svg");
     }
 
-    nav>ul>li:nth-child(3)::before {
+    nav>ul>li:nth-child(4)::before {
         background-image: url("/img/hover/tools-nav.svg");
     }
 
-    nav>ul>li:nth-child(4)::before {
+    nav>ul>li:nth-child(6)::before {
         background-image: url("/img/hover/resources-bg.svg");
     }
 
-    nav>ul>li:nth-child(5)::before {
+    nav>ul>li:nth-child(8)::before {
         background-image: url("/img/hover/get-involved-bg.svg");
     }
 
@@ -194,12 +229,11 @@
     }
 
     .nav-close {
-        width: 100%;
-        display: flex;
-        justify-content: flex-start;
+        width: 0;
         padding: 0;
-        display: none;
+        visibility: hidden;
     }
+
 
     .nav-close-btn {
         background: none;
@@ -235,24 +269,34 @@
             display: flex;
         }
 
+        .inner-nav {
+            display: block;
+            margin-left: var(--p2-rem);
+            padding-left: var(--p1-rem);
+            border-left: 1px solid var(--grey-4);
+            margin-bottom: var(--p2-rem);
+            font-size: var(--fs20);
+        }
+
         nav>ul {
             position: fixed;
             top: 0;
             right: 0;
+            margin: auto;
             height: 100vh;
-            width: 70vw;
-            max-width: 320px;
+            width: 100vw;
+            /* max-width: 320px; */
             background: #fff;
             flex-direction: column;
             align-items: flex-start;
-            padding: var(--p4-rem) var(--p2-rem) var(--p2-rem) var(--p2-rem);
+            padding: var(--p4-rem) var(--p3-rem) var(--p2-rem) var(--p2-rem);
             box-shadow: -2px 0 16px rgba(0, 0, 0, 0.08);
             transform: translateX(120%);
             z-index: 99;
         }
 
         nav>ul.open {
-            transform: translateX(10%);
+            transform: translateX(0);
         }
 
         nav {
@@ -264,7 +308,10 @@
         }
 
         .nav-close {
-            display: block;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            visibility: visible;
         }
 
 
@@ -274,7 +321,6 @@
 <script>
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('header>div>nav>ul');
-    const resourcesLink = document.querySelector('.group > a');
 
     // Sticky header shadow
     document.addEventListener('scroll', function () {
@@ -300,13 +346,12 @@
         navToggle.setAttribute('aria-expanded', false);
     });
 
-    // Resources submenu (keyboard + toggle support)
-    resourcesLink.addEventListener('click', function (e) {
-        const expanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', !expanded);
-        const dropdown = this.nextElementSibling;
-        dropdown.style.opacity = expanded ? '0' : '1';
-        dropdown.style.visibility = expanded ? 'hidden' : 'visible';
+    const links = document.querySelectorAll('header nav a');
+    links.forEach(link => {
+        link.addEventListener('click', function () {
+            navMenu.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', false);
+        });
     });
 
 </script>

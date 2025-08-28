@@ -3,7 +3,7 @@ layout: publication-layout
 title: Governance Gaps in Scenario based Planning - An Agent-based Modelling Approach
 subtitle: Srinidhi Santosh
 category: publications
-subcategory: Peer Reviewed
+subcategory: 2019
 event_date: Jun 2019
 permalink: /publications/ICFC_paper/
 

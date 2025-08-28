@@ -3,7 +3,7 @@ layout: publication-layout
 title: Networks of Care&#58; Partnerships for Relief and Support during the COVID-19 Second Wave in Karnataka
 subtitle: Harsha K, Srinidhi Santosh, Ursula Uday, Vaibhav Dutt
 category: publications
-subcategory: Peer Reviewed
+subcategory: 2022
 event_date: Feb 2022
 permalink: /publications/networksofcare-covid-19/
 

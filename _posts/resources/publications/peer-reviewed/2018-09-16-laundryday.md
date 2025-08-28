@@ -3,7 +3,7 @@ layout: publication-layout
 title: Laundry Day&#58; an illustrated children's book
 subtitle: Mathangi Subramanian and Shambhavi Singh
 category: publications
-subcategory: Peer Reviewed
+subcategory: 2018
 event_date: Sep 2018
 permalink: /publications/laundryday/
 

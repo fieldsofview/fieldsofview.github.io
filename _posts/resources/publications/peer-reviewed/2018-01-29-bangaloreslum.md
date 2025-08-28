@@ -3,7 +3,7 @@ layout: publication-layout
 title: Survey-based socio-economic data from slums in Bangalore, India
 subtitle: Debraj Roy, Bharath M. Palavalli, Niveditha Menon, Robin King, Karin Pfeffer, Michael Lees and Peter M.A. Sloot
 category: publications
-subcategory: Peer Reviewed
+subcategory: 2018
 event_date: Jan 2018
 permalink: /publications/slums/
 

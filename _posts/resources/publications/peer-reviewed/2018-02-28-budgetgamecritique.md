@@ -3,7 +3,7 @@ layout: publication-layout
 title: Budget 2018 and Interactive Media&#58; How to Design Nuanced Games on Complex Topics
 subtitle: Bharath M. Palavalli and Sruthi Krishnan
 category: publications
-subcategory: Peer Reviewed
+subcategory: 2018
 event_date: Feb 2018
 permalink: /publications/budget2018/
 

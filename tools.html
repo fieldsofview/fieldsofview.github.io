@@ -24,9 +24,10 @@ permalink: /tools/
             <div class="img-overlay"></div>
         </div>
         <p class="tool-title">{{ post.title }}</p>
-        <p class="subtitle">{{ post.subtitle }}</p>
         <hr>
-        <p class="tag">{{ post.tag }}</p>
+
+        <p class="subtitle">{{ post.subtitle }}</p>
+        <!-- <p class="tag">{{ post.tag }}</p> -->
     </a>
     {% endfor %}
 
@@ -45,18 +46,6 @@ permalink: /tools/
         padding-top: var(--p5-rem);
         align-items: center;
         gap: var(--p4-rem);
-    }
-
-    .tools-container .project-card {
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .tools-container img {
-        max-height: 100%;
-        width: auto;
-        margin: auto;
-        border-radius: 10px;
     }
 
     @media (max-width: 768px) {

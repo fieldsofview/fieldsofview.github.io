@@ -8,15 +8,15 @@ permalink: /get-involved/
         <div>
             <h2 class="title">We want to <span>hear from you</span></h2>
             <div class="contact-items">
-                <img src="{{ site.baseurl }}/img/icons/phone.svg" alt="">
-                <span>Phone : +91 80 40977237</span>
-                <img src="{{ site.baseurl }}/img/icons/email.svg" alt="">
-                <span>E-mail :
+                <!-- <img src="{{ site.baseurl }}/img/icons/phone.svg" alt=""> -->
+                <p><b>Phone</b> : +91 80 40977237</p>
+                <!-- <img src="{{ site.baseurl }}/img/icons/email.svg" alt=""> -->
+                <p><b>E-mail</b> :
                     <a href="mailto:info@fieldsofview.in">info@fieldsofview.in</a>
-                </span>
-                <img src="{{ site.baseurl }}/img/icons/location.svg" alt="">
-                <span>Address : Fields of View, #1915, 5th Cross, 18th A Main, JP Nagar II Phase, Bangalore, 560
-                    078.</span>
+                </p>
+                <!-- <img src="{{ site.baseurl }}/img/icons/location.svg" alt=""> -->
+                <p><b>Address</b> : Fields of View, #1915, 5th Cross, 18th A Main, JP Nagar II Phase, Bangalore, 560
+                    078.</p>
             </div>
         </div>
 
@@ -59,7 +59,6 @@ permalink: /get-involved/
 </section>
 
 <section class="pif-container">
-
     <h2 class="subtitle">We want to <span>pay it forward</span></h2>
     <hr>
 
@@ -131,17 +130,21 @@ permalink: /get-involved/
     .contact-items {
         margin-top: var(--p3-rem);
         margin-right: var(--p8-rem);
-        display: grid;
-        grid-template-columns: 1.5rem auto;
-        gap: 0.5rem;
         color: var(--grey-1);
+
+        &>p{
+            padding-bottom: var(--p1-rem);
+        }
+        /* display: grid; */
+        /* grid-template-columns: 1.5rem auto; */
+        /* gap: 0.5rem; */
         /* color: var(--body-color); */
         /* font-size: 0.8rem; */
     }
 
-    .contact-items img {
+    /* .contact-items img {
         display: inline;
-    }
+    } */
 
     main a {
         color: var(--orange);
@@ -218,6 +221,7 @@ permalink: /get-involved/
 
     .pif-layout p {
         margin: 0 var(--p2-rem) var(--p2-rem) 0;
+        max-width: 650px;
     }
 
     .pif-layout {

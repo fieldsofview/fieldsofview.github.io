@@ -3,7 +3,7 @@ layout: publication-layout
 title: Inclusive Wealth Report 2018&#58 Measuring Progress Towards Sustainability
 subtitle: Bharath M. Palavalli, Srijan  Sil and Anantha Kumar Duraiappah 
 category: publications
-subcategory: Peer Reviewed
+subcategory: 2018
 event_date: Mar 2018
 permalink: /publications/inclusivewealthindex/
 

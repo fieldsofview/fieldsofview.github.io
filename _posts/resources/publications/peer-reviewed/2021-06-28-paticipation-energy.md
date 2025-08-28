@@ -3,7 +3,7 @@ layout: publication-layout
 title: Enabling Public Participation in Shaping the Inclusive Energy Transition Through Serious Gaming---Case Studies in India
 subtitle: Bharath M. Palavalli, Sruthi Krishnan and Yashwin Iddya
 category: publications
-subcategory: Peer Reviewed
+subcategory: 2021
 event_date: Jun 2021
 permalink: /publications/energy-participation/
 

@@ -3,7 +3,7 @@ layout: publication-layout
 title: Analyzing gaming-simulations using video based techniques.
 subtitle: Bharath M. Palavalli, Harsha Krishna and Dinesh Jayagopi
 category: publications
-subcategory: Peer Reviewed
+subcategory: 2014
 event_date: Oct 2014
 permalink: /publications/videogameanalysis/
 
