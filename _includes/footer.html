@@ -4,7 +4,7 @@
 </div>
 <footer>
     <p class=" trademark">
-        "Fields of View" and "FoV" are trademarks of Fields of View Society © 2022. Fields of View. <br>All Rights
+        "Fields of View" and "FoV" are trademarks of Fields of View Society © <span>2022</span>. Fields of View. <br>All Rights
         Reserved.
     </p>
     <p class="address">
@@ -125,3 +125,10 @@
         }
     }
 </style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const yearSpan = document.querySelector('footer .trademark span');
+        const currentYear = new Date().getFullYear();
+        yearSpan.textContent = currentYear;
+    })
+</script>
