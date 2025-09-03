@@ -21,5 +21,5 @@ bibtex: "@techreport{Iddya2020transport,
 	Year = {2020}}"
 reportlink: /publications/BMTC_FareChangeScenarios_Report2020.pdf
 visuallink: /publications/BMTC_FareChangeScenarious_Visuals2020.pdf
-link: /docs/BMTC_FareChangeScenarios_Report2020.pdf
+link: /publications/BMTC_FareChangeScenarios_Report2020.pdf
 ---
