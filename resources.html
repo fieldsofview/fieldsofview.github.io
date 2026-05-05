@@ -8,7 +8,7 @@ permalink: /resources/
     <button class="tab-btn active" data-tab="publications">Publications</button>
     <button class="tab-btn" data-tab="newsletter">Newsletter</button>
     <button class="tab-btn" data-tab="financials">Financials</button>
-    <a class="tab-btn" href="{{ site.baseurl }}/projects">Archive</a>
+    <button class="tab-btn" data-tab="archive">Archive</button>
 </nav>
 
 <!-- PUBLICATIONS -->
@@ -174,6 +174,62 @@ permalink: /resources/
         {% for financial in site.data.financials %}
         <a href="{{site.baseurl}}{{ financial.pdf }}" target="_blank">{{ financial.title }}</a>
         {% endfor %}
+    </div>
+</section>
+
+{% assign archive_page = site.pages | where: "title", "Projects" | first %}
+<section class="tab-content" id="tab-archive">
+    <div class="archive-tab">
+        <div class="container">
+            <div class="grid">
+                <div class="sidebar">
+                    <h2 class="about title" id="all">All Projects</h2>
+                    <ul>
+                        {% for category in archive_page.categories %}
+                        <li class="about_nav" id="{{ category.ide }}">{{ category.title }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="projects">
+                    {% for post in site.categories['project'] %}
+                    <div id="{{ post.ide }}" class="project {{ post.tag }}">
+                        <a href="{{ site.baseurl }}/projects/{{ post.ide }}">
+                            <img src="/img/projects/{{ post.ide }}-thumb.jpg" alt="{{ post.title }} thumbnail" />
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <div class="description">
+                    <div id="our-work-description">
+                        <p class="simple-content">
+                            Our goal is to design better policy using games and simulations. Our work involves three
+                            inter-related
+                            threads: <br><b>PolicyLab</b> where we undertake research at the intersection of art, social
+                            sciences, and technology to design games and simulations; <br><b>School of Policy</b> where we
+                            train policymakers and civil society groups in the use of these tools; <br><b>Policy in Play</b>
+                            where we design artefacts such as graphic novels and games to make policy more accessible.
+                        </p><br>
+                        <p class="simple-content">
+                            Some of our current projects include: Building a game for the UN for students of economics and
+                            sustainability studies to understand the Inclusive Wealth Indicator (IWI), an indicator proposed
+                            as a complement to the GDP and HDI; ₹ubbish! a game on waste management in Bangalore; SimCity -
+                            building simulations to understand and plan for cities in the Indian context; and building a
+                            game for the Institute of Plasma Research, a Government of India undertaking.
+                        </p>
+                    </div>
+
+                    {% for category in archive_page.categories %}
+                    <div class="category-desc" id="{{ category.ide }}-content">
+                        <p class="simple-content">{{ category.description }}</p>
+                    </div>
+                    {% endfor %}
+
+                    <a href="/docs/brochures/FoVBrochure.pdf" class="mailid">Download our brochure here.</a><br/><br>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <style>
@@ -367,6 +423,80 @@ permalink: /resources/
         font-weight: 400;
     }
 
+    .archive-tab {
+        padding: var(--p4-rem);
+        max-width: 1400px;
+    }
+
+    .archive-tab .content {
+        min-height: 600px;
+        padding: 2rem 1rem;
+    }
+
+    .archive-tab .grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1.5fr;
+        gap: 2rem;
+    }
+
+    .archive-tab .sidebar h2 {
+        margin-bottom: 1rem;
+    }
+
+    .archive-tab .about_nav {
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+    }
+
+    .archive-tab .about_nav.active {
+        font-weight: bold;
+    }
+
+    .archive-tab .projects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding-top: var(--p4-rem);
+    }
+
+    .archive-tab .project {
+        flex: 1 1 calc(50% - 1.5rem);
+    }
+
+    .archive-tab .project img {
+        width: 100%;
+        display: block;
+        padding-bottom: 1rem;
+        cursor: pointer;
+    }
+
+    .archive-tab .description {
+        padding-top: var(--p4-rem);
+    }
+
+    .archive-tab .category-desc {
+        display: none;
+    }
+
+    .archive-tab .mailid {
+        font-size: 0.9rem;
+        display: inline-block;
+        margin-top: 1rem;
+        font-weight: 600;
+        text-decoration: underline;
+        text-underline-position: from-font;
+    }
+
+    @media (max-width: 768px) {
+        .archive-tab .grid {
+            grid-template-columns: 1fr;
+        }
+
+        .archive-tab .project {
+            flex: 1 1 100%;
+        }
+    }
+
     @media (max-width: 768px) {
 
         .tabs {
@@ -446,6 +576,35 @@ permalink: /resources/
                 }
             });
         });
+
+        const archiveSection = document.getElementById('tab-archive');
+        if (archiveSection) {
+            const categoryButtons = archiveSection.querySelectorAll('.about_nav');
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    archiveSection.querySelectorAll('.project').forEach(el => el.style.display = 'none');
+                    archiveSection.querySelectorAll('.' + button.id).forEach(el => el.style.display = 'block');
+
+                    archiveSection.querySelectorAll('.about_nav').forEach(el => el.classList.remove('active'));
+                    button.classList.add('active');
+
+                    archiveSection.querySelectorAll('.category-desc').forEach(el => el.style.display = 'none');
+                    archiveSection.querySelector('#' + button.id + '-content').style.display = 'block';
+                    archiveSection.querySelector('#our-work-description').style.display = 'none';
+                });
+            });
+
+            const allButton = archiveSection.querySelector('#all');
+            if (allButton) {
+                allButton.addEventListener('click', function () {
+                    archiveSection.querySelectorAll('.project').forEach(el => el.style.display = 'block');
+                    archiveSection.querySelectorAll('.about_nav').forEach(el => el.classList.remove('active'));
+                    allButton.classList.add('active');
+                    archiveSection.querySelector('#our-work-description').style.display = 'block';
+                    archiveSection.querySelectorAll('.category-desc').forEach(el => el.style.display = 'none');
+                });
+            }
+        }
     });
 
 
