@@ -48,14 +48,14 @@
                         <li><a href="{{ site.baseurl }}/resources/#publications">publications</a></li>
                         <li><a href="{{ site.baseurl }}/resources/#newsletter">newsletters</a></li>
                         <li><a href="{{ site.baseurl }}/resources/#financials">financials</a></li>
-                        <li><a href="{{ site.baseurl }}/resources/#archive">archive</a></li>
+                        <li><a href="{{ site.baseurl }}/resources/#archive">tools archive</a></li>
                     </ul>
                 </li>
                 <ul class="inner-nav">
                     <li><a href="{{ site.baseurl }}/resources/#publications">publications</a></li>
                     <li><a href="{{ site.baseurl }}/resources/#newsletter">newsletters</a></li>
                     <li><a href="{{ site.baseurl }}/resources/#financials">financials</a></li>
-                    <li><a href="{{ site.baseurl }}/resources/#archive">archive</a></li>
+                    <li><a href="{{ site.baseurl }}/resources/#archive">tools archive</a></li>
                 </ul>
                 <li class="{% if page.url == '/get-involved/' %}active{% endif %}">
                     <a href="{{ site.baseurl }}/get-involved/">get involved</a>
@@ -107,6 +107,7 @@
         padding: var(--p1-rem);
         cursor: pointer;
         position: relative;
+        text-wrap-mode: nowrap;
     }
 
     nav>ul>li::before {
@@ -163,7 +164,7 @@
 
     .dropdown {
         position: absolute;
-        left: 0.75rem;
+        left: calc(var(--p1-rem) * 0.5);
         background-color: white;
         border: 1px solid var(--grey-4);
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);

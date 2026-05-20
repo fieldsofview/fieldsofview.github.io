@@ -8,7 +8,7 @@ permalink: /resources/
     <button class="tab-btn active" data-tab="publications">Publications</button>
     <button class="tab-btn" data-tab="newsletter">Newsletter</button>
     <button class="tab-btn" data-tab="financials">Financials</button>
-    <button class="tab-btn" data-tab="archive">Archive</button>
+    <button class="tab-btn" data-tab="archive">Tools Archive</button>
 </nav>
 
 <!-- PUBLICATIONS -->
@@ -201,7 +201,7 @@ permalink: /resources/
                     {% endfor %}
                 </div>
 
-                <div class="description">
+                <!-- <div class="description">
                     <div id="our-work-description">
                         <p class="simple-content">
                             Our goal is to design better policy using games and simulations. Our work involves three
@@ -227,7 +227,7 @@ permalink: /resources/
                     {% endfor %}
 
                     <a href="/docs/brochures/FoVBrochure.pdf" class="mailid">Download our brochure here.</a><br/><br>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -435,7 +435,7 @@ permalink: /resources/
 
     .archive-tab .grid {
         display: grid;
-        grid-template-columns: 1fr 2fr 1.5fr;
+        grid-template-columns: 1fr 4fr;
         gap: 2rem;
     }
 
@@ -453,14 +453,10 @@ permalink: /resources/
     }
 
     .archive-tab .projects {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
         gap: 1.5rem;
         padding-top: var(--p4-rem);
-    }
-
-    .archive-tab .project {
-        flex: 1 1 calc(50% - 1.5rem);
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     .archive-tab .project img {
@@ -488,12 +484,16 @@ permalink: /resources/
     }
 
     @media (max-width: 768px) {
+        .archive-tab {
+            padding: var(--p1-rem);
+        }
+
         .archive-tab .grid {
             grid-template-columns: 1fr;
         }
 
-        .archive-tab .project {
-            flex: 1 1 100%;
+        .archive-tab .projects {
+            grid-template-columns: 1fr 1fr;
         }
     }
 
